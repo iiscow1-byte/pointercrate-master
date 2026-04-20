@@ -1,3 +1,4 @@
+error-demonlist-geolocationfailed = Геолокация не удалась!
 error-demonlist-malformedvideourl = Неправильная ссылка на видео
 error-demonlist-bannedfromsubmissions = Вы забанены в демонлисте!
 error-demonlist-claimunverified = Ваш запрос на присвоение профиля не подтвержден
