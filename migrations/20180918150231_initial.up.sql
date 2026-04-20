@@ -66,5 +66,11 @@ CREATE TABLE IF NOT EXISTS  creators (
     PRIMARY KEY (demon, creator)
 );
 
+DO $$ BEGIN
+    IF NOT EXISTS (SELECT FROM pg_roles WHERE rolname = 'pointercrate') THEN
+        CREATE ROLE pointercrate;
+    END IF;
+END $$;
+
 GRANT TRIGGER, REFERENCES, SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA public TO pointercrate;
 GRANT USAGE ON ALL SEQUENCES IN SCHEMA public TO pointercrate;

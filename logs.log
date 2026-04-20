@@ -1,0 +1,10 @@
+2026-04-20T20:58:03.920428425Z [err]  note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+2026-04-20T20:58:04.969820332Z [err]  thread 'main' (1) panicked at pointercrate-core/src/pool.rs:54:14:
+2026-04-20T20:58:05.492771356Z [err]  note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+2026-04-20T20:58:06.309538881Z [err]  
+2026-04-20T20:58:06.309551626Z [err]  note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+2026-04-20T20:58:07.006515424Z [err]  Localization Files for language ru-RU are missing key error-demonlist-geolocationfailed!
+2026-04-20T20:58:07.033853443Z [err]  Failed to run migrations: ExecuteMigration(Database(PgDatabaseError { severity: Error, code: "42704", message: "role \"pointercrate\" does not exist", detail: None, hint: None, position: None, where: None, schema: None, table: None, column: None, data_type: None, constraint: None, file: Some("acl.c"), line: Some(5560), routine: Some("get_role_oid") }), 20180918150231)
+2026-04-20T20:58:07.033856848Z [err]  note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+2026-04-20T20:58:10.548325443Z [err]  
+2026-04-20T20:58:11.328932121Z [err]  note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
