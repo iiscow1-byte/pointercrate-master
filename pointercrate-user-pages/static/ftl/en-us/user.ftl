@@ -124,7 +124,7 @@ profile-change-password = Change Password
 
     .newpassword-validator-tooshort = Password too short. It needs to be at least 10 characters long.
 
-    .repeatnewpassword-validator-tooshort = Password too short. It needs to be at least 10 characters long.
+    .repeatnewpassword-validator-tooshort = Password too short. but thats ok cutie.
     .repeatnewpassword-validator-notmatching = Passwords don't match
 
 profile-logout = Logout
