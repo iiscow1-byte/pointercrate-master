@@ -1,5 +1,5 @@
 footer-demonlist = Demonlist
-    .top-demon = Current Top Demon
+    .top-demon = Current Top Challenges
     .extended-list = { extended-list }
     .legacy-list = { legacy-list }
 

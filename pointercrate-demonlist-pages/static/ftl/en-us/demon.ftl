@@ -18,7 +18,7 @@ demon-gdversion = Created In
 
 demon-ngsong = Newgrounds Song
 
-demon-score = Demonlist score ({$percent}%)
+demon-score = Challenge list score ({$percent}%)
 
 demon-video = Verification Video
     .validator-typemismatch = Please enter a valid URL
@@ -28,9 +28,9 @@ demon-thumbnail = Thumbnail
     .validator-valuemissing = Please enter a URL
 
 demon-position = Position
-    .validator-rangeunderflow = Demon position must be at least 1
-    .validator-badinput = Demon position must be a valid integer
-    .validator-stepmismatch = Demon position mustn't be a decimal
+    .validator-rangeunderflow = Challenge position must be at least 1
+    .validator-badinput = Challenge position must be a valid integer
+    .validator-stepmismatch = Challenge position mustn't be a decimal
     .validator-valuemissing = Please specify a position
 
 demon-requirement = Requirement
@@ -113,7 +113,7 @@ demon-listed = {$demon} (ID: {$demon-id})
     .publisher = by {$publisher}
 
 demon-viewer = Demon #
-    .welcome = Click on a demon on the left to get started!
+    .welcome = Click on a Challenge on the left to get started!
 
     .video-field = { demon-video }:
     .thumbnail-field = { demon-thumbnail }:
@@ -123,13 +123,13 @@ demon-viewer = Demon #
     .verifier-field = { demon-verifier }:
     .creators-field = { demon-creators }:
 
-demon-add-panel = Add Demon
-    .button = Add a demon!
+demon-add-panel = Add Challenge
+    .button = Add a Challenge!
 
-# Demon addition form
-demon-add-form = Add Demon
+# Challenge addition form
+demon-add-form = Add Challenge
     .name-field = { demon-name }:
-    .name-validator-valuemissing = Please provide a name for the demon
+    .name-validator-valuemissing = Please provide a name for the Challenge
 
     .levelid-field = Geometry Dash Level ID:
     .position-field = { demon-position }:
@@ -139,9 +139,9 @@ demon-add-form = Add Demon
     .video-field = { demon-video }:
     .creators-field = { demon-creators }:
 
-    .submit = Add Demon
+    .submit = Add Challenge
 
-    .edit-success = Successfully added demon!
+    .edit-success = Successfully added Challenge!
 
 # Demon viewer dialogs
 demon-video-dialog = Change verification video link
@@ -150,7 +150,7 @@ demon-video-dialog = Change verification video link
     .submit = Edit
 
 demon-name-dialog = Change demon name
-    .info = Change the name of this demon. Multiple demons with the same name ARE supported!
+    .info = Change the name of this Challenge. Multiple Challenges with the same name ARE supported!
     .name-field = Name:
     .submit = Edit
 
@@ -164,25 +164,25 @@ demon-thumbnail-dialog = Change thumbnail link
     .submit = Edit
 
 demon-position-dialog = Change demon position
-    .info = Change the position of this demon. Has be be greater than 0 and be at most the current list size.
+    .info = Change the position of this Challenge. Has be be greater than 0 and be at most the current list size.
     .position-field = Position:
     .submit = Edit
 
 demon-requirement-dialog = Change demon requirement
-    .info = Change the record requirement for this demon. Has be lie between 0 and and 100 (inclusive).
+    .info = Change the record requirement for this Challenge. Has be lie between 0 and and 100 (inclusive).
     .requirement-field = Requirement:
     .submit = Edit
 
 demon-publisher-dialog = Change demon publisher
-    .info = Type the new publisher of the demon into the text field below. If the player already exists, it will appear as a suggestion below the text field. Then click the button below.
+    .info = Type the new publisher of the Challenge into the text field below. If the player already exists, it will appear as a suggestion below the text field. Then click the button below.
     .submit = Edit
 
 demon-verifier-dialog = Change demon verifier
-    .info = Type the new verifier of the demon into the text field below. If the player already exists, it will appear as a suggestion below the text field. Then click the button below.
+    .info = Type the new verifier of the Challenge into the text field below. If the player already exists, it will appear as a suggestion below the text field. Then click the button below.
     .submit = Edit
 
 demon-creator-dialog = Add creator
-    .info = Type the creator to add to this demon into the text field below. If the player already exists, it will appear as a suggestion below the text field. Then click the button below.
+    .info = Type the creator to add to this Challenge into the text field below. If the player already exists, it will appear as a suggestion below the text field. Then click the button below.
     .submit = Add Creator
 
     .edit-success = Successfully added creator!

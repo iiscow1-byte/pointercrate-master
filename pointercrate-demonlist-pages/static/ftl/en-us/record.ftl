@@ -15,7 +15,7 @@ record-submitter = Submitter ID
 ## Records tab (user area)
 records = Records
 record-manager = Record Manager
-    .all-option = All Demons
+    .all-option = All Challenges
 
 record-listed = Record #{ $record-id }
     .progress = { $percent }% on { $demon }
@@ -76,14 +76,14 @@ record-videolink-dialog = Change video link
     .videolink-validator-typemismatch = Please enter a valid URL
 
 record-demon-dialog = Change record demon
-    .info = Change the demon associated with this record. Search up the demon this record should be associated with below. Then click it to modify the record
+    .info = Change the Challenge associated with this record. Search up the Challenge this record should be associated with below. Then click it to modify the record
 
 record-holder-dialog = Change record holder
     .info = Type the new holder of the record into the text field below. If the player already exists, it will appear as a suggestion below the text field. Then click the button below.
     .submit = Edit
 
 record-progress-dialog = Change record progress
-    .info = Change the progress value of this record. Has to be between the demon's record requirement and 100 (inclusive).
+    .info = Change the progress value of this record. Has to be between the Challenge's record requirement and 100 (inclusive).
     .progress-field = Progress:
 
     .submit = Edit

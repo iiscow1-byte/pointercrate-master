@@ -1,17 +1,17 @@
 statsviewer = Stats Viewer
-    .rank = Demonlist rank
-    .score = Demonlist score
-    .stats = Demonlist stats
-    .hardest = Hardest demon
+    .rank = Challenge list rank
+    .score = Challenge list score
+    .stats = Challenge list stats
+    .hardest = Hardest Challenge
 
-    .completed = Demons completed
-    .completed-main = Main list demons completed
-    .completed-extended = Extended list demons completed
-    .completed-legacy = Legacy list demons completed
+    .completed = Challenges completed
+    .completed-main = Main list Challenges completed
+    .completed-extended = Extended list Challenges completed
+    .completed-legacy = Legacy list Challenges completed
 
-    .created = Demons created
-    .published = Demons published
-    .verified = Demons verified
+    .created = Challenges created
+    .published = Challenges published
+    .verified = Challenges verified
     .progress = Progress on
 
     .stats-value = { $main } Main, { $extended } Extended, { $legacy } Legacy
@@ -26,7 +26,7 @@ statsviewer-nation = Nations
     .welcome = Click on a country's name on the left to get started!
 
     .players = Players
-    .unbeaten = Unbeaten demons
+    .unbeaten = Unbeaten Challenges
 
     .created-tooltip = (Co)created by { $players } { $players ->
             [one] player
@@ -44,7 +44,7 @@ statsviewer-nation = Nations
         } in this country:
 
 demon-sorting-panel = Demon Sorting
-    .info = The order in which completed demons should be listed
+    .info = The order in which completed Challenges should be listed
 
     .option-alphabetical = Alphabetical
     .option-position = Position
