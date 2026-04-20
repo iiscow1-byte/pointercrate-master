@@ -90,7 +90,7 @@ pub async fn demon_permalink(demon_id: i32, pool: &State<PointercratePool>) -> R
 
     let position = MinimalDemon::by_id(demon_id, &mut connection).await?.position;
 
-    Ok(Redirect::to(rocket::uri!("/demonlist", demon_page(position))))
+    Ok(Redirect::to(format!("/demonlist/{}/", position)))
 }
 
 #[localized]
