@@ -1,0 +1,35 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "INSERT INTO demons (name, position, requirement, video, verifier, publisher, level_id, tier) VALUES ($1::text,$2,$3,$4::text,$5,$6,$7,$8) RETURNING id, thumbnail",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 1,
+        "name": "thumbnail",
+        "type_info": "Text"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Text",
+        "Int2",
+        "Int2",
+        "Text",
+        "Int4",
+        "Int4",
+        "Int8",
+        "Int2"
+      ]
+    },
+    "nullable": [
+      false,
+      false
+    ]
+  },
+  "hash": "05c63c476331fa305c09da6e908c03f52dbd684b783734c5a374986b0535a3f3"
+}

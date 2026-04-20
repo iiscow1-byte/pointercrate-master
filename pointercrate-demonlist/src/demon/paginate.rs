@@ -112,6 +112,7 @@ impl Paginatable<DemonIdPagination> for Demon {
                     banned: row.get("verifier_banned"),
                 },
                 level_id: row.get::<Option<i64>, _>("level_id").map(|id| id as u64),
+                tier: row.get("tier"),
             })
         }
 
@@ -224,6 +225,7 @@ impl Paginatable<DemonPositionPagination> for Demon {
                     banned: row.get("verifier_banned"),
                 },
                 level_id: row.get::<Option<i64>, _>("level_id").map(|id| id as u64),
+                tier: row.get("tier"),
             })
         }
 

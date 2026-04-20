@@ -1,0 +1,15 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "UPDATE demons SET tier = $1 WHERE id = $2",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Int2",
+        "Int4"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "d697358bee6969d755e0e07e1fea43db067f88329fc6932f1b5a1c86fe19698e"
+}
