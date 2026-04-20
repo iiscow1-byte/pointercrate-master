@@ -1,0 +1,86 @@
+:root {
+  --color-ok-bg: rgb(238, 255, 228);
+  --color-ok-border: #a8ff93;
+  --color-ok-text: #074d07;
+  --color-ok-accent: #68bf0b;
+
+  --color-warn-bg: #fffadd;
+  --color-warn-border: #e0e37b;
+  --color-warn-text: #4d4707;
+  /* --color-warn-accent */
+
+  --color-error-bg: #fdd;
+  --color-error-border: #ff9393;
+  --color-error-text: #4d0707;
+  /* --color-error-accent */
+
+  --color-consider-bg: #D8EFF3;
+  /* --color-consider-border */
+  --color-consider-text: #326067;
+  /* --color-consider-accent */
+
+  --color-text: #444446;
+  --color-text-accent: #222;
+
+  --color-border: lightgray;
+  --color-border-broken: #555;
+
+  --color-bg: white;
+
+  --color-link: blue;
+  --color-link-dark: #f77e39;
+
+  --color-pc-button-bg: #0881c6;
+  --color-pc-button-bg-hover: #076696;
+  --color-pc-button-bg-click: #055075;
+  --color-pc-button-text: white;
+  --color-pc-button-text-click: #eee;
+
+  --color-imp-button-bg: #ff003c;
+  --color-imp-button-bg-hover: #ff2457;
+  --color-imp-button-bg-click: #f21347;
+
+  --color-unobstrusive-button-bg: var(--color-bg);
+  --color-unobstrusive-button-bg-hover: #ddd;
+  --color-unobstrusive-button-bg-click: #aaa;
+  --color-unobstrusive-button-text: var(--color-text);
+  --color-unobstrusive-button-text-click: #111;
+}
+
+body {
+  color: var(--color-text);
+
+  position: relative;
+
+  min-width: 100%;
+  height: 100%;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 767px) {
+  body {
+    background-image: none;
+  }
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* input elements are weird about their font */
+input {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* If element to scroll to is selected by id in URL, add offset to account for nav bar */
+:target:before {
+  content: "";
+  display: block;
+  height: calc(90px + 0.6em); /* fixed header height*/
+  margin-top: calc(-90px - 0.6em); /* negative fixed header height */
+}

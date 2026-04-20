@@ -1,0 +1,199 @@
+/* Basic css classes that can be applied to various components to make them look fancy*/
+
+/* https://stackoverflow.com/questions/16679146/force-footer-on-bottom-on-pages-with-little-content */
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
+.bordered {
+  border: 1px solid #ddd;
+}
+
+.fade {
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  border: 1px lightgray dashed;
+}
+
+@media (min-width: 1072px) {
+  .fade-hide {
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  .m-center {
+    max-width: 1072px;
+    margin-left: calc(50% - 1072px / 2) !important;
+    margin-right: calc(50% - 1072px / 2) !important;
+  }
+
+  /* center using padding */
+  .center {
+    max-width: 1072px;
+    padding-left: calc(50% - 1072px / 2);
+    padding-right: calc(50% - 1072px / 2);
+  }
+}
+
+@media (min-width: 1359px) {
+  /* center using margin */
+  .m-center {
+    max-width: 1072px;
+    margin-left: calc(50% - 1072px / 2) !important;
+    margin-right: calc(50% - 1072px / 2) !important;
+  }
+
+  /* center using padding */
+  .center {
+    max-width: 1072px;
+    padding-left: calc(50% - 1072px / 2);
+    padding-right: calc(50% - 1072px / 2);
+  }
+}
+
+
+.clickable {
+  cursor: pointer;
+}
+
+.see-through {
+  opacity: 0.95;
+}
+
+.disabled,
+*[disabled] {
+  opacity: 0.7;
+}
+
+.hover,
+.hover:hover:not(.disabled):not([disabled]) {
+  transition: all 0.8s ease;
+}
+
+.hover.scale:hover:not(.disabled):not([disabled]) {
+  transform: scale(1.1);
+}
+
+/* color modifying styles */
+
+.blue {
+  background-color: var(--color-pc-button-bg);
+  color: var(--color-pc-button-text);
+}
+
+.blue.hover:not(.disabled):not([disabled]):hover,
+.blue.active {
+  background-color: var(--color-pc-button-bg-hover);
+}
+
+.blue.hover:not(.disabled):not([disabled]):active {
+  background-color: var(--color-pc-button-bg-click);
+  color: var(--color-pc-button-text-click);
+}
+
+.white {
+  background-color: var(--color-unobstrusive-button-bg);
+  color: var(--color-unobstrusive-button-text);
+}
+
+.white.hover:not(.disabled):not([disabled]):hover,
+.white.active {
+  background-color: var(--color-unobstrusive-button-bg-hover);
+}
+
+.white.hover:not(.disabled):not([disabled]):active {
+  background-color: var(--color-unobstrusive-button-bg-click);
+  color: var(--color-unobstrusive-button-text-click);
+}
+
+.red {
+  background: var(--color-imp-button-bg);
+  color: var(--color-pc-button-text);
+}
+
+.red.hover:not(.disabled):not([disabled]):hover,
+.red.active {
+  background: var(--color-imp-button-bg-hover);
+}
+
+.red.hover:not(.disabled):not([disabled]):active,
+.red.active {
+  background: var(--color-imp-button-bg-click);
+  color: var(--color-pc-button-text-click);
+}
+
+/* size modifying styles */
+
+.large {
+  padding: 20px 40px;
+}
+
+.medium {
+  padding: 10px 20px;
+}
+
+.small {
+  padding: 5px 10px;
+}
+
+.xsmall {
+  padding: 1px 2px;
+}
+
+/* animations */
+
+.fade-in,
+.fade-out {
+  animation-name: fade;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.scale-in,
+.scale-out {
+  animation-name: scale;
+  animation-duration: 1;
+  animation-timing-function: ease-out;
+}
+
+.fade-out,
+.scale-out {
+  animation-direction: reverse;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scale {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
