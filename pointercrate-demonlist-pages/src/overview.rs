@@ -149,7 +149,11 @@ impl OverviewPage {
 
         html! {
              section.panel.fade.flex.mobile-col.completed[progress==100] style="overflow:hidden" {
-                 a.thumb."ratio-16-9"."js-delay-css" href = (video_link) style = "position: relative" data-property = "background-image" data-property-value = {"url('" (demon.thumbnail) "')"} {}
+                 a.thumb."ratio-16-9"."js-delay-css" href = (video_link) style = "position: relative" data-property = "background-image" data-property-value = {"url('" (demon.thumbnail) "')"} {
+                     @if let Some(tier) = demon.tier {
+                         img.tier-icon src = {"/static/demonlist/images/tier_icons/" (tier) ".png"} alt = {"Tier " (tier)} {}
+                     }
+                 }
                  div.flex.demon-info style = "align-items: center" {
                      div.demon-byline {
                          h2 style = "text-align: left; margin-bottom: 0px" {

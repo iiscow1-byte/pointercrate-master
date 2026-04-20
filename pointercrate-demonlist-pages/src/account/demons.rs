@@ -99,6 +99,15 @@ impl AccountPageTab for DemonsTab {
                                 div.stats-container.flex.space  {
                                     span{
                                         b {
+                                            i.fa.fa-pencil-alt.clickable #demon-tier-pen aria-hidden = "true" {} " Tier"
+                                        }
+                                        br;
+                                        span #demon-tier {}
+                                    }
+                                }
+                                div.stats-container.flex.space  {
+                                    span{
+                                        b {
                                             i.fa.fa-pencil-alt.clickable #demon-publisher-pen aria-hidden = "true" {} " " (tr("demon-viewer.publisher-field"))
                                         }
                                         br;
@@ -134,6 +143,7 @@ impl AccountPageTab for DemonsTab {
             (change_name_dialog())
             (change_position_dialog())
             (change_requirement_dialog())
+            (change_tier_dialog())
             (change_video_dialog())
             (change_thumbnail_dialog())
             (change_verifier_dialog())
@@ -204,6 +214,32 @@ fn change_requirement_dialog() -> Markup {
                         p.error {}
                     }
                     input.button.blue.hover type = "submit" style = "margin: 15px auto 0px;" value = (tr("demon-requirement-dialog.submit"));
+                }
+            }
+        }
+    }
+}
+
+fn change_tier_dialog() -> Markup {
+    html! {
+        div.overlay.closable {
+            div.dialog #demon-tier-dialog {
+                span.plus.cross.hover {}
+                h2.underlined.pad {
+                    "Edit Tier"
+                }
+                p style = "max-width: 400px" {
+                    "Set the tier (0–45) for this demon, or leave blank to remove it."
+                }
+                form.flex.col novalidate = "" {
+                    p.info-red.output {}
+                    p.info-green.output {}
+                    span.form-input #demon-tier-edit {
+                        label for = "tier" { "Tier" }
+                        input name = "tier" type = "number" min = "0" max = "45";
+                        p.error {}
+                    }
+                    input.button.blue.hover type = "submit" style = "margin: 15px auto 0px;" value = "Edit Tier";
                 }
             }
         }
@@ -377,6 +413,11 @@ fn demon_submitter() -> Markup {
                         label {(tr("demon-add-form.publisher-field")) }
                         br;
                         (player_selection_dropdown("demon-add-publisher", "/api/v1/players/", "name", "publisher"))
+                        p.error {}
+                    }
+                    span.form-input.flex.col #demon-add-tier {
+                        label for = "tier" { "Tier (0–45, optional)" }
+                        input type = "number" name = "tier" min = "0" max = "45";
                         p.error {}
                     }
                     span.form-input.flex.col #demon-add-video {

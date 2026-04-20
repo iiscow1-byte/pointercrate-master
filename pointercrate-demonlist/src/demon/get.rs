@@ -146,6 +146,7 @@ struct FetchedDemon {
     verifier_name: String,
     verifier_banned: bool,
     level_id: Option<i64>,
+    tier: Option<i16>,
 }
 
 impl From<FetchedDemon> for Demon {
@@ -170,6 +171,7 @@ impl From<FetchedDemon> for Demon {
                 banned: fetched.verifier_banned,
             },
             level_id: fetched.level_id.map(|id| id as u64),
+            tier: fetched.tier,
         }
     }
 }
@@ -211,6 +213,7 @@ pub async fn list_at(connection: &mut PgConnection, at: NaiveDateTime) -> Result
                     banned: row.verifier_banned,
                 },
                 level_id: row.level_id.map(|i| i as u64),
+                tier: row.tier,
             },
             position_now: row.current_position,
         })

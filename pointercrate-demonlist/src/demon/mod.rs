@@ -57,6 +57,9 @@ pub struct Demon {
     /// This is automatically queried based on the level name, but can be manually overridden by a
     /// list mod.
     pub level_id: Option<u64>,
+
+    /// Difficulty tier for this demon (0-45), displayed as an icon on the list
+    pub tier: Option<i16>,
 }
 
 /// Absolutely minimal representation of a demon to be sent when a demon is part of another object

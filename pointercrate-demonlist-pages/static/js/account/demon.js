@@ -50,6 +50,8 @@ export class DemonManager extends FilteredPaginator {
     this._verifier = document.getElementById("demon-verifier");
     this._publisher = document.getElementById("demon-publisher");
 
+    this._tier = document.getElementById("demon-tier");
+
     this._creators = document.getElementById("demon-creators");
 
     let videoForm = setupFormDialogEditor(
@@ -150,6 +152,24 @@ export class DemonManager extends FilteredPaginator {
       new PaginatorEditorBackend(this, true),
       this.output
     );
+
+    let tierForm = setupFormDialogEditor(
+      new PaginatorEditorBackend(this, false),
+      "demon-tier-dialog",
+      "demon-tier-pen",
+      this.output
+    );
+
+    tierForm.addValidators({
+      "demon-tier-edit": {
+        [tr("demonlist", "demon", "demon-position.validator-rangeunderflow")]:
+          rangeUnderflow,
+        [tr("demonlist", "demon", "demon-position.validator-badinput")]:
+          badInput,
+        [tr("demonlist", "demon", "demon-position.validator-stepmismatch")]:
+          stepMismatch,
+      },
+    });
   }
 
   onReceive(response) {
@@ -163,6 +183,7 @@ export class DemonManager extends FilteredPaginator {
     this._name.innerText = this.currentObject.name;
     this._position.innerText = this.currentObject.position;
     this._requirement.innerText = this.currentObject.requirement;
+    this._tier.innerText = this.currentObject.tier ?? "None";
 
     var embeddedVideo = embedVideo(this.currentObject.video);
 
@@ -314,6 +335,14 @@ function setupDemonAdditionForm() {
     "demon-add-publisher": {
       [tr("demonlist", "demon", "demon-publisher.validator-valuemissing")]:
         valueMissing,
+    },
+    "demon-add-tier": {
+      [tr("demonlist", "demon", "demon-position.validator-rangeunderflow")]:
+        rangeUnderflow,
+      [tr("demonlist", "demon", "demon-position.validator-badinput")]:
+        badInput,
+      [tr("demonlist", "demon", "demon-position.validator-stepmismatch")]:
+        stepMismatch,
     },
     "demon-add-video": {
       [tr("demonlist", "demon", "demon-video.validator-typemismatch")]:

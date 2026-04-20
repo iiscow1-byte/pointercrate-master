@@ -30,6 +30,9 @@ pub struct PatchDemon {
 
     #[serde(default, deserialize_with = "non_nullable")]
     pub publisher: Option<String>,
+
+    #[serde(default, deserialize_with = "nullable")]
+    pub tier: Option<Option<i16>>,
 }
 
 impl FullDemon {
@@ -87,6 +90,10 @@ impl Demon {
 
         if let Some(requirement) = patch.requirement {
             self.set_requirement(requirement, connection).await?;
+        }
+
+        if let Some(tier) = patch.tier {
+            self.set_tier(tier, connection).await?;
         }
 
         Ok(self)
@@ -166,6 +173,16 @@ impl Demon {
             .await?;
 
         self.thumbnail = thumbnail;
+
+        Ok(())
+    }
+
+    pub async fn set_tier(&mut self, tier: Option<i16>, connection: &mut PgConnection) -> Result<()> {
+        sqlx::query!("UPDATE demons SET tier = $1 WHERE id = $2", tier, self.base.id)
+            .execute(connection)
+            .await?;
+
+        self.tier = tier;
 
         Ok(())
     }

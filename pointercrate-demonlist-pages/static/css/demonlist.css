@@ -190,3 +190,12 @@ tr:nth-child(even) {
 .ct-series-a .ct-point {
   stroke: #0881c6;
 }
+
+.tier-icon {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  width: 48px;
+  height: 48px;
+  pointer-events: none;
+}
