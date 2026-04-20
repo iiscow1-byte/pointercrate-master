@@ -91,7 +91,7 @@ impl GeolocationProvider for IpWhoIsGeolocationProvider {
 #[rocket::launch]
 async fn rocket() -> _ {
     // Load the configuration from your .env file
-    dotenv::dotenv().unwrap();
+    dotenv::dotenv().ok();
 
     // Load the translation files
     LocalesLoader::load(&[

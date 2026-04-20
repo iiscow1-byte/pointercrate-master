@@ -1,0 +1,21 @@
+2026-04-20T20:01:34.711403704Z [inf]  Starting Container
+2026-04-20T20:01:35.663831110Z [err]  
+2026-04-20T20:01:35.663837190Z [err]  thread 'main' (1) panicked at pointercrate-example/src/main.rs:94:22:
+2026-04-20T20:01:35.663842623Z [err]  called `Result::unwrap()` on an `Err` value: Io(Custom { kind: NotFound, error: "path not found" })
+2026-04-20T20:01:35.663847921Z [err]  note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+2026-04-20T20:01:35.663853292Z [err]  
+2026-04-20T20:01:35.663859824Z [err]  thread 'main' (1) panicked at pointercrate-example/src/main.rs:94:22:
+2026-04-20T20:01:35.663864365Z [err]  called `Result::unwrap()` on an `Err` value: Io(Custom { kind: NotFound, error: "path not found" })
+2026-04-20T20:01:35.663869713Z [err]  note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+2026-04-20T20:01:36.656520795Z [err]  note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+2026-04-20T20:01:36.656699743Z [err]  
+2026-04-20T20:01:36.656706488Z [err]  thread 'main' (1) panicked at pointercrate-example/src/main.rs:94:22:
+2026-04-20T20:01:36.656715465Z [err]  called `Result::unwrap()` on an `Err` value: Io(Custom { kind: NotFound, error: "path not found" })
+2026-04-20T20:01:37.535308521Z [err]  
+2026-04-20T20:01:37.535320826Z [err]  thread 'main' (1) panicked at pointercrate-example/src/main.rs:94:22:
+2026-04-20T20:01:37.535327672Z [err]  called `Result::unwrap()` on an `Err` value: Io(Custom { kind: NotFound, error: "path not found" })
+2026-04-20T20:01:37.535333268Z [err]  note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+2026-04-20T20:01:38.591741561Z [err]  note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+2026-04-20T20:01:38.591884695Z [err]  
+2026-04-20T20:01:38.591891931Z [err]  thread 'main' (1) panicked at pointercrate-example/src/main.rs:94:22:
+2026-04-20T20:01:38.591899074Z [err]  called `Result::unwrap()` on an `Err` value: Io(Custom { kind: NotFound, error: "path not found" })
