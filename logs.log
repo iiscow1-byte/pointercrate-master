@@ -1,2 +1,41 @@
-2026-04-20T21:04:11.223163244Z [inf]  Starting Container
-2026-04-20T21:04:13.946019177Z [err]  Localization Files for language ru-RU are missing key error-demonlist-geolocationfailed!
+2026-04-20T21:14:35.180678217Z [inf]  Starting Container
+2026-04-20T21:16:24.211874750Z [inf]  [2;39m2026-04-20T21:16:23.071Z[0m [31mERROR[0m [39mrocket::lifecycle[0m [2;31m+[0m [31mA panic is treated as an internal server error.[0m
+2026-04-20T21:16:24.211874877Z [inf]  [2;39m2026-04-20T21:16:23.071Z[0m [31mERROR[0m [39mrocket::lifecycle[0m [2;31m+[0m [31mInstead of panicking, return `Option` and/or `Result`.[0m
+2026-04-20T21:16:24.211877917Z [inf]  [2;39m2026-04-20T21:16:23.071Z[0m [31mERROR[0m [39mrocket::lifecycle[0m [1;31m›[0m [31mhandler panicked[0m
+2026-04-20T21:16:24.211884051Z [inf]  [2;39m2026-04-20T21:16:23.071Z[0m [31mERROR[0m [39mrocket::lifecycle[0m [2;31m+[0m [31mValues of either type can be returned directly from handlers.[0m
+2026-04-20T21:16:24.211885829Z [inf]  [2;39m2026-04-20T21:16:23.071Z[0m [31mERROR[0m [39mrocket::lifecycle[0m [2;31m+[0m [31mThis is an application bug.[0m
+2026-04-20T21:16:24.211891757Z [err]  thread 'rocket-worker-thread' (4) panicked at pointercrate-user/src/config.rs:19:21:
+2026-04-20T21:16:24.211893564Z [inf]  [2;39m2026-04-20T21:16:23.071Z[0m [31mERROR[0m [39mrocket::lifecycle[0m [2;31m+[0m [31mA panic in Rust must be treated as an exceptional event.[0m
+2026-04-20T21:16:24.211897557Z [err]  Unable to open secret file: Os { code: 2, kind: NotFound, message: "No such file or directory" }
+2026-04-20T21:16:24.211899884Z [inf]  [2;39m2026-04-20T21:16:23.071Z[0m [31mERROR[0m [39mrocket::lifecycle[0m [2;31m+[0m [31mPanicking is not a suitable error handling mechanism.[0m
+2026-04-20T21:16:24.211903182Z [err]  note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+2026-04-20T21:16:24.211908861Z [inf]  [2;39m2026-04-20T21:16:23.071Z[0m [31mERROR[0m [39mrocket::lifecycle[0m [2;31m+[0m [31mUnwinding, the result of a panic, is an expensive operation.[0m
+2026-04-20T21:16:24.211912807Z [err]  
+2026-04-20T21:16:24.211916322Z [inf]  [2;39m2026-04-20T21:16:23.071Z[0m [31mERROR[0m [39mrocket::lifecycle[0m [2;31m+[0m [31mPanics will degrade application performance.[0m
+2026-04-20T21:16:24.213230081Z [inf]  [2;39m2026-04-20T21:16:23.071Z[0m [31mERROR[0m [39mrocket::lifecycle[0m [2;31m+[0m [1;31mhandler[0m: [39mregister[0m
+2026-04-20T21:16:43.867339657Z [err]  thread 'rocket-worker-thread' (4) panicked at pointercrate-user/src/config.rs:19:21:
+2026-04-20T21:16:43.867343699Z [err]  Unable to open secret file: Os { code: 2, kind: NotFound, message: "No such file or directory" }
+2026-04-20T21:16:43.867347284Z [inf]  [2;39m2026-04-20T21:16:39.501Z[0m [31mERROR[0m [39mrocket::lifecycle[0m [1;31m›[0m [31mhandler panicked[0m
+2026-04-20T21:16:43.867350820Z [inf]  [2;39m2026-04-20T21:16:39.501Z[0m [31mERROR[0m [39mrocket::lifecycle[0m [2;31m+[0m [31mThis is an application bug.[0m
+2026-04-20T21:16:43.867354224Z [inf]  [2;39m2026-04-20T21:16:39.501Z[0m [31mERROR[0m [39mrocket::lifecycle[0m [2;31m+[0m [31mA panic in Rust must be treated as an exceptional event.[0m
+2026-04-20T21:16:43.867357268Z [inf]  [2;39m2026-04-20T21:16:39.501Z[0m [31mERROR[0m [39mrocket::lifecycle[0m [2;31m+[0m [31mPanicking is not a suitable error handling mechanism.[0m
+2026-04-20T21:16:43.867363873Z [inf]  [2;39m2026-04-20T21:16:39.501Z[0m [31mERROR[0m [39mrocket::lifecycle[0m [2;31m+[0m [31mPanics will degrade application performance.[0m
+2026-04-20T21:16:43.867371187Z [inf]  [2;39m2026-04-20T21:16:39.501Z[0m [31mERROR[0m [39mrocket::lifecycle[0m [2;31m+[0m [31mValues of either type can be returned directly from handlers.[0m
+2026-04-20T21:16:43.869536170Z [err]  
+2026-04-20T21:16:43.869545306Z [err]  Unable to open secret file: Os { code: 2, kind: NotFound, message: "No such file or directory" }
+2026-04-20T21:16:43.869549405Z [inf]  [2;39m2026-04-20T21:16:42.050Z[0m [31mERROR[0m [39mrocket::lifecycle[0m [1;31m›[0m [31mhandler panicked[0m
+2026-04-20T21:16:43.869553263Z [inf]  [2;39m2026-04-20T21:16:42.050Z[0m [31mERROR[0m [39mrocket::lifecycle[0m [2;31m+[0m [31mThis is an application bug.[0m
+2026-04-20T21:16:43.869560979Z [inf]  [2;39m2026-04-20T21:16:42.050Z[0m [31mERROR[0m [39mrocket::lifecycle[0m [2;31m+[0m [31mPanicking is not a suitable error handling mechanism.[0m
+2026-04-20T21:16:43.869564291Z [inf]  [2;39m2026-04-20T21:16:42.050Z[0m [31mERROR[0m [39mrocket::lifecycle[0m [2;31m+[0m [31mUnwinding, the result of a panic, is an expensive operation.[0m
+2026-04-20T21:16:43.869567751Z [inf]  [2;39m2026-04-20T21:16:42.050Z[0m [31mERROR[0m [39mrocket::lifecycle[0m [2;31m+[0m [31mPanics will degrade application performance.[0m
+2026-04-20T21:16:43.869574983Z [inf]  [2;39m2026-04-20T21:16:42.050Z[0m [31mERROR[0m [39mrocket::lifecycle[0m [2;31m+[0m [31mValues of either type can be returned directly from handlers.[0m
+2026-04-20T21:16:43.869581384Z [inf]  [2;39m2026-04-20T21:16:42.050Z[0m [31mERROR[0m [39mrocket::lifecycle[0m [2;31m+[0m [1;31mhandler[0m: [39mlogin[0m
+2026-04-20T21:16:45.336689786Z [err]  
+2026-04-20T21:16:45.336693134Z [err]  thread 'rocket-worker-thread' (4) panicked at pointercrate-user/src/config.rs:19:21:
+2026-04-20T21:16:45.336699744Z [inf]  [2;39m2026-04-20T21:16:45.186Z[0m [31mERROR[0m [39mrocket::lifecycle[0m [1;31m›[0m [31mhandler panicked[0m
+2026-04-20T21:16:45.336703274Z [inf]  [2;39m2026-04-20T21:16:45.186Z[0m [31mERROR[0m [39mrocket::lifecycle[0m [2;31m+[0m [31mThis is an application bug.[0m
+2026-04-20T21:16:45.336713471Z [inf]  [2;39m2026-04-20T21:16:45.186Z[0m [31mERROR[0m [39mrocket::lifecycle[0m [2;31m+[0m [31mUnwinding, the result of a panic, is an expensive operation.[0m
+2026-04-20T21:16:45.336716644Z [inf]  [2;39m2026-04-20T21:16:45.186Z[0m [31mERROR[0m [39mrocket::lifecycle[0m [2;31m+[0m [31mPanics will degrade application performance.[0m
+2026-04-20T21:16:45.336719436Z [inf]  [2;39m2026-04-20T21:16:45.186Z[0m [31mERROR[0m [39mrocket::lifecycle[0m [2;31m+[0m [31mInstead of panicking, return `Option` and/or `Result`.[0m
+2026-04-20T21:16:45.336722465Z [inf]  [2;39m2026-04-20T21:16:45.186Z[0m [31mERROR[0m [39mrocket::lifecycle[0m [2;31m+[0m [31mValues of either type can be returned directly from handlers.[0m
+2026-04-20T21:16:45.336725297Z [inf]  [2;39m2026-04-20T21:16:45.186Z[0m [31mERROR[0m [39mrocket::lifecycle[0m [2;31m+[0m [31mA panic is treated as an internal server error.[0m

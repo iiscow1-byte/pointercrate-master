@@ -11,4 +11,4 @@ COPY --from=builder /app/pointercrate-core-pages/static ./pointercrate-core-page
 COPY --from=builder /app/pointercrate-demonlist-pages/static ./pointercrate-demonlist-pages/static
 COPY --from=builder /app/pointercrate-user-pages/static ./pointercrate-user-pages/static
 COPY --from=builder /app/pointercrate-example/static ./pointercrate-example/static
-CMD ROCKET_PORT=$PORT ROCKET_ADDRESS=0.0.0.0 ./server
+CMD sh -c 'echo -n "$SECRET" > /app/.secret && ROCKET_PORT=$PORT ROCKET_ADDRESS=0.0.0.0 ./server'
