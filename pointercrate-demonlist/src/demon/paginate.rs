@@ -113,6 +113,7 @@ impl Paginatable<DemonIdPagination> for Demon {
                 },
                 level_id: row.get::<Option<i64>, _>("level_id").map(|id| id as u64),
                 tier: row.get("tier"),
+                fps: row.get("fps"),
             })
         }
 
@@ -226,6 +227,7 @@ impl Paginatable<DemonPositionPagination> for Demon {
                 },
                 level_id: row.get::<Option<i64>, _>("level_id").map(|id| id as u64),
                 tier: row.get("tier"),
+                fps: row.get("fps"),
             })
         }
 
