@@ -20,7 +20,7 @@ demon-ngsong = Newgrounds Song
 
 demon-fps = FPS
 
-demon-score = Points awarded ({$percent}%)
+demon-score = Points awarded
 
 demon-video = Verification Video
     .validator-typemismatch = Please enter a valid URL
