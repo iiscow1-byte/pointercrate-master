@@ -106,6 +106,9 @@ impl Render for NavigationBar {
                     @if let Some(locales_dropdown) = locale_selection_dropdown() {
                         (locales_dropdown)
                     }
+                    div#dark-mode-toggle.nav-item.nav-nohide title="Toggle dark mode" aria-label="Toggle dark mode" {
+                        i.fas.fa-moon {}
+                    }
                     div.nav-item.collapse-button.nav-nohide {
                         div.hamburger.hover {
                             input type="checkbox"{}
