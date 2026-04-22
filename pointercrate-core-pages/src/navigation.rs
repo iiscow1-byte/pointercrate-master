@@ -97,7 +97,7 @@ impl Render for NavigationBar {
                 nav.center.collapse.underlined.see-through {
                     div.nav-icon.nav-nohide style = "margin-right: auto" {
                         a href = "/" aria-label = "Go to homepage" {
-                            img src = (self.logo_path) style="height:15px" alt="Logo";
+                            span style = "font-weight: 800; font-size: 1.1em; letter-spacing: 0.05em" { "MSCL" }
                         }
                     }
                     @for item in &self.items {

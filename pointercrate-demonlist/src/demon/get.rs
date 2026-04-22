@@ -147,6 +147,7 @@ struct FetchedDemon {
     verifier_banned: bool,
     level_id: Option<i64>,
     tier: Option<i16>,
+    fps: Option<i16>,
 }
 
 impl From<FetchedDemon> for Demon {
@@ -172,6 +173,7 @@ impl From<FetchedDemon> for Demon {
             },
             level_id: fetched.level_id.map(|id| id as u64),
             tier: fetched.tier,
+            fps: fetched.fps,
         }
     }
 }
@@ -214,6 +216,7 @@ pub async fn list_at(connection: &mut PgConnection, at: NaiveDateTime) -> Result
                 },
                 level_id: row.level_id.map(|i| i as u64),
                 tier: row.tier,
+                fps: None,
             },
             position_now: row.current_position,
         })

@@ -400,6 +400,20 @@ impl DemonPage {
                             }
                         }
                     }
+                    @if let Some(level_id) = self.data.demon.level_id {
+                        span {
+                            b { (tr("demon-id")) }
+                            br;
+                            (level_id)
+                        }
+                    }
+                    @if let Some(fps) = self.data.demon.fps {
+                        span {
+                            b { (tr("demon-fps")) }
+                            br;
+                            (fps)
+                        }
+                    }
                     @if position <= list_config::extended_list_size() {
                         span {
                             b {
@@ -407,15 +421,6 @@ impl DemonPage {
                             }
                             br;
                             (format!("{:.2}", score100))
-                        }
-                    }
-                    @if position <= list_config::list_size(){
-                        span {
-                            b {
-                                (trp!("demon-score", "percent" = self.data.demon.requirement))
-                            }
-                            br;
-                            (format!("{:.2}", score_requirement))
                         }
                     }
                 }

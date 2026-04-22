@@ -1,0 +1,1 @@
+ALTER TABLE demons DROP COLUMN fps;
