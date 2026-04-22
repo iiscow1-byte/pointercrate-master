@@ -301,8 +301,6 @@ impl DemonPage {
                                 ))
                             }
                         }
-                        " | id "
-                        (self.data.demon.base.id)
                     }
                 }
                 @if let Some(ref level) = self.integration {
