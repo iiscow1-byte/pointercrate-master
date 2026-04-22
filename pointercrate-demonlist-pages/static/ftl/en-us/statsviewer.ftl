@@ -43,7 +43,7 @@ statsviewer-nation = Nations
             *[other] players
         } in this country:
 
-demon-sorting-panel = Demon Sorting
+demon-sorting-panel = Challenge Sorting
     .info = The order in which completed Challenges should be listed
 
     .option-alphabetical = Alphabetical
