@@ -407,11 +407,12 @@ impl DemonPage {
                             (level_id)
                         }
                     }
-                    @if let Some(fps) = self.data.demon.fps {
-                        span {
-                            b { (tr("demon-fps")) }
-                            br;
-                            (fps)
+                    span {
+                        b { (tr("demon-fps")) }
+                        br;
+                        @match self.data.demon.fps {
+                            Some(fps) => (fps),
+                            None => "any",
                         }
                     }
                     @if position <= list_config::extended_list_size() {
