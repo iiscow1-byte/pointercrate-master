@@ -406,6 +406,29 @@ export function initialize() {
   demonManager = new DemonManager();
   demonManager.initialize();
 
+  let deleteButton = document.getElementById("demon-delete");
+  if (deleteButton) {
+    deleteButton.addEventListener("click", () => {
+      if (!demonManager.currentObject) return;
+      if (
+        !confirm(
+          "Are you sure you want to delete the demon '" +
+            demonManager.currentObject.name +
+            "'? This will permanently remove it along with all its records and creators."
+        )
+      )
+        return;
+      del("/api/v2/demons/" + demonManager.currentObject.id + "/", {
+        "If-Match": demonManager.currentEtag,
+      })
+        .then(() => {
+          demonManager.output.hideContent();
+          demonManager.refresh();
+        })
+        .catch(displayError(demonManager.output));
+    });
+  }
+
   let addDemonForm = setupDemonAdditionForm();
 
   let creatorFormDialog = new FormDialog("demon-add-creator-dialog");

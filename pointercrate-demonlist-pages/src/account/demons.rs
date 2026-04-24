@@ -138,6 +138,7 @@ impl AccountPageTab for DemonsTab {
 
                                     }
                                 }
+                                span.button.red.hover #demon-delete style = "margin: 15px auto 0px" { "Delete demon" }
                             }
                         }
                     }

@@ -53,6 +53,10 @@ impl FullDemon {
             ..self
         })
     }
+
+    pub async fn delete(self, connection: &mut PgConnection) -> Result<()> {
+        self.demon.delete(connection).await
+    }
 }
 
 impl Demon {
@@ -202,6 +206,38 @@ impl Demon {
             .await?;
 
         self.level_id = validated;
+
+        Ok(())
+    }
+
+    pub async fn delete(self, connection: &mut PgConnection) -> Result<()> {
+        info!("Deleting demon {}", self);
+
+        sqlx::query!("DELETE FROM records WHERE demon = $1", self.base.id)
+            .execute(&mut *connection)
+            .await?;
+
+        sqlx::query!("DELETE FROM creators WHERE demon = $1", self.base.id)
+            .execute(&mut *connection)
+            .await?;
+
+        sqlx::query!("DELETE FROM demon_modifications WHERE demon = $1::CITEXT", self.base.name)
+            .execute(&mut *connection)
+            .await?;
+
+        sqlx::query!("DELETE FROM demon_additions WHERE name = $1::CITEXT", self.base.name)
+            .execute(&mut *connection)
+            .await?;
+
+        sqlx::query!("DELETE FROM demons WHERE id = $1", self.base.id)
+            .execute(&mut *connection)
+            .await?;
+
+        sqlx::query!("UPDATE demons SET position = position - 1 WHERE position > $1", self.base.position)
+            .execute(&mut *connection)
+            .await?;
+
+        recompute_scores(connection).await?;
 
         Ok(())
     }

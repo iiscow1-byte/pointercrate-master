@@ -125,6 +125,22 @@ pub async fn post_creator(demon_id: i32, mut auth: Auth<ApiToken>, creator: Json
 }
 
 #[localized]
+#[rocket::delete("/<demon_id>/")]
+pub async fn delete(demon_id: i32, mut auth: Auth<ApiToken>, precondition: Precondition) -> Result<Status> {
+    auth.require_permission(LIST_ADMINISTRATOR)?;
+
+    let demon = FullDemon::by_id(demon_id, &mut auth.connection)
+        .await?
+        .require_match(precondition)?;
+
+    demon.delete(&mut auth.connection).await?;
+
+    auth.commit().await?;
+
+    Ok(Status::NoContent)
+}
+
+#[localized]
 #[rocket::delete("/<demon_id>/creators/<player_id>/")]
 pub async fn delete_creator(demon_id: i32, player_id: i32, mut auth: Auth<ApiToken>) -> Result<Status> {
     auth.require_permission(LIST_MODERATOR)?;
