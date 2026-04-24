@@ -186,6 +186,18 @@ tr:nth-child(even) {
   }
 }
 
+[data-theme="dark"] tr {
+  background: #1e2030;
+}
+
+[data-theme="dark"] tr:nth-child(even) {
+  background: #252535;
+}
+
+[data-theme="dark"] #stats-viewer-pagination li i {
+  color: #aaa;
+}
+
 .ct-series-a .ct-line,
 .ct-series-a .ct-point {
   stroke: #0881c6;

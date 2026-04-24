@@ -69,6 +69,7 @@ impl FullDemon {
             verifier,
             level_id,
             tier: data.tier,
+            fps: None,
         };
 
         let mut creators = Vec::new();

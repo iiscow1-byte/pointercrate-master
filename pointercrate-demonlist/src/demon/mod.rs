@@ -60,6 +60,9 @@ pub struct Demon {
 
     /// Difficulty tier for this demon (0-45), displayed as an icon on the list
     pub tier: Option<i16>,
+
+    /// FPS the level was verified at
+    pub fps: Option<i16>,
 }
 
 /// Absolutely minimal representation of a demon to be sent when a demon is part of another object

@@ -1,6 +1,6 @@
 ## Demon information, including information fetched by dash-rs
 ## Fields included in forms may have validators
-demon-name = Demon Name
+demon-name = Challenge Name
     .validator-valuemissing = Please specify a name
 
 demon-password = Level Password
@@ -18,7 +18,9 @@ demon-gdversion = Created In
 
 demon-ngsong = Newgrounds Song
 
-demon-score = Challenge list score ({$percent}%)
+demon-fps = FPS
+
+demon-score = Points awarded
 
 demon-video = Verification Video
     .validator-typemismatch = Please enter a valid URL
@@ -84,8 +86,8 @@ movements-reason = Reason
     .added = Added to list
     .addedabove = { $demon } was added above
     .moved = Moved
-    .movedabove = { $demon } was moved up past this demon
-    .movedbelow = { $demon } was moved down past this demon
+    .movedabove = { $demon } was moved up past this challenge
+    .movedbelow = { $demon } was moved down past this challenge
 
 ## Records table
 demon-records = Records
@@ -106,13 +108,13 @@ demon-records-total = {$num-records} { $num-records ->
 }
 
 ## Demons tab in user area
-demons = Demons
-demon-manager = Demon Manager
+demons = Challenges
+demon-manager = Challenge Manager
 
 demon-listed = {$demon} (ID: {$demon-id})
     .publisher = by {$publisher}
 
-demon-viewer = Demon #
+demon-viewer = Challenge #
     .welcome = Click on a Challenge on the left to get started!
 
     .video-field = { demon-video }:
@@ -149,7 +151,7 @@ demon-video-dialog = Change verification video link
     .video-field = Video link:
     .submit = Edit
 
-demon-name-dialog = Change demon name
+demon-name-dialog = Change challenge name
     .info = Change the name of this Challenge. Multiple Challenges with the same name ARE supported!
     .name-field = Name:
     .submit = Edit
@@ -163,21 +165,21 @@ demon-thumbnail-dialog = Change thumbnail link
     .thumbnail-field = Thumbnail link:
     .submit = Edit
 
-demon-position-dialog = Change demon position
+demon-position-dialog = Change challenge position
     .info = Change the position of this Challenge. Has be be greater than 0 and be at most the current list size.
     .position-field = Position:
     .submit = Edit
 
-demon-requirement-dialog = Change demon requirement
+demon-requirement-dialog = Change challenge requirement
     .info = Change the record requirement for this Challenge. Has be lie between 0 and and 100 (inclusive).
     .requirement-field = Requirement:
     .submit = Edit
 
-demon-publisher-dialog = Change demon publisher
+demon-publisher-dialog = Change challenge publisher
     .info = Type the new publisher of the Challenge into the text field below. If the player already exists, it will appear as a suggestion below the text field. Then click the button below.
     .submit = Edit
 
-demon-verifier-dialog = Change demon verifier
+demon-verifier-dialog = Change challenge verifier
     .info = Type the new verifier of the Challenge into the text field below. If the player already exists, it will appear as a suggestion below the text field. Then click the button below.
     .submit = Edit
 
