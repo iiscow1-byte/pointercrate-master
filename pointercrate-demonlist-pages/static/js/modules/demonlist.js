@@ -168,14 +168,6 @@ export function initializeRecordSubmitter(submitApproved = false) {
   );
 
   video.addValidator(
-    valueMissing,
-    tr(
-      "demonlist",
-      "submitter",
-      "record-submission.video-validator-valuemissing"
-    )
-  );
-  video.addValidator(
     typeMismatch,
     tr(
       "demonlist",
@@ -183,6 +175,15 @@ export function initializeRecordSubmitter(submitApproved = false) {
       "record-submission.video-validator-typemismatch"
     )
   );
+
+  let videoWarning = document.getElementById("id_video_warning");
+  if (videoWarning) {
+    let updateWarning = () => {
+      videoWarning.style.display = video.value ? "none" : "block";
+    };
+    video.input.addEventListener("input", updateWarning);
+    updateWarning();
+  }
 
   rawFootage.addValidator(
     typeMismatch,

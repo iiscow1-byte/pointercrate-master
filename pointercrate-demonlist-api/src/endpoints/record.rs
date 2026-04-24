@@ -93,7 +93,7 @@ pub async fn submit(
         None => (false, None),
     };
 
-    if !status_is_submitted || !submission.has_video() {
+    if !status_is_submitted {
         match auth {
             Some(ref auth) => auth.require_permission(LIST_HELPER)?,
             None => return Err(CoreError::Unauthorized.into()),

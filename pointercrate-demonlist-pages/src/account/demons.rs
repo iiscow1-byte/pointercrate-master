@@ -104,6 +104,13 @@ impl AccountPageTab for DemonsTab {
                                         br;
                                         span #demon-tier {}
                                     }
+                                    span{
+                                        b {
+                                            i.fa.fa-pencil-alt.clickable #demon-level-id-pen aria-hidden = "true" {} " Level ID"
+                                        }
+                                        br;
+                                        span #demon-level-id {}
+                                    }
                                 }
                                 div.stats-container.flex.space  {
                                     span{
@@ -146,6 +153,7 @@ impl AccountPageTab for DemonsTab {
             (change_tier_dialog())
             (change_video_dialog())
             (change_thumbnail_dialog())
+            (change_level_id_dialog())
             (change_verifier_dialog())
             (change_publisher_dialog())
             (add_creator_dialog())
@@ -321,10 +329,43 @@ fn change_thumbnail_dialog() -> Markup {
                     p.info-green.output {}
                     span.form-input #demon-thumbnail-edit {
                         label for = "thumbnail" {(tr("demon-thumbnail-dialog.thumbnail-field")) }
-                        input required="" name = "thumbnail" type = "url";
+                        input name = "thumbnail" type = "url";
+                        p.error {}
+                    }
+                    p style = "max-width: 400px; margin-top: 10px" {
+                        "Or upload an image file to use as the thumbnail:"
+                    }
+                    span.form-input #demon-thumbnail-upload {
+                        input #demon-thumbnail-file type = "file" accept = "image/*";
                         p.error {}
                     }
                     input.button.blue.hover type = "submit" style = "margin: 15px auto 0px;" value = (tr("demon-thumbnail-dialog.submit"));
+                }
+            }
+        }
+    }
+}
+
+fn change_level_id_dialog() -> Markup {
+    html! {
+        div.overlay.closable {
+            div.dialog #demon-level-id-dialog {
+                span.plus.cross.hover {}
+                h2.underlined.pad {
+                    "Edit Level ID"
+                }
+                p style = "max-width: 400px" {
+                    "Set the Geometry Dash level ID for this demon, or leave blank to remove it."
+                }
+                form.flex.col novalidate = "" {
+                    p.info-red.output {}
+                    p.info-green.output {}
+                    span.form-input #demon-level-id-edit {
+                        label for = "level_id" { "Level ID" }
+                        input name = "level_id" type = "number" min = "1";
+                        p.error {}
+                    }
+                    input.button.blue.hover type = "submit" style = "margin: 15px auto 0px;" value = "Edit Level ID";
                 }
             }
         }

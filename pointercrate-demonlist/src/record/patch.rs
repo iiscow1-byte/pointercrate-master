@@ -205,13 +205,6 @@ impl FullRecord {
             return Ok(());
         }
 
-        if let Some(row) = sqlx::query!(r#"SELECT id FROM records WHERE video = $1"#, video.to_string())
-            .fetch_optional(&mut *connection)
-            .await?
-        {
-            return Err(DemonlistError::DuplicateVideo { id: row.id });
-        }
-
         sqlx::query!("UPDATE records SET video = $1::text WHERE id = $2", video, self.id)
             .execute(connection)
             .await?;

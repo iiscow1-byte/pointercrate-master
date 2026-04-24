@@ -52,6 +52,8 @@ export class DemonManager extends FilteredPaginator {
 
     this._tier = document.getElementById("demon-tier");
 
+    this._level_id = document.getElementById("demon-level-id");
+
     this._creators = document.getElementById("demon-creators");
 
     let videoForm = setupFormDialogEditor(
@@ -72,10 +74,22 @@ export class DemonManager extends FilteredPaginator {
       "demon-thumbnail-edit": {
         [tr("demonlist", "demon", "demon-thumbnail.validator-typemismatch")]:
           typeMismatch,
-        [tr("demonlist", "demon", "demon-thumbnail.validator-valuemissing")]:
-          valueMissing,
       },
     });
+
+    let thumbnailFileInput = document.getElementById("demon-thumbnail-file");
+    let thumbnailUrlInput = thumbnailForm.input("demon-thumbnail-edit");
+    if (thumbnailFileInput) {
+      thumbnailFileInput.addEventListener("change", () => {
+        let file = thumbnailFileInput.files[0];
+        if (!file) return;
+        let reader = new FileReader();
+        reader.onload = () => {
+          thumbnailUrlInput.value = reader.result;
+        };
+        reader.readAsDataURL(file);
+      });
+    }
 
     for (let errorCode of [42222, 42223, 42224, 42225]) {
       videoForm.addErrorOverride(errorCode, "demon-video-edit");
@@ -170,6 +184,24 @@ export class DemonManager extends FilteredPaginator {
           stepMismatch,
       },
     });
+
+    let levelIdForm = setupFormDialogEditor(
+      new PaginatorEditorBackend(this, false),
+      "demon-level-id-dialog",
+      "demon-level-id-pen",
+      this.output
+    );
+
+    levelIdForm.addValidators({
+      "demon-level-id-edit": {
+        [tr("demonlist", "demon", "demon-id.validator-rangeunderflow")]:
+          rangeUnderflow,
+        [tr("demonlist", "demon", "demon-position.validator-badinput")]:
+          badInput,
+        [tr("demonlist", "demon", "demon-position.validator-stepmismatch")]:
+          stepMismatch,
+      },
+    });
   }
 
   onReceive(response) {
@@ -184,6 +216,7 @@ export class DemonManager extends FilteredPaginator {
     this._position.innerText = this.currentObject.position;
     this._requirement.innerText = this.currentObject.requirement;
     this._tier.innerText = this.currentObject.tier ?? "None";
+    this._level_id.innerText = this.currentObject.level_id ?? "None";
 
     var embeddedVideo = embedVideo(this.currentObject.video);
 

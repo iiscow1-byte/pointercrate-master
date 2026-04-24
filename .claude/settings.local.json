@@ -2,7 +2,11 @@
   "permissions": {
     "allow": [
       "Bash(xargs grep *)",
-      "Bash(node -e ' *)"
+      "Bash(node -e ' *)",
+      "Bash(cargo check *)",
+      "PowerShell(cargo check --message-format=short 2>&1)",
+      "PowerShell(Get-Command cargo -ErrorAction SilentlyContinue; $env:PATH -split ';' | Where-Object {$_ -match 'cargo|rust'})",
+      "PowerShell(Test-Path \"$env:USERPROFILE\\\\.cargo\\\\bin\\\\cargo.exe\"; Test-Path \"C:\\\\Program Files\\\\Rust\\\\cargo.exe\")"
     ]
   }
 }

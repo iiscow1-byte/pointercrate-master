@@ -115,21 +115,6 @@ impl NormalizedSubmission {
 
         debug!("Submission is valid, checking for duplicates!");
 
-        // Search for existing records. If a video exists, we also check if a record with
-        // exactly that video exists.
-
-        if let Some(ref video) = self.video {
-            if let Some(row) = sqlx::query!(r#"SELECT id, status_::text as "status_!: String" FROM records WHERE video = $1"#, video.to_string())
-                .fetch_optional(&mut *connection) // FIXME(sqlx)
-                .await?
-            {
-                return Err(DemonlistError::SubmissionExists {
-                    existing: row.id,
-                    status: RecordStatus::from_sql(&row.status_),
-                });
-            }
-        }
-
         let existing = sqlx::query!(
             r#"SELECT id, status_::text as "status_!: String" FROM records WHERE demon = $1 AND player = $2 AND (status_ = 'REJECTED' OR status_ = 
              'UNDER_CONSIDERATION' OR (status_ = 'APPROVED' AND progress >= $3)) LIMIT 1"#,

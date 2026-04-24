@@ -70,8 +70,11 @@ impl Render for RecordSubmitter<'_> {
                         (tr("record-submission.video-note"))
                     }
                     span.form-input.flex.col #id_video {
-                        input type = "url" name = "video" required = "" placeholder = (tr("record-submission.video-placeholder")) ;
+                        input type = "url" name = "video" placeholder = (tr("record-submission.video-placeholder")) ;
                         p.error {}
+                        p.info-yellow #id_video_warning style = "display: none; color: #cf8a00" {
+                            "Warning: submitting without a video will probably not be accepted."
+                        }
                     }
                     h3 {
                         (tr("record-submission.raw-footage"))
