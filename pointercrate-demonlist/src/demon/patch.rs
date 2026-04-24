@@ -221,14 +221,6 @@ impl Demon {
             .execute(&mut *connection)
             .await?;
 
-        sqlx::query!("DELETE FROM demon_modifications WHERE demon::text = $1", self.base.name)
-            .execute(&mut *connection)
-            .await?;
-
-        sqlx::query!("DELETE FROM demon_additions WHERE name::text = $1", self.base.name)
-            .execute(&mut *connection)
-            .await?;
-
         sqlx::query!("DELETE FROM demons WHERE id = $1", self.base.id)
             .execute(&mut *connection)
             .await?;
