@@ -1,0 +1,14 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "DELETE FROM creators WHERE demon = $1",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Int4"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "610cc1b836a99e6872d0b6422feb3e70a055f889f38a9299bec7a5277ab5b1be"
+}

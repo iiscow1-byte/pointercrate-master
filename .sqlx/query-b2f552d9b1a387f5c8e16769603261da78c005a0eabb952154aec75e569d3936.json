@@ -1,0 +1,14 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "DELETE FROM demon_modifications WHERE demon::text = $1",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Text"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "b2f552d9b1a387f5c8e16769603261da78c005a0eabb952154aec75e569d3936"
+}

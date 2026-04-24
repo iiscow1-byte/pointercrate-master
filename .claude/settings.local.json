@@ -6,7 +6,9 @@
       "Bash(cargo check *)",
       "PowerShell(cargo check --message-format=short 2>&1)",
       "PowerShell(Get-Command cargo -ErrorAction SilentlyContinue; $env:PATH -split ';' | Where-Object {$_ -match 'cargo|rust'})",
-      "PowerShell(Test-Path \"$env:USERPROFILE\\\\.cargo\\\\bin\\\\cargo.exe\"; Test-Path \"C:\\\\Program Files\\\\Rust\\\\cargo.exe\")"
+      "PowerShell(Test-Path \"$env:USERPROFILE\\\\.cargo\\\\bin\\\\cargo.exe\"; Test-Path \"C:\\\\Program Files\\\\Rust\\\\cargo.exe\")",
+      "PowerShell($s = \"DELETE FROM records WHERE demon = `$1 AND progress < `$2\"; $hasher = [System.Security.Cryptography.SHA256]::Create\\(\\); $bytes = [System.Text.Encoding]::UTF8.GetBytes\\($s\\); $hash = $hasher.ComputeHash\\($bytes\\); [System.BitConverter]::ToString\\($hash\\).Replace\\(\"-\", \"\"\\).ToLower\\(\\))",
+      "Bash(xargs -I {} cat {})"
     ]
   }
 }
