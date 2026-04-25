@@ -23,6 +23,8 @@ rocket = { workspace = true }
 unic-langid = { version = "0.9.5", features = ["macros"] }
 reqwest = "0.13.2"
 serde = "1.0.228"
+log = "0.4"
+sqlx = { workspace = true }
 
 [features]
 oauth2 = ["pointercrate-user-api/oauth2", "pointercrate-user-pages/oauth2"]

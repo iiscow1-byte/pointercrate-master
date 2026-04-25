@@ -21,6 +21,8 @@ use std::net::IpAddr;
 use unic_langid::lang;
 use unic_langid::subtags::Language;
 
+mod import;
+
 /// A catcher for 404 errors (e.g. when a user tried to navigate to a URL that
 /// does not exist)
 ///
@@ -106,6 +108,10 @@ async fn rocket() -> _ {
     // Initialize a database connection pool to the database specified by the
     // DATABASE_URL environment variable
     let pool = PointercratePool::init().await;
+
+    // One-time TSV import. No-op if the demons table already has any rows, or if
+    // the "Placing sheet - Sheet1.tsv" file is missing from the working directory.
+    import::run_import_if_needed(&pool.clone_inner()).await;
 
     // Set up the HTTP server
     let rocket = rocket::build()
