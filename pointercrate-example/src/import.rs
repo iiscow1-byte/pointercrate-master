@@ -9,36 +9,12 @@ const TSV_PATH: &str = "Placing sheet - Sheet1.tsv";
 const VICTOR_COLUMN_NAMES: [&str; 6] = ["SilkGMD", "HLHL", "ava", "GERG", "Emea", "Cinder"];
 
 pub async fn run_import_if_needed(pool: &Pool<Postgres>) {
-    let mut conn = match pool.acquire().await {
-        Ok(c) => c,
-        Err(e) => {
-            warn!("[import] could not acquire db connection: {}", e);
-            return;
-        },
-    };
-
-    let already_populated: bool = match sqlx::query("SELECT EXISTS(SELECT 1 FROM demons LIMIT 1) AS e")
-        .fetch_one(&mut *conn)
-        .await
-    {
-        Ok(r) => r.try_get::<bool, _>("e").unwrap_or(true),
-        Err(e) => {
-            warn!("[import] could not check demons table: {}", e);
-            return;
-        },
-    };
-
-    if already_populated {
-        info!("[import] demons table is not empty, skipping TSV import");
-        return;
-    }
-
     if !Path::new(TSV_PATH).exists() {
         warn!("[import] TSV file {:?} not found, skipping", TSV_PATH);
         return;
     }
 
-    info!("[import] demons table is empty -- running one-time TSV import from {:?}", TSV_PATH);
+    info!("[import] running TSV import from {:?} (levels already in the db are skipped)", TSV_PATH);
 
     let raw = match fs::read_to_string(TSV_PATH) {
         Ok(s) => s,
@@ -49,9 +25,6 @@ pub async fn run_import_if_needed(pool: &Pool<Postgres>) {
     };
 
     let rows = parse_tsv(&raw);
-
-    // Drop the probing connection before opening a fresh transaction.
-    drop(conn);
 
     let mut tx = match pool.begin().await {
         Ok(t) => t,
@@ -74,8 +47,8 @@ pub async fn run_import_if_needed(pool: &Pool<Postgres>) {
                 return;
             }
             info!(
-                "[import] done. inserted {} demons, {} records, created {} new players",
-                stats.demons, stats.records, stats.players
+                "[import] done. inserted {} demons ({} skipped as existing), {} records, created {} new players",
+                stats.demons, stats.skipped, stats.records, stats.players
             );
         },
         Err(e) => {
@@ -88,6 +61,7 @@ pub async fn run_import_if_needed(pool: &Pool<Postgres>) {
 #[derive(Default)]
 struct Stats {
     demons: u32,
+    skipped: u32,
     records: u32,
     players: u32,
 }
@@ -284,16 +258,32 @@ fn levenshtein(a: &str, b: &str) -> usize {
 async fn import_rows(rows: &[ParsedRow], conn: &mut PgConnection) -> sqlx::Result<Stats> {
     let mut stats = Stats::default();
     let mut registry = PlayerRegistry::new();
-
-    // One shared submitter for the entire import.
-    let submitter_row = sqlx::query(
-        "INSERT INTO submitters (ip_address) VALUES (cast('127.0.0.1' as inet)) RETURNING submitter_id",
-    )
-    .fetch_one(&mut *conn)
-    .await?;
-    let submitter_id: i32 = submitter_row.try_get("submitter_id")?;
+    // Lazy: don't create a submitter row on restarts where every level is already imported.
+    let mut submitter_id: Option<i32> = None;
 
     for row in rows {
+        // Skip rows whose level is already in the database. We match primarily on level_id (the
+        // GD id, globally unique), and fall back to name + position for rows that have no id.
+        let existing: Option<i32> = if let Some(level_id) = row.level_id {
+            sqlx::query("SELECT id FROM demons WHERE level_id = $1")
+                .bind(level_id)
+                .fetch_optional(&mut *conn)
+                .await?
+                .map(|r| r.try_get::<i32, _>("id").unwrap_or(0))
+        } else {
+            sqlx::query("SELECT id FROM demons WHERE name = $1::CITEXT AND position = $2")
+                .bind(&row.name)
+                .bind(row.position)
+                .fetch_optional(&mut *conn)
+                .await?
+                .map(|r| r.try_get::<i32, _>("id").unwrap_or(0))
+        };
+        if existing.is_some() {
+            info!("[import] skipping {:?} (placement {}): already present in the db", row.name, row.position);
+            stats.skipped += 1;
+            continue;
+        }
+
         let publisher_id = registry.resolve(&row.creators[0], &mut *conn, &mut stats).await?;
         let verifier_id = registry.resolve(&row.verifier, &mut *conn, &mut stats).await?;
 
@@ -362,12 +352,26 @@ async fn import_rows(rows: &[ParsedRow], conn: &mut PgConnection) -> sqlx::Resul
                 continue;
             }
 
+            let sid = match submitter_id {
+                Some(id) => id,
+                None => {
+                    let row = sqlx::query(
+                        "INSERT INTO submitters (ip_address) VALUES (cast('127.0.0.1' as inet)) RETURNING submitter_id",
+                    )
+                    .fetch_one(&mut *conn)
+                    .await?;
+                    let id: i32 = row.try_get("submitter_id")?;
+                    submitter_id = Some(id);
+                    id
+                },
+            };
+
             sqlx::query(
                 "INSERT INTO records (progress, video, status_, player, submitter, demon) \
                  VALUES (100, NULL, 'APPROVED', $1, $2, $3) ON CONFLICT DO NOTHING",
             )
             .bind(player_id)
-            .bind(submitter_id)
+            .bind(sid)
             .bind(demon_id)
             .execute(&mut *conn)
             .await?;
@@ -375,10 +379,12 @@ async fn import_rows(rows: &[ParsedRow], conn: &mut PgConnection) -> sqlx::Resul
         }
     }
 
-    // Recompute cached scores. These are plain SELECT-of-a-function calls.
-    sqlx::query("SELECT recompute_player_scores();").execute(&mut *conn).await?;
-    sqlx::query("SELECT recompute_nation_scores();").execute(&mut *conn).await?;
-    sqlx::query("SELECT recompute_subdivision_scores();").execute(&mut *conn).await?;
+    // Only recompute cached scores if we actually changed something.
+    if stats.demons > 0 || stats.records > 0 {
+        sqlx::query("SELECT recompute_player_scores();").execute(&mut *conn).await?;
+        sqlx::query("SELECT recompute_nation_scores();").execute(&mut *conn).await?;
+        sqlx::query("SELECT recompute_subdivision_scores();").execute(&mut *conn).await?;
+    }
 
     Ok(stats)
 }
