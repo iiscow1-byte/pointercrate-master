@@ -319,69 +319,6 @@ impl DemonPage {
                 }
                 div.underlined.pad.flex.wrap #level-info {
                     @if let Some(ref level) = self.integration {
-                        span {
-                            b {
-                                (tr("demon-password"))
-                            }
-                            br;
-                            (level.level_data.password.as_processed().map(|pw| pw.to_string()).unwrap_or("Unknown".to_string()))
-                        }
-                        span {
-                            b {
-                                (tr("demon-id"))
-                            }
-                            br;
-                            (level.level_id)
-                        }
-                        span {
-                            b {
-                                (tr("demon-length"))
-                            }
-                            br;
-                            @match level.level_data.level_data {
-                                Thunk::Processed(ref objects) => {
-                                    @let length_in_seconds = objects.length_in_seconds();
-
-                                    (format!("{}m:{:02}s", (length_in_seconds as i32)/ 60, (length_in_seconds as i32) % 60))
-                                }
-                                _ => "unreachable!()"
-                            }
-                        }
-                        span {
-                            b {
-                                (tr("demon-objects"))
-                            }
-                            br;
-                            @match level.level_data.level_data {
-                                Thunk::Processed(ref objects) => (objects.objects.len()),
-                                _ => "unreachable!()"
-                            }
-                        }
-                        span {
-                            b {
-                                (tr("demon-difficulty"))
-                            }
-                            br;
-                            @match level.difficulty {
-                                LevelRating::NotAvailable => "Unrated",
-                                LevelRating::Demon(demon_rating) => @match demon_rating {
-                                    DemonRating::Easy => "Easy Demon",
-                                    DemonRating::Medium => "Medium Demon",
-                                    DemonRating::Hard => "Hard Demon",
-                                    DemonRating::Insane => "Insane Demon",
-                                    DemonRating::Extreme => "Extreme Demon",
-                                    _ => "???"
-                                },
-                                _ => "Level not rated demon, list mods fucked up"
-                            }
-                        }
-                        span {
-                            b {
-                                (tr("demon-gdversion"))
-                            }
-                            br;
-                            (level.gd_version)
-                        }
                         @if let Some(ref song) = level.custom_song {
                             span style = "width: 100%"{
                                 b {
