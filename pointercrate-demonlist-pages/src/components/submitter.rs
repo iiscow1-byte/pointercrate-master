@@ -105,9 +105,6 @@ impl Render for RecordSubmitter<'_> {
                     p {
                         (trp_html!(
                             "record-submission.guidelines",
-                            "guidelines-link" = html! {
-                                a.link href = "/guidelines" { (tr("record-submission.guidelines-link")) }
-                            }
                         ))
                     }
                     input.button.blue.hover type = "submit" style = "margin: 15px auto 0px;" value=(tr("record-submission.submit"));

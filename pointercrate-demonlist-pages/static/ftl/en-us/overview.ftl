@@ -35,8 +35,7 @@ helpers-panel = List Helpers
     .info = Contact these people if you have any questions regarding why a specific record was rejected. Do not needlessly bug them about checking submissions though!
 
 guidelines-panel = Guidelines
-    .info = All Challengelist operations are carried out in accordance to our guidelines. Be sure to check them before submitting a record to ensure a flawless experience!
-    .button = Read the guidelines!
+    .info = A challenge may only be submitted if:\n- It is legitimately cleared without cheats\n- The level does not require an FPS above 360 in 2.1 to beat\n- The level is under 30 seconds in lengt\n- The level is harder then Toighty Wav\n- User levels (not made by THQ members) have less strict guidelines\n- For now, only Silk, HLHL, Ava, and emea are allowed to submit on the list, to keep the list unique. This can change in the future\n- Click Between Frames and Click Between Steps is allowed on the list, installable through Geode.
 
 submission-panel = Submit Records
     .info = Please do not submit nonsense, it only makes it harder for us all and will get you banned. Also note that the form rejects duplicate submissions.
