@@ -233,7 +233,7 @@ impl DemonPage {
                                 i class="fa fa-chevron-left" style="padding-right: 5%" {}
                             }
                         }
-                        (name)
+                        (format!("#{} - {}", position, name))
                         @if position as usize != self.demonlist.len() {
                             a href=(format!("/demonlist/{:?}/", position + 1)) {
                                 i class="fa fa-chevron-right" style="padding-left: 5%" {}
