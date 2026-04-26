@@ -107,6 +107,7 @@ impl Render for RecordSubmitter<'_> {
                             "record-submission.guidelines",
                         ))
                     }
+                    input.button.blue.hover type = "submit" style = "margin: 15px auto 0px;" value=(tr("record-submission.submit"));
                 }
             }
         }
