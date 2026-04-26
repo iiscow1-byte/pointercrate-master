@@ -1,0 +1,1 @@
+-- No-op: the up migration only normalizes positions; original gap state cannot be reconstructed.

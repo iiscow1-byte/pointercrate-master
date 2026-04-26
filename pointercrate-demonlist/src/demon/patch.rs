@@ -225,9 +225,7 @@ impl Demon {
             .execute(&mut *connection)
             .await?;
 
-        sqlx::query!("UPDATE demons SET position = position - 1 WHERE position > $1", self.base.position)
-            .execute(&mut *connection)
-            .await?;
+        Demon::close_position_gaps(&mut *connection).await?;
 
         recompute_scores(connection).await?;
 

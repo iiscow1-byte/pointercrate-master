@@ -11,7 +11,8 @@
       "Bash(xargs -I {} cat {})",
       "Bash(SQLX_OFFLINE=true cargo check -p pointercrate-example)",
       "PowerShell($env:SQLX_OFFLINE='true'; cargo check -p pointercrate-example 2>&1 | Select-Object -Last 80)",
-      "PowerShell(Get-Command cargo -ErrorAction SilentlyContinue; Get-ChildItem \"$env:USERPROFILE\\\\.cargo\\\\bin\" -ErrorAction SilentlyContinue | Select-Object Name -First 5; Test-Path \"$env:USERPROFILE\\\\.cargo\\\\bin\\\\cargo.exe\")"
+      "PowerShell(Get-Command cargo -ErrorAction SilentlyContinue; Get-ChildItem \"$env:USERPROFILE\\\\.cargo\\\\bin\" -ErrorAction SilentlyContinue | Select-Object Name -First 5; Test-Path \"$env:USERPROFILE\\\\.cargo\\\\bin\\\\cargo.exe\")",
+      "PowerShell(cargo check -p pointercrate-demonlist-pages -p pointercrate-demonlist 2>&1)"
     ]
   }
 }

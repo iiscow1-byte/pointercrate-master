@@ -1,8 +1,8 @@
 use crate::components::{demon_dropdown, player_selection_dropdown};
 use maud::{html, Markup, Render};
-use pointercrate_core::{localization::tr, trp};
+use pointercrate_core::localization::tr;
 use pointercrate_core_pages::trp_html;
-use pointercrate_demonlist::{config, demon::Demon};
+use pointercrate_demonlist::demon::Demon;
 
 pub struct RecordSubmitter<'a> {
     initially_visible: bool,
@@ -33,10 +33,10 @@ impl Render for RecordSubmitter<'_> {
                         (tr("record-submission.demon"))
                     }
                     p {
-                        (trp!("record-submission.demon-info", "list-size" = config::extended_list_size()))
+                        (tr("record-submission.demon-info"))
                     }
                     span.form-input data-type = "dropdown" {
-                        (demon_dropdown("id_demon", self.demons.iter().filter(|demon| demon.base.position <= config::extended_list_size())))
+                        (demon_dropdown("id_demon", self.demons.iter()))
                         p.error {}
                     }
                     h3 {
@@ -107,7 +107,6 @@ impl Render for RecordSubmitter<'_> {
                             "record-submission.guidelines",
                         ))
                     }
-                    input.button.blue.hover type = "submit" style = "margin: 15px auto 0px;" value=(tr("record-submission.submit"));
                 }
             }
         }

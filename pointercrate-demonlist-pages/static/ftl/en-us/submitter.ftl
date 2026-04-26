@@ -15,10 +15,10 @@ record-submission-panel = Submit Records
 record-submission = Record Submission
     .note = Note
 
-    .demon = Demon
-    .demon-info = The demon the record was made on. Only demons in the top {$list-size} are accepted. This excludes legacy demons!
+    .demon = Level
+    .demon-info = The level the record was made on.
 
-    .demon-validator-valuemissing = Please specify a demon
+    .demon-validator-valuemissing = Please specify a level
 
     .holder = Holder
     .holder-info = The player holding the record. Start typing to see suggestions of existing players. If this is your first submission, write your name, as you wish it to appear on the website, into the text field (ignoring any suggestions).
@@ -29,7 +29,7 @@ record-submission = Record Submission
     .holder-validator-rangeoverflow = Due to Geometry Dash's limitations I know that no player has such a long name
 
     .progress = Progress
-    .progress-info = The progress made as percentage. Only values greater than or equal to the demons record requirement and smaller than or equal to 100 are accepted!
+    .progress-info = The progress made as percentage. Only values greater than or equal to the levels record requirement and smaller than or equal to 100 are accepted!
     .progress-placeholder = e. g. '50', '98'
 
     .progress-validator-valuemissing = Please specify the record's progress
@@ -48,7 +48,7 @@ record-submission = Record Submission
 
     .raw-footage = Raw footage
     .raw-footage-info-a = The unedited and untrimmed video for this completion, uploaded to a non-compressing (e.g. not YouTube) file-sharing service such as google drive. Note: Players can be given a one-time exception to use a stream VOD as raw footage.
-    .raw-footage-info-b = Any personal information possibly contained within raw footage (e.g. names, sensitive conversations) will be kept strictly confidential and will not be shared outside of the demonlist team. Conversely, you acknowledge that you might inadvertently share such information by providing raw footage. You have the right to request deletion of your record note by contacting a list administrator.
+    .raw-footage-info-b = Any personal information possibly contained within raw footage (e.g. names, sensitive conversations) will be kept strictly confidential and will not be shared outside of the levellist team. Conversely, you acknowledge that you might inadvertently share such information by providing raw footage. You have the right to request deletion of your record note by contacting a list administrator.
     .raw-footage-note = This is required for every record submitted to the list!
 
     .raw-footage-validator-typemismatch = Please enter a valid URL

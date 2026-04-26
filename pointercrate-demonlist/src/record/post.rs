@@ -95,11 +95,6 @@ impl NormalizedSubmission {
             return Err(DemonlistError::PlayerBanned);
         }
 
-        // Cannot submit records for the legacy list (it is possible to directly add them for list mods)
-        if self.demon.position > crate::config::extended_list_size() && self.status == RecordStatus::Submitted {
-            return Err(DemonlistError::SubmitLegacy);
-        }
-
         // Can only submit 100% records for the extended list (it is possible to directly add them for list
         // mods)
         if self.demon.position > crate::config::list_size() && self.progress != 100 && self.status == RecordStatus::Submitted {
