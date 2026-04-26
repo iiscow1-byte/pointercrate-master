@@ -127,15 +127,8 @@ impl NormalizedSubmission {
             });
         }
 
-        match self.raw_footage {
-            Some(ref raw) => {
-                let _ = Url::parse(raw).map_err(|_| DemonlistError::MalformedRawUrl)?;
-            },
-            None if self.status == RecordStatus::Submitted => {
-                // list mods can submit without raw
-                return Err(DemonlistError::RawRequired);
-            },
-            _ => (),
+        if let Some(ref raw) = self.raw_footage {
+            let _ = Url::parse(raw).map_err(|_| DemonlistError::MalformedRawUrl)?;
         }
 
         Ok(ValidatedSubmission {
