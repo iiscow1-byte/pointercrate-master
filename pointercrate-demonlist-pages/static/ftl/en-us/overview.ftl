@@ -45,4 +45,4 @@ statsviewer-panel = Stats Viewer
     .info = Get a detailed overview of who completed the most, created the most challenges or beat the hardest challenges! There is even a leaderboard to compare yourself to the very best!
     .button = Open the stats viewer!
 
-discord-panel-info = This is the official MSCL discord server.
+discord-panel-info = This is the official MSCL discord server: discord.gg/H8SXKr5ju

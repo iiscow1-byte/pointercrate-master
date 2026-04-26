@@ -57,8 +57,7 @@ record-submission = Record Submission
     .notes-info = Provide any additional notes you'd like to pass on to the list moderator receiving your submission.
     .notes-placeholder = Your dreams and hopes for this record... or something like that
 
-    .guidelines = By submitting the record you acknowledge the { $guidelines-link }.
-    .guidelines-link = submission guidelines
+    .guidelines = By submitting the record you acknowledge the guidelines.
 
     .submit = Submit record
 

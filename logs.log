@@ -1359,7 +1359,12 @@ ca-certificates is already the newest version (20250419).
 
 2026-04-26T02:16:18.646087098Z [inf]     Compiling hyper v1.8.1
 
+2026-04-26T02:16:19.650553423Z [inf]     Compiling hyper-util v0.1.20
+
 2026-04-26T02:16:19.866833372Z [inf]     Compiling sqlx v0.8.6
+
+2026-04-26T02:16:20.425610639Z [inf]     Compiling pointercrate-user v0.1.0 (/app/pointercrate-user)
+   Compiling pointercrate-core-pages v0.1.0 (/app/pointercrate-core-pages)
 
 2026-04-26T02:16:20.528995371Z [inf]  warning: field `logo_path` is never read
   --> pointercrate-core-pages/src/navigation.rs:30:5
@@ -1371,6 +1376,8 @@ ca-certificates is already the newest version (20250419).
    |
    = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
 
+
+2026-04-26T02:16:20.756943203Z [inf]  warning: `pointercrate-core-pages` (lib) generated 1 warning
 
 2026-04-26T02:16:21.05148486Z [inf]     Compiling pointercrate-demonlist v0.1.0 (/app/pointercrate-demonlist)
 
@@ -1390,8 +1397,13 @@ ca-certificates is already the newest version (20250419).
 2026-04-26T02:16:23.083001403Z [inf]  error: could not compile `pointercrate-demonlist` (lib) due to 1 previous error
 warning: build failed, waiting for other jobs to finish...
 
+2026-04-26T02:16:31.469853691Z [err]  [builder 4/4] RUN cargo build --release -p pointercrate-example
+2026-04-26T02:16:31.482549806Z [err]  Dockerfile:4
 2026-04-26T02:16:31.482580977Z [err]  -------------------
 2026-04-26T02:16:31.482585469Z [err]  2 |     WORKDIR /app
 2026-04-26T02:16:31.482589055Z [err]  3 |     COPY . .
 2026-04-26T02:16:31.482593772Z [err]  4 | >>> RUN cargo build --release -p pointercrate-example
+2026-04-26T02:16:31.482597148Z [err]  5 |
+2026-04-26T02:16:31.482600931Z [err]  6 |     FROM rust:latest
+2026-04-26T02:16:31.482604230Z [err]  -------------------
 2026-04-26T02:16:31.482608393Z [err]  ERROR: failed to build: failed to solve: process "/bin/sh -c cargo build --release -p pointercrate-example" did not complete successfully: exit code: 101
