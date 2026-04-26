@@ -39,7 +39,7 @@ fn dropdowns(all_demons: &[&Demon], current: Option<&Demon>) -> Markup {
             // The drop down for the extended list:
             (dropdown(&ListSection { name: tr("extended-list"), description: tr("extended-list.info"), id: "extended", numbered: true }, extended, current))
             // The drop down for the legacy list:
-            (dropdown(&ListSection { name: tr("legacy-list"), description: tr("legacy-list.info"), id: "legacy", numbered: false }, legacy, current))
+            (dropdown(&ListSection { name: tr("legacy-list"), description: tr("legacy-list.info"), id: "legacy", numbered: true }, legacy, current))
         }
     }
 }

@@ -89,9 +89,9 @@ export class StatsViewer extends FilteredPaginator {
     });
 
     this.demonSortingModeDropdown.select(
-      localStorage.getItem("demon_sorting_mode") ?? "Alphabetical",
+      localStorage.getItem("demon_sorting_mode") ?? "Position",
       true
-    ); // default to alphabetical
+    ); // default to position (difficulty)
   }
 
   initialize() {

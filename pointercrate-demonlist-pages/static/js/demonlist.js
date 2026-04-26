@@ -70,9 +70,7 @@ function initializeHistoryTable() {
         }
 
         if (entry["new_position"] !== undefined) {
-          if (entry["new_position"] > window.extended_list_length)
-            cells[2].innerText = "-";
-          else cells[2].innerText = entry["new_position"];
+          cells[2].innerText = entry["new_position"];
         }
 
         let reason = null;
