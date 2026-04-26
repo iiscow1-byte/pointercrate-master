@@ -170,7 +170,7 @@ impl Demon {
     /// preserving the existing relative ordering. Closes any gaps introduced by deletions
     /// or by historical buggy code paths.
     pub async fn close_position_gaps(connection: &mut PgConnection) -> Result<()> {
-        sqlx::query!(
+        sqlx::query(
             "UPDATE demons SET position = renumbered.new_position \
              FROM (SELECT id, ROW_NUMBER() OVER (ORDER BY position) :: SMALLINT AS new_position FROM demons WHERE position > 0) AS renumbered \
              WHERE demons.id = renumbered.id AND demons.position <> renumbered.new_position"
