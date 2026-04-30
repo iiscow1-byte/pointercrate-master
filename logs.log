@@ -1,1372 +1,1425 @@
-2026-04-26T02:15:40.317374052Z [inf]  
-2026-04-26T02:15:41.263293078Z [inf]  [35m[Region: us-west1][0m
-2026-04-26T02:15:41.275556768Z [inf]  [35m=========================
-2026-04-26T02:15:41.275581958Z [inf]  Using Detected Dockerfile
-2026-04-26T02:15:41.275585985Z [inf]  =========================
-2026-04-26T02:15:41.275589053Z [inf]  [0m
-2026-04-26T02:15:41.275598329Z [inf]  context: fhrf-D6n
-2026-04-26T02:15:41.418577610Z [inf]  [internal] load build definition from Dockerfile
-2026-04-26T02:15:41.418618550Z [inf]  [internal] load build definition from Dockerfile
-2026-04-26T02:15:41.418634521Z [inf]  [internal] load build definition from Dockerfile
-2026-04-26T02:15:41.418645600Z [inf]  [internal] load build definition from Dockerfile
-2026-04-26T02:15:41.425784068Z [inf]  [internal] load build definition from Dockerfile
-2026-04-26T02:15:41.427309812Z [inf]  [internal] load metadata for docker.io/library/rust:latest
-2026-04-26T02:15:41.500916699Z [inf]  [auth] library/rust:pull token for registry-1.docker.io
-2026-04-26T02:15:41.500954175Z [inf]  [auth] library/rust:pull token for registry-1.docker.io
-2026-04-26T02:15:42.163569901Z [inf]  [internal] load metadata for docker.io/library/rust:latest
-2026-04-26T02:15:42.164085822Z [inf]  [internal] load .dockerignore
-2026-04-26T02:15:42.164119049Z [inf]  [internal] load .dockerignore
-2026-04-26T02:15:42.164137007Z [inf]  [internal] load .dockerignore
-2026-04-26T02:15:42.171838410Z [inf]  [internal] load .dockerignore
-2026-04-26T02:15:42.174958526Z [inf]  [stage-1 9/9] COPY --from=builder [/app/Placing sheet - Sheet1.tsv, /app/Placing sheet - Sheet1.tsv]
-2026-04-26T02:15:42.174983284Z [inf]  [stage-1 8/9] COPY --from=builder /app/pointercrate-example/static ./pointercrate-example/static
-2026-04-26T02:15:42.174994054Z [inf]  [stage-1 7/9] COPY --from=builder /app/pointercrate-user-pages/static ./pointercrate-user-pages/static
-2026-04-26T02:15:42.175000327Z [inf]  [stage-1 6/9] COPY --from=builder /app/pointercrate-demonlist-pages/static ./pointercrate-demonlist-pages/static
-2026-04-26T02:15:42.175006252Z [inf]  [stage-1 5/9] COPY --from=builder /app/pointercrate-core-pages/static ./pointercrate-core-pages/static
-2026-04-26T02:15:42.175014307Z [inf]  [stage-1 4/9] COPY --from=builder /app/target/release/pointercrate-example ./server
-2026-04-26T02:15:42.175020043Z [inf]  [builder 4/4] RUN cargo build --release -p pointercrate-example
-2026-04-26T02:15:42.175025761Z [inf]  [builder 3/4] COPY . .
-2026-04-26T02:15:42.175031435Z [inf]  [internal] load build context
-2026-04-26T02:15:42.175038206Z [inf]  [stage-1 3/9] RUN apt-get update && apt-get install -y libssl3 ca-certificates && rm -rf /var/lib/apt/lists/*
-2026-04-26T02:15:42.175044067Z [inf]  [builder 2/4] WORKDIR /app
-2026-04-26T02:15:42.175051910Z [inf]  [builder 1/4] FROM docker.io/library/rust:latest@sha256:e4f09e8fe5a2366e7d3dc35e08bd25821151e3ed8fdbd3a6a16b51555f0c551d
-2026-04-26T02:15:42.175067138Z [inf]  [internal] load build context
-2026-04-26T02:15:42.175072808Z [inf]  [builder 1/4] FROM docker.io/library/rust:latest@sha256:e4f09e8fe5a2366e7d3dc35e08bd25821151e3ed8fdbd3a6a16b51555f0c551d
-2026-04-26T02:15:42.180664132Z [inf]  [builder 1/4] FROM docker.io/library/rust:latest@sha256:e4f09e8fe5a2366e7d3dc35e08bd25821151e3ed8fdbd3a6a16b51555f0c551d
-2026-04-26T02:15:42.180882385Z [inf]  [builder 1/4] FROM docker.io/library/rust:latest@sha256:e4f09e8fe5a2366e7d3dc35e08bd25821151e3ed8fdbd3a6a16b51555f0c551d
-2026-04-26T02:15:42.180907103Z [inf]  [builder 1/4] FROM docker.io/library/rust:latest@sha256:e4f09e8fe5a2366e7d3dc35e08bd25821151e3ed8fdbd3a6a16b51555f0c551d
-2026-04-26T02:15:42.180979127Z [inf]  [builder 1/4] FROM docker.io/library/rust:latest@sha256:e4f09e8fe5a2366e7d3dc35e08bd25821151e3ed8fdbd3a6a16b51555f0c551d
-2026-04-26T02:15:42.181015945Z [inf]  [internal] load build context
-2026-04-26T02:15:42.203637150Z [inf]  [builder 1/4] FROM docker.io/library/rust:latest@sha256:e4f09e8fe5a2366e7d3dc35e08bd25821151e3ed8fdbd3a6a16b51555f0c551d
-2026-04-26T02:15:42.204873609Z [inf]  [builder 1/4] FROM docker.io/library/rust:latest@sha256:e4f09e8fe5a2366e7d3dc35e08bd25821151e3ed8fdbd3a6a16b51555f0c551d
-2026-04-26T02:15:42.484710006Z [inf]  [internal] load build context
-2026-04-26T02:15:51.744485880Z [inf]  [builder 1/4] FROM docker.io/library/rust:latest@sha256:e4f09e8fe5a2366e7d3dc35e08bd25821151e3ed8fdbd3a6a16b51555f0c551d
-2026-04-26T02:15:58.565004108Z [inf]  [builder 2/4] WORKDIR /app
-2026-04-26T02:15:59.033032575Z [inf]  [builder 2/4] WORKDIR /app
-2026-04-26T02:15:59.035370236Z [inf]  [stage-1 3/9] RUN apt-get update && apt-get install -y libssl3 ca-certificates && rm -rf /var/lib/apt/lists/*
-2026-04-26T02:15:59.035385745Z [inf]  [builder 3/4] COPY . .
-2026-04-26T02:15:59.154738640Z [inf]  [builder 3/4] COPY . .
-2026-04-26T02:15:59.155346928Z [inf]  [builder 4/4] RUN cargo build --release -p pointercrate-example
-2026-04-26T02:15:59.264643484Z [inf]  Hit:1 http://deb.debian.org/debian trixie InRelease
+2026-04-30T00:00:16.529955936Z [inf]  
+2026-04-30T00:00:18.606758666Z [inf]  [35m[Region: us-west1][0m
+2026-04-30T00:00:18.619508462Z [inf]  [35m=========================
+2026-04-30T00:00:18.619536756Z [inf]  Using Detected Dockerfile
+2026-04-30T00:00:18.619540822Z [inf]  =========================
+2026-04-30T00:00:18.619544307Z [inf]  [0m
+2026-04-30T00:00:18.619556242Z [inf]  context: mpxp-73Pd
+2026-04-30T00:00:18.809559738Z [inf]  [internal] load build definition from Dockerfile
+2026-04-30T00:00:18.809611952Z [inf]  [internal] load build definition from Dockerfile
+2026-04-30T00:00:18.809634186Z [inf]  [internal] load build definition from Dockerfile
+2026-04-30T00:00:18.809650821Z [inf]  [internal] load build definition from Dockerfile
+2026-04-30T00:00:18.820361279Z [inf]  [internal] load build definition from Dockerfile
+2026-04-30T00:00:18.822628716Z [inf]  [internal] load metadata for docker.io/library/rust:latest
+2026-04-30T00:00:19.043006636Z [inf]  [auth] library/rust:pull token for registry-1.docker.io
+2026-04-30T00:00:19.043050590Z [inf]  [auth] library/rust:pull token for registry-1.docker.io
+2026-04-30T00:00:20.351349772Z [inf]  [internal] load metadata for docker.io/library/rust:latest
+2026-04-30T00:00:20.351725147Z [inf]  [internal] load .dockerignore
+2026-04-30T00:00:20.351752427Z [inf]  [internal] load .dockerignore
+2026-04-30T00:00:20.351774321Z [inf]  [internal] load .dockerignore
+2026-04-30T00:00:20.351887581Z [inf]  [internal] load .dockerignore
+2026-04-30T00:00:20.362150277Z [inf]  [internal] load .dockerignore
+2026-04-30T00:00:20.365669132Z [inf]  [builder 3/4] COPY . .
+2026-04-30T00:00:20.365703176Z [inf]  [internal] load build context
+2026-04-30T00:00:20.365714495Z [inf]  [stage-1 3/9] RUN apt-get update && apt-get install -y libssl3 ca-certificates && rm -rf /var/lib/apt/lists/*
+2026-04-30T00:00:20.365730819Z [inf]  [builder 2/4] WORKDIR /app
+2026-04-30T00:00:20.365740713Z [inf]  [builder 1/4] FROM docker.io/library/rust:latest@sha256:a9cfb755b33f5bb872610cbdb25da61f527416b28fc9c052bbce4bef93e7799a
+2026-04-30T00:00:20.365855894Z [inf]  [stage-1 9/9] COPY --from=builder [/app/Placing sheet - Sheet1.tsv, /app/Placing sheet - Sheet1.tsv]
+2026-04-30T00:00:20.365868385Z [inf]  [stage-1 8/9] COPY --from=builder /app/pointercrate-example/static ./pointercrate-example/static
+2026-04-30T00:00:20.365876862Z [inf]  [stage-1 7/9] COPY --from=builder /app/pointercrate-user-pages/static ./pointercrate-user-pages/static
+2026-04-30T00:00:20.365889221Z [inf]  [stage-1 6/9] COPY --from=builder /app/pointercrate-demonlist-pages/static ./pointercrate-demonlist-pages/static
+2026-04-30T00:00:20.365895252Z [inf]  [stage-1 5/9] COPY --from=builder /app/pointercrate-core-pages/static ./pointercrate-core-pages/static
+2026-04-30T00:00:20.365904599Z [inf]  [stage-1 4/9] COPY --from=builder /app/target/release/pointercrate-example ./server
+2026-04-30T00:00:20.365917320Z [inf]  [builder 4/4] RUN cargo build --release -p pointercrate-example
+2026-04-30T00:00:20.365957226Z [inf]  [internal] load build context
+2026-04-30T00:00:20.365985775Z [inf]  [builder 1/4] FROM docker.io/library/rust:latest@sha256:a9cfb755b33f5bb872610cbdb25da61f527416b28fc9c052bbce4bef93e7799a
+2026-04-30T00:00:20.370931138Z [inf]  [builder 1/4] FROM docker.io/library/rust:latest@sha256:a9cfb755b33f5bb872610cbdb25da61f527416b28fc9c052bbce4bef93e7799a
+2026-04-30T00:00:20.371223877Z [inf]  [builder 1/4] FROM docker.io/library/rust:latest@sha256:a9cfb755b33f5bb872610cbdb25da61f527416b28fc9c052bbce4bef93e7799a
+2026-04-30T00:00:20.371419621Z [inf]  [builder 1/4] FROM docker.io/library/rust:latest@sha256:a9cfb755b33f5bb872610cbdb25da61f527416b28fc9c052bbce4bef93e7799a
+2026-04-30T00:00:20.371450204Z [inf]  [internal] load build context
+2026-04-30T00:00:20.401987148Z [inf]  [builder 1/4] FROM docker.io/library/rust:latest@sha256:a9cfb755b33f5bb872610cbdb25da61f527416b28fc9c052bbce4bef93e7799a
+2026-04-30T00:00:20.404751014Z [inf]  [builder 1/4] FROM docker.io/library/rust:latest@sha256:a9cfb755b33f5bb872610cbdb25da61f527416b28fc9c052bbce4bef93e7799a
+2026-04-30T00:00:20.714533682Z [inf]  [internal] load build context
+2026-04-30T00:00:37.383367144Z [inf]  [builder 2/4] WORKDIR /app
+2026-04-30T00:00:37.626321610Z [inf]  [builder 2/4] WORKDIR /app
+2026-04-30T00:00:37.627589342Z [inf]  [stage-1 3/9] RUN apt-get update && apt-get install -y libssl3 ca-certificates && rm -rf /var/lib/apt/lists/*
+2026-04-30T00:00:37.627606700Z [inf]  [builder 3/4] COPY . .
+2026-04-30T00:00:37.822143186Z [inf]  Hit:1 http://deb.debian.org/debian trixie InRelease
+Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
 
-2026-04-26T02:15:59.266580609Z [inf]  Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+2026-04-30T00:00:37.8282738Z [inf]  Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
 
-2026-04-26T02:15:59.283275836Z [inf]  Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+2026-04-30T00:00:37.857181874Z [inf]  Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9671 kB]
 
-2026-04-26T02:15:59.292786514Z [inf]  Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9671 kB]
+2026-04-30T00:00:37.962113912Z [inf]  Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [129 kB]
 
-2026-04-26T02:15:59.340523783Z [inf]      Updating crates.io index
+2026-04-30T00:00:38.289680534Z [inf]  [builder 3/4] COPY . .
+2026-04-30T00:00:38.291236511Z [inf]  [builder 4/4] RUN cargo build --release -p pointercrate-example
+2026-04-30T00:00:38.464181695Z [inf]      Updating crates.io index
 
-2026-04-26T02:15:59.376576397Z [inf]  Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+2026-04-30T00:00:38.518761782Z [inf]      Updating git repository `https://github.com/rwf2/Rocket`
 
-2026-04-26T02:15:59.385029416Z [inf]  Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [127 kB]
-
-2026-04-26T02:15:59.417498551Z [inf]      Updating git repository `https://github.com/rwf2/Rocket`
-
-2026-04-26T02:16:00.153379841Z [inf]  Fetched 9894 kB in 1s (10.4 MB/s)
+2026-04-30T00:00:38.937665696Z [inf]  Fetched 9895 kB in 1s (8618 kB/s)
 Reading package lists...
-2026-04-26T02:16:00.612838146Z [inf]  
+2026-04-30T00:00:39.50163184Z [inf]  
 
-2026-04-26T02:16:00.627108552Z [inf]  Reading package lists...
-2026-04-26T02:16:00.705909881Z [inf]      Updating git repository `https://github.com/stadust/dash-rs`
+2026-04-30T00:00:39.521004047Z [inf]  Reading package lists...
+2026-04-30T00:00:39.791059769Z [inf]      Updating git repository `https://github.com/stadust/dash-rs`
 
-2026-04-26T02:16:01.086164001Z [inf]  
+2026-04-30T00:00:40.129904636Z [inf]  
 
-2026-04-26T02:16:01.095586903Z [inf]  Building dependency tree...
-2026-04-26T02:16:01.203923615Z [inf]  
+2026-04-30T00:00:40.144508437Z [inf]  Building dependency tree...
+2026-04-30T00:00:40.303788777Z [inf]  
 Reading state information...
-2026-04-26T02:16:01.204199709Z [inf]  
+2026-04-30T00:00:40.304135047Z [inf]  
 
-2026-04-26T02:16:01.371377561Z [inf]  libssl3t64 is already the newest version (3.5.5-1~deb13u2).
+2026-04-30T00:00:40.523954137Z [inf]  libssl3t64 is already the newest version (3.5.5-1~deb13u2).
 libssl3t64 set to manually installed.
 ca-certificates is already the newest version (20250419).
 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
 
-2026-04-26T02:16:01.383995099Z [inf]  [stage-1 3/9] RUN apt-get update && apt-get install -y libssl3 ca-certificates && rm -rf /var/lib/apt/lists/*
-2026-04-26T02:16:01.426621782Z [inf]      Updating git repository `https://github.com/SergioBenitez/s2n-quic-h3.git`
+2026-04-30T00:00:40.565425044Z [inf]  [stage-1 3/9] RUN apt-get update && apt-get install -y libssl3 ca-certificates && rm -rf /var/lib/apt/lists/*
+2026-04-30T00:00:40.573956087Z [inf]      Updating git repository `https://github.com/SergioBenitez/s2n-quic-h3.git`
 
-2026-04-26T02:16:01.820330877Z [inf]      Updating git repository `https://github.com/stadust/variant-partial-eq`
+2026-04-30T00:00:40.862436987Z [inf]      Updating git repository `https://github.com/stadust/variant-partial-eq`
 
-2026-04-26T02:16:03.15909737Z [inf]   Downloading crates ...
+2026-04-30T00:00:42.3647617Z [inf]   Downloading crates ...
 
-2026-04-26T02:16:03.257261046Z [inf]    Downloaded dotenv v0.15.0
+2026-04-30T00:00:42.476470541Z [inf]    Downloaded atoi v2.0.0
 
-2026-04-26T02:16:03.259827338Z [inf]    Downloaded async-stream-impl v0.3.6
+2026-04-30T00:00:42.479889555Z [inf]    Downloaded async-stream-impl v0.3.6
 
-2026-04-26T02:16:03.261251973Z [inf]    Downloaded async-stream v0.3.6
+2026-04-30T00:00:42.483388023Z [inf]    Downloaded async-stream v0.3.6
 
-2026-04-26T02:16:03.26654749Z [inf]    Downloaded allocator-api2 v0.2.21
+2026-04-30T00:00:42.487722931Z [inf]    Downloaded dunce v1.0.5
 
-2026-04-26T02:16:03.270793575Z [inf]    Downloaded foreign-types-shared v0.1.1
+2026-04-30T00:00:42.489832048Z [inf]    Downloaded crypto-common v0.1.7
 
-2026-04-26T02:16:03.2721819Z [inf]    Downloaded futures-core v0.3.32
+2026-04-30T00:00:42.492996453Z [inf]    Downloaded atomic-waker v1.1.2
 
-2026-04-26T02:16:03.274318079Z [inf]    Downloaded devise_codegen v0.4.2
+2026-04-30T00:00:42.496612399Z [inf]    Downloaded devise_codegen v0.4.2
 
-2026-04-26T02:16:03.275896289Z [inf]    Downloaded futures-io v0.3.32
+2026-04-30T00:00:42.498394815Z [inf]    Downloaded crc v3.4.0
 
-2026-04-26T02:16:03.277743795Z [inf]    Downloaded home v0.5.12
+2026-04-30T00:00:42.503789399Z [inf]    Downloaded heck v0.5.0
 
-2026-04-26T02:16:03.279407264Z [inf]    Downloaded hex v0.4.3
+2026-04-30T00:00:42.50682557Z [inf]    Downloaded displaydoc v0.2.5
 
-2026-04-26T02:16:03.281681811Z [inf]    Downloaded base64 v0.21.7
+2026-04-30T00:00:42.512641689Z [inf]    Downloaded getrandom v0.1.16
 
-2026-04-26T02:16:03.286337132Z [inf]    Downloaded http-body v1.0.1
+2026-04-30T00:00:42.519601422Z [inf]    Downloaded rand_chacha v0.9.0
 
-2026-04-26T02:16:03.288079353Z [inf]    Downloaded memoffset v0.9.1
+2026-04-30T00:00:42.522970413Z [inf]    Downloaded httpdate v1.0.3
 
-2026-04-26T02:16:03.289970257Z [inf]    Downloaded either v1.15.0
+2026-04-30T00:00:42.528587166Z [inf]    Downloaded ref-cast v1.0.25
 
-2026-04-26T02:16:03.291838129Z [inf]    Downloaded aho-corasick v1.1.4
+2026-04-30T00:00:42.532729801Z [inf]    Downloaded quinn-udp v0.5.14
 
-2026-04-26T02:16:03.297781524Z [inf]    Downloaded httpdate v1.0.3
+2026-04-30T00:00:42.539517994Z [inf]    Downloaded quanta v0.12.6
 
-2026-04-26T02:16:03.300745543Z [inf]    Downloaded ref-cast v1.0.25
+2026-04-30T00:00:42.547620969Z [inf]    Downloaded siphasher v1.0.2
 
-2026-04-26T02:16:03.304286049Z [inf]    Downloaded rand_chacha v0.2.2
+2026-04-30T00:00:42.555920298Z [inf]    Downloaded time-core v0.1.8
 
-2026-04-26T02:16:03.306029439Z [inf]    Downloaded raw-cpuid v11.6.0
+2026-04-30T00:00:42.557932495Z [inf]    Downloaded type-map v0.5.1
 
-2026-04-26T02:16:03.311458253Z [inf]    Downloaded pem-rfc7468 v0.7.0
+2026-04-30T00:00:42.560065797Z [inf]    Downloaded tower-layer v0.3.3
 
-2026-04-26T02:16:03.314575341Z [inf]    Downloaded openssl-macros v0.1.1
+2026-04-30T00:00:42.562391782Z [inf]    Downloaded toml_datetime v0.6.11
 
-2026-04-26T02:16:03.31645277Z [inf]    Downloaded idna_adapter v1.2.1
+2026-04-30T00:00:42.565083249Z [inf]    Downloaded tokio-stream v0.1.18
 
-2026-04-26T02:16:03.318041077Z [inf]    Downloaded powerfmt v0.2.0
+2026-04-30T00:00:42.576693778Z [inf]    Downloaded version_check v0.9.5
 
-2026-04-26T02:16:03.320197068Z [inf]    Downloaded dunce v1.0.5
+2026-04-30T00:00:42.581485836Z [inf]    Downloaded whoami v1.6.1
 
-2026-04-26T02:16:03.321901073Z [inf]    Downloaded quinn-udp v0.5.14
+2026-04-30T00:00:42.586555892Z [inf]    Downloaded web-time v1.1.0
 
-2026-04-26T02:16:03.324087545Z [inf]    Downloaded futures-task v0.3.32
+2026-04-30T00:00:42.592270829Z [inf]    Downloaded zeroize_derive v1.4.3
 
-2026-04-26T02:16:03.326261215Z [inf]    Downloaded mime v0.3.17
+2026-04-30T00:00:42.595103929Z [inf]    Downloaded zmij v1.0.21
 
-2026-04-26T02:16:03.327980535Z [inf]    Downloaded futures-executor v0.3.32
+2026-04-30T00:00:42.598604346Z [inf]    Downloaded rand v0.10.0
 
-2026-04-26T02:16:03.329781493Z [inf]    Downloaded errno v0.3.14
+2026-04-30T00:00:42.605958535Z [inf]    Downloaded zerotrie v0.2.3
 
-2026-04-26T02:16:03.331550444Z [inf]    Downloaded getrandom v0.1.16
+2026-04-30T00:00:42.611039596Z [inf]    Downloaded yoke-derive v0.8.1
 
-2026-04-26T02:16:03.33497715Z [inf]    Downloaded rand_chacha v0.9.0
+2026-04-30T00:00:42.614410408Z [inf]    Downloaded zerovec v0.11.5
 
-2026-04-26T02:16:03.337171983Z [inf]    Downloaded rand v0.8.5
+2026-04-30T00:00:42.62114334Z [inf]    Downloaded zeroize v1.8.2
 
-2026-04-26T02:16:03.342186715Z [inf]    Downloaded quote v1.0.45
+2026-04-30T00:00:42.624343131Z [inf]    Downloaded winnow v0.7.15
 
-2026-04-26T02:16:03.345778921Z [inf]    Downloaded ppv-lite86 v0.2.21
+2026-04-30T00:00:42.634916912Z [inf]    Downloaded unic-langid-macros-impl v0.9.6
 
-2026-04-26T02:16:03.347284145Z [inf]    Downloaded pem v3.0.6
+2026-04-30T00:00:42.636537732Z [inf]    Downloaded tracing-subscriber v0.3.23
 
-2026-04-26T02:16:03.349366784Z [inf]    Downloaded rand_core v0.5.1
+2026-04-30T00:00:42.647740612Z [inf]    Downloaded zerofrom-derive v0.1.6
 
-2026-04-26T02:16:03.351188625Z [inf]    Downloaded pkg-config v0.3.32
+2026-04-30T00:00:42.649374435Z [inf]    Downloaded time v0.3.47
 
-2026-04-26T02:16:03.353446037Z [inf]    Downloaded signal-hook-registry v1.4.8
+2026-04-30T00:00:42.664164495Z [inf]    Downloaded rustix v1.1.4
 
-2026-04-26T02:16:03.355170435Z [inf]    Downloaded fluent-syntax v0.12.0
+2026-04-30T00:00:42.69600983Z [inf]    Downloaded regex-automata v0.4.14
 
-2026-04-26T02:16:03.358214246Z [inf]    Downloaded toml_datetime v0.6.11
+2026-04-30T00:00:42.722733067Z [inf]    Downloaded tracing v0.1.44
 
-2026-04-26T02:16:03.360276742Z [inf]    Downloaded tower-layer v0.3.3
+2026-04-30T00:00:42.758020421Z [inf]    Downloaded vcpkg v0.2.15
 
-2026-04-26T02:16:03.362133431Z [inf]    Downloaded uncased v0.9.10
+2026-04-30T00:00:42.813114296Z [inf]    Downloaded unicode-bidi v0.3.18
 
-2026-04-26T02:16:03.363894004Z [inf]    Downloaded s2n-quic v1.77.0
+2026-04-30T00:00:42.817643312Z [inf]    Downloaded libc v0.2.183
 
-2026-04-26T02:16:03.369091461Z [inf]    Downloaded unic-langid v0.9.6
+2026-04-30T00:00:42.854963506Z [inf]    Downloaded unic-langid-macros v0.9.6
 
-2026-04-26T02:16:03.370551612Z [inf]    Downloaded zerofrom-derive v0.1.6
+2026-04-30T00:00:42.856210796Z [inf]    Downloaded ref-swap v0.1.2
 
-2026-04-26T02:16:03.371651705Z [inf]    Downloaded want v0.3.1
+2026-04-30T00:00:42.85819463Z [inf]    Downloaded tokio v1.50.0
 
-2026-04-26T02:16:03.372836626Z [inf]    Downloaded quinn v0.11.9
+2026-04-30T00:00:42.902156846Z [inf]    Downloaded libz-sys v1.1.25
 
-2026-04-26T02:16:03.377001593Z [inf]    Downloaded version_check v0.9.5
+2026-04-30T00:00:42.926972107Z [inf]    Downloaded tokio-util v0.7.18
 
-2026-04-26T02:16:03.378278408Z [inf]    Downloaded tinyvec v1.11.0
+2026-04-30T00:00:42.936356888Z [inf]    Downloaded syn v2.0.117
 
-2026-04-26T02:16:03.38154954Z [inf]    Downloaded zmij v1.0.21
+2026-04-30T00:00:42.954426433Z [inf]    Downloaded encoding_rs v0.8.35
 
-2026-04-26T02:16:03.38428275Z [inf]    Downloaded writeable v0.6.2
+2026-04-30T00:00:42.98836124Z [inf]    Downloaded openssl v0.10.76
 
-2026-04-26T02:16:03.386861283Z [inf]    Downloaded zerovec-derive v0.11.2
+2026-04-30T00:00:43.00450215Z [inf]    Downloaded yoke v0.8.1
 
-2026-04-26T02:16:03.389275027Z [inf]    Downloaded yansi v1.0.1
+2026-04-30T00:00:43.007375584Z [inf]    Downloaded ring v0.17.14
 
-2026-04-26T02:16:03.392286086Z [inf]    Downloaded zerocopy-derive v0.8.48
+2026-04-30T00:00:43.081095682Z [inf]    Downloaded unicode-normalization v0.1.25
 
-2026-04-26T02:16:03.399724535Z [inf]    Downloaded unic-langid-macros v0.9.6
+2026-04-30T00:00:43.088095178Z [inf]    Downloaded unic-langid v0.9.6
 
-2026-04-26T02:16:03.401007994Z [inf]    Downloaded thread_local v1.1.9
+2026-04-30T00:00:43.090239411Z [inf]    Downloaded zerofrom v0.1.6
 
-2026-04-26T02:16:03.402435569Z [inf]    Downloaded sqlx v0.8.6
+2026-04-30T00:00:43.091687376Z [inf]    Downloaded tower-http v0.6.8
 
-2026-04-26T02:16:03.41373267Z [inf]    Downloaded zerovec v0.11.5
+2026-04-30T00:00:43.102643899Z [inf]    Downloaded s2n-quic-transport v0.77.0
 
-2026-04-26T02:16:03.418616897Z [inf]    Downloaded time v0.3.47
+2026-04-30T00:00:43.127791115Z [inf]    Downloaded quinn-proto v0.11.14
 
-2026-04-26T02:16:03.429228551Z [inf]    Downloaded winnow v0.7.15
+2026-04-30T00:00:43.139458019Z [inf]    Downloaded url v2.5.8
 
-2026-04-26T02:16:03.437236256Z [inf]    Downloaded socket2 v0.6.3
+2026-04-30T00:00:43.144347513Z [inf]    Downloaded unsafe-libyaml v0.2.11
 
-2026-04-26T02:16:03.439284018Z [inf]    Downloaded vcpkg v0.2.15
+2026-04-30T00:00:43.148548819Z [inf]    Downloaded sqlx v0.8.6
 
-2026-04-26T02:16:03.474695537Z [inf]    Downloaded zeroize v1.8.2
+2026-04-30T00:00:43.166464533Z [inf]    Downloaded rustls v0.23.37
 
-2026-04-26T02:16:03.476213378Z [inf]    Downloaded serde_yaml v0.9.34+deprecated
+2026-04-30T00:00:43.184664926Z [inf]    Downloaded regex-syntax v0.8.10
 
-2026-04-26T02:16:03.479186582Z [inf]    Downloaded zerocopy v0.8.48
+2026-04-30T00:00:43.197362786Z [inf]    Downloaded libm v0.2.16
 
-2026-04-26T02:16:03.496110531Z [inf]    Downloaded unicode-properties v0.1.4
+2026-04-30T00:00:43.210748828Z [inf]    Downloaded icu_properties_data v2.1.2
 
-2026-04-26T02:16:03.497951465Z [inf]    Downloaded rustls-webpki v0.103.10
+2026-04-30T00:00:43.224633012Z [inf]    Downloaded hyper v1.8.1
 
-2026-04-26T02:16:03.500987438Z [inf]    Downloaded rustix v1.1.4
+2026-04-30T00:00:43.235788812Z [inf]    Downloaded toml_edit v0.22.27
 
-2026-04-26T02:16:03.521693833Z [inf]    Downloaded zerotrie v0.2.3
+2026-04-30T00:00:43.243100166Z [inf]    Downloaded num-bigint-dig v0.8.6
 
-2026-04-26T02:16:03.524978781Z [inf]    Downloaded toml_edit v0.22.27
+2026-04-30T00:00:43.251643815Z [inf]    Downloaded hyper-util v0.1.20
 
-2026-04-26T02:16:03.529222639Z [inf]    Downloaded tower v0.5.3
+2026-04-30T00:00:43.259633543Z [inf]    Downloaded num-bigint v0.4.6
 
-2026-04-26T02:16:03.53688232Z [inf]    Downloaded serde_json v1.0.149
+2026-04-30T00:00:43.265671968Z [inf]    Downloaded indexmap v2.12.0
 
-2026-04-26T02:16:03.543415603Z [inf]    Downloaded s2n-quic-core v0.77.0
+2026-04-30T00:00:43.271801531Z [inf]    Downloaded idna v1.1.0
 
-2026-04-26T02:16:03.573082517Z [inf]    Downloaded futures-util v0.3.32
+2026-04-30T00:00:43.278837743Z [inf]    Downloaded zerocopy v0.8.48
 
-2026-04-26T02:16:03.58298515Z [inf]    Downloaded reqwest v0.13.2
+2026-04-30T00:00:43.313044593Z [inf]    Downloaded linux-raw-sys v0.12.1
 
-2026-04-26T02:16:03.588461534Z [inf]    Downloaded hashbrown v0.15.4
+2026-04-30T00:00:43.433620853Z [inf]    Downloaded
+2026-04-30T00:00:43.433877994Z [inf]   icu_locale_core v2.1.1
 
-2026-04-26T02:16:03.593171935Z [inf]    Downloaded governor v0.10.4
+2026-04-30T00:00:43.442539212Z [inf]    Downloaded zerovec-derive v0.11.2
 
-2026-04-26T02:16:03.597593426Z [inf]    Downloaded tracing-subscriber v0.3.23
+2026-04-30T00:00:43.445011901Z [inf]    Downloaded unicode-properties v0.1.4
 
-2026-04-26T02:16:03.605035398Z [inf]    Downloaded libc v0.2.183
+2026-04-30T00:00:43.449157784Z [inf]    Downloaded
+2026-04-30T00:00:43.449269992Z [inf]   typenum v1.19.0
 
-2026-04-26T02:16:03.635155083Z [inf]    Downloaded icu_normalizer_data v2.1.1
+2026-04-30T00:00:43.454525354Z [inf]    Downloaded
+2026-04-30T00:00:43.454541654Z [inf]   sqlx-sqlite v0.8.6
 
-2026-04-26T02:16:03.63740504Z [inf]    Downloaded s2n-quic-platform v0.77.0
+2026-04-30T00:00:43.462948004Z [inf]    Downloaded rand v0.8.5
 
-2026-04-26T02:16:03.642965587Z [inf]    Downloaded hashbrown v0.16.0
+2026-04-30T00:00:43.469132139Z [inf]    Downloaded
+2026-04-30T00:00:43.469168043Z [inf]   pin-project-lite v0.2.17
 
-2026-04-26T02:16:03.64788567Z [inf]    Downloaded regex-syntax v0.8.10
+2026-04-30T00:00:43.47765455Z [inf]    Downloaded num-traits v0.2.19
 
-2026-04-26T02:16:03.655405093Z [inf]    Downloaded unicode-bidi v0.3.18
+2026-04-30T00:00:43.482812549Z [inf]    Downloaded jsonwebtoken v9.3.1
 
-2026-04-26T02:16:03.657596444Z [inf]    Downloaded rustls v0.23.37
+2026-04-30T00:00:43.487392989Z [inf]    Downloaded intrusive-collections v0.10.0
 
-2026-04-26T02:16:03.668282592Z [inf]    Downloaded s2n-quic-transport v0.77.0
+2026-04-30T00:00:43.491689933Z [inf]    Downloaded icu_provider v2.1.1
 
-2026-04-26T02:16:03.682678937Z [inf]    Downloaded libz-sys v1.1.25
+2026-04-30T00:00:43.495533934Z [inf]    Downloaded icu_properties v2.1.2
 
-2026-04-26T02:16:03.703521672Z [inf]    Downloaded tracing-core v0.1.36
+2026-04-30T00:00:43.499756235Z [inf]    Downloaded icu_normalizer_data v2.1.1
 
-2026-04-26T02:16:03.705955844Z [inf]    Downloaded sqlx-mysql v0.8.6
+2026-04-30T00:00:43.504419004Z [inf]    Downloaded
+2026-04-30T00:00:43.50443695Z [inf]   icu_normalizer v2.1.1
 
-2026-04-26T02:16:03.710269282Z [inf]    Downloaded serde_core v1.0.228
+2026-04-30T00:00:43.509534667Z [inf]    Downloaded hyper-rustls v0.27.7
 
-2026-04-26T02:16:03.712735999Z [inf]    Downloaded tracing v0.1.44
+2026-04-30T00:00:43.512841155Z [inf]    Downloaded writeable v0.6.2
 
-2026-04-26T02:16:03.727592819Z [inf]    Downloaded hashbrown v0.14.5
+2026-04-30T00:00:43.516132909Z [inf]    Downloaded utf8_iter v1.0.4
 
-2026-04-26T02:16:03.732086823Z [inf]    Downloaded h2 v0.4.13
+2026-04-30T00:00:43.517963228Z [inf]    Downloaded tinyvec v1.11.0
 
-2026-04-26T02:16:03.737627337Z [inf]    Downloaded serde_derive v1.0.228
+2026-04-30T00:00:43.52245063Z [inf]    Downloaded time-macros v0.2.27
 
-2026-04-26T02:16:03.740872847Z [inf]    Downloaded syn v2.0.117
+2026-04-30T00:00:43.526664889Z [inf]    Downloaded sqlx-postgres v0.8.6
 
-2026-04-26T02:16:03.750206027Z [inf]    Downloaded rustls-pki-types v1.14.0
+2026-04-30T00:00:43.541080721Z [inf]    Downloaded smallvec v1.15.1
 
-2026-04-26T02:16:03.75224852Z [inf]    Downloaded regex-automata v0.4.14
+2026-04-30T00:00:43.544663174Z [inf]    Downloaded serde_json v1.0.149
 
-2026-04-26T02:16:03.766001848Z [inf]    Downloaded figment v0.10.19
+2026-04-30T00:00:43.555887221Z [inf]    Downloaded rand v0.9.2
 
-2026-04-26T02:16:03.768979107Z [inf]    Downloaded smallvec v1.15.1
+2026-04-30T00:00:43.562397602Z [inf]    Downloaded rand v0.7.3
 
-2026-04-26T02:16:03.770796667Z [inf]    Downloaded rustls-platform-verifier v0.6.2
+2026-04-30T00:00:43.57078375Z [inf]    Downloaded portable-atomic v1.13.1
 
-2026-04-26T02:16:03.773777055Z [inf]    Downloaded openssl v0.10.76
+2026-04-30T00:00:43.581667686Z [inf]    Downloaded pkcs1 v0.7.5
 
-2026-04-26T02:16:03.782165914Z [inf]    Downloaded whoami v1.6.1
+2026-04-30T00:00:43.586740371Z [inf]    Downloaded parking_lot_core v0.9.12
 
-2026-04-26T02:16:03.784026454Z [inf]    Downloaded web-time v1.1.0
+2026-04-30T00:00:43.592095623Z [inf]    Downloaded parking_lot v0.12.5
 
-2026-04-26T02:16:03.785412705Z [inf]    Downloaded tracing-log v0.2.0
+2026-04-30T00:00:43.595013293Z [inf]    Downloaded openssl-probe v0.2.1
 
-2026-04-26T02:16:03.786501828Z [inf]    Downloaded tracing-attributes v0.1.31
+2026-04-30T00:00:43.596797757Z [inf]    Downloaded lock_api v0.4.14
 
-2026-04-26T02:16:03.788695728Z [inf]    Downloaded sharded-slab v0.1.7
+2026-04-30T00:00:43.5997635Z [inf]    Downloaded unic-langid-impl v0.9.6
 
-2026-04-26T02:16:03.79140512Z [inf]    Downloaded self_cell v1.2.2
+2026-04-30T00:00:43.606757924Z [inf]    Downloaded
+2026-04-30T00:00:43.606885046Z [inf]   litemap v0.8.1
 
-2026-04-26T02:16:03.792405263Z [inf]    Downloaded zeroize_derive v1.4.3
+2026-04-30T00:00:43.609978473Z [inf]    Downloaded jobserver v0.1.34
 
-2026-04-26T02:16:03.79323446Z [inf]    Downloaded unicode-xid v0.2.6
+2026-04-30T00:00:43.613343863Z [inf]    Downloaded ipnet v2.12.0
 
-2026-04-26T02:16:03.794388604Z [inf]    Downloaded unic-langid-macros-impl v0.9.6
+2026-04-30T00:00:43.615562947Z [inf]    Downloaded inlinable_string v0.1.15
 
-2026-04-26T02:16:03.795116417Z [inf]    Downloaded tokio-rustls v0.26.4
+2026-04-30T00:00:43.617296249Z [inf]    Downloaded yansi v1.0.1
 
-2026-04-26T02:16:03.796970739Z [inf]    Downloaded tokio-macros v2.6.1
+2026-04-30T00:00:43.620417299Z [inf]    Downloaded zerocopy-derive v0.8.48
 
-2026-04-26T02:16:03.798457355Z [inf]    Downloaded tokio v1.50.0
+2026-04-30T00:00:43.631236942Z [inf]    Downloaded libsqlite3-sys v0.30.1
 
-2026-04-26T02:16:03.832360664Z [inf]    Downloaded tinyvec_macros v0.1.1
+2026-04-30T00:00:43.758725775Z [inf]    Downloaded
+2026-04-30T00:00:43.758747531Z [inf]   hash_hasher v2.0.4
 
-2026-04-26T02:16:03.833090655Z [inf]    Downloaded time-macros v0.2.27
+2026-04-30T00:00:43.761105821Z [inf]    Downloaded tracing-log v0.2.0
 
-2026-04-26T02:16:03.834882321Z [inf]    Downloaded simple_asn1 v0.6.4
+2026-04-30T00:00:43.763240708Z [inf]    Downloaded icu_collections v2.1.1
 
-2026-04-26T02:16:03.836002134Z [inf]    Downloaded shlex v1.3.0
+2026-04-30T00:00:43.772745742Z [inf]    Downloaded want v0.3.1
 
-2026-04-26T02:16:03.837000383Z [inf]    Downloaded s2n-codec v0.77.0
+2026-04-30T00:00:43.773959062Z [inf]    Downloaded unicode-ident v1.0.24
 
-2026-04-26T02:16:03.838437228Z [inf]    Downloaded rustls-native-certs v0.8.3
+2026-04-30T00:00:43.777896571Z [inf]    Downloaded tracing-core v0.1.36
 
-2026-04-26T02:16:03.840257481Z [inf]    Downloaded slab v0.4.12
+2026-04-30T00:00:43.782318018Z [inf]    Downloaded tower v0.5.3
 
-2026-04-26T02:16:03.841452306Z [inf]    Downloaded quinn-proto v0.11.14
+2026-04-30T00:00:43.795201012Z [inf]    Downloaded tokio-macros v2.6.1
 
-2026-04-26T02:16:03.847701044Z [inf]    Downloaded chacha20 v0.10.0
+2026-04-30T00:00:43.796646702Z [inf]    Downloaded tinystr v0.8.2
 
-2026-04-26T02:16:03.849707828Z [inf]    Downloaded try-lock v0.2.5
+2026-04-30T00:00:43.79852067Z [inf]    Downloaded thread_local v1.1.9
 
-2026-04-26T02:16:03.85089295Z [inf]    Downloaded tower-service v0.3.3
+2026-04-30T00:00:43.799793105Z [inf]    Downloaded synstructure v0.13.2
 
-2026-04-26T02:16:03.851562594Z [inf]    Downloaded sqlx-macros-core v0.8.6
+2026-04-30T00:00:43.800960318Z [inf]    Downloaded sync_wrapper v1.0.2
 
-2026-04-26T02:16:03.853263402Z [inf]    Downloaded sha2 v0.10.9
+2026-04-30T00:00:43.802103191Z [inf]    Downloaded subtle v2.6.1
 
-2026-04-26T02:16:03.855240457Z [inf]    Downloaded serde v1.0.228
+2026-04-30T00:00:43.803607377Z [inf]    Downloaded percent-encoding v2.3.2
 
-2026-04-26T02:16:03.858302038Z [inf]    Downloaded hyper v1.8.1
+2026-04-30T00:00:43.810427868Z [inf]    Downloaded pear v0.2.9
 
-2026-04-26T02:16:03.864060097Z [inf]    Downloaded getrandom v0.2.16
+2026-04-30T00:00:43.812305325Z [inf]    Downloaded parking v2.2.1
 
-2026-04-26T02:16:03.866380904Z [inf]    Downloaded encoding_rs v0.8.35
+2026-04-30T00:00:43.813754589Z [inf]    Downloaded openssl-sys v0.9.112
 
-2026-04-26T02:16:03.889342539Z [inf]    Downloaded url v2.5.8
+2026-04-30T00:00:43.820635794Z [inf]    Downloaded openssl-macros v0.1.1
 
-2026-04-26T02:16:03.891884201Z [inf]    Downloaded unicode-normalization v0.1.25
+2026-04-30T00:00:43.821314861Z [inf]    Downloaded num-conv v0.2.1
 
-2026-04-26T02:16:03.895361364Z [inf]    Downloaded unic-langid-impl v0.9.6
+2026-04-30T00:00:43.822299808Z [inf]    Downloaded nonzero_ext v0.3.0
 
-2026-04-26T02:16:03.8986655Z [inf]    Downloaded tower-http v0.6.8
+2026-04-30T00:00:43.826141184Z [inf]    Downloaded mio v1.2.0
 
-2026-04-26T02:16:03.904911059Z [inf]    Downloaded toml_write v0.1.2
+2026-04-30T00:00:43.832321144Z [inf]    Downloaded memoffset v0.9.1
 
-2026-04-26T02:16:03.905983934Z [inf]    Downloaded tokio-util v0.7.18
+2026-04-30T00:00:43.833617034Z [inf]    Downloaded maud_macros v0.27.0
 
-2026-04-26T02:16:03.91193281Z [inf]    Downloaded subtle v2.6.1
+2026-04-30T00:00:43.834715715Z [inf]    Downloaded lazy_static v1.5.0
 
-2026-04-26T02:16:03.912912582Z [inf]    Downloaded sqlx-postgres v0.8.6
+2026-04-30T00:00:43.836951132Z [inf]    Downloaded intl-memoizer v0.5.3
 
-2026-04-26T02:16:03.919474011Z [inf]    Downloaded sha1 v0.10.6
+2026-04-30T00:00:43.83855877Z [inf]    Downloaded untrusted v0.9.0
 
-2026-04-26T02:16:03.920879725Z [inf]    Downloaded portable-atomic v1.13.1
+2026-04-30T00:00:43.840422181Z [inf]    Downloaded untrusted v0.7.1
 
-2026-04-26T02:16:03.927041068Z [inf]    Downloaded libm v0.2.16
+2026-04-30T00:00:43.841930807Z [inf]    Downloaded unicode-xid v0.2.6
 
-2026-04-26T02:16:03.935082901Z [inf]    Downloaded iri-string v0.7.12
+2026-04-30T00:00:43.843250415Z [inf]    Downloaded ubyte v0.10.4
 
-2026-04-26T02:16:03.941430253Z [inf]    Downloaded typenum v1.19.0
+2026-04-30T00:00:43.844798839Z [inf]    Downloaded try-lock v0.2.5
 
-2026-04-26T02:16:03.943978673Z [inf]    Downloaded s2n-quic-crypto v0.77.0
+2026-04-30T00:00:43.845762986Z [inf]    Downloaded aws-lc-sys v0.39.1
 
-2026-04-26T02:16:03.945590025Z [inf]    Downloaded ring v0.17.14
+2026-04-30T00:00:44.174276608Z [inf]    Downloaded tower-service v0.3.3
 
-2026-04-26T02:16:03.983367091Z [inf]    Downloaded idna v1.1.0
+2026-04-30T00:00:44.176240776Z [inf]    Downloaded toml_write v0.1.2
 
-2026-04-26T02:16:03.987037493Z [inf]    Downloaded getrandom v0.4.2
+2026-04-30T00:00:44.177563812Z [inf]    Downloaded toml v0.8.23
 
-2026-04-26T02:16:03.98997421Z [inf]    Downloaded futures v0.3.32
+2026-04-30T00:00:44.180159556Z [inf]    Downloaded tokio-rustls v0.26.4
 
-2026-04-26T02:16:03.993626078Z [inf]    Downloaded flate2 v1.1.9
+2026-04-30T00:00:44.182699649Z [inf]    Downloaded thiserror v2.0.18
 
-2026-04-26T02:16:03.997823685Z [inf]    Downloaded sqlx-core v0.8.6
+2026-04-30T00:00:44.187937921Z [inf]    Downloaded thiserror v1.0.69
 
-2026-04-26T02:16:04.003624251Z [inf]    Downloaded siphasher v1.0.2
+2026-04-30T00:00:44.192395723Z [inf]    Downloaded spinning_top v0.3.0
 
-2026-04-26T02:16:04.004669472Z [inf]    Downloaded icu_properties_data v2.1.2
+2026-04-30T00:00:44.194136729Z [inf]    Downloaded spin v0.9.8
 
-2026-04-26T02:16:04.012773695Z [inf]    Downloaded fs_extra v1.3.0
+2026-04-30T00:00:44.197129737Z [inf]    Downloaded s2n-quic-core v0.77.0
 
-2026-04-26T02:16:04.014185889Z [inf]    Downloaded fluent-bundle v0.16.0
+2026-04-30T00:00:44.234068186Z [inf]    Downloaded s2n-quic-platform v0.77.0
 
-2026-04-26T02:16:04.016125126Z [inf]    Downloaded bytes v1.11.1
+2026-04-30T00:00:44.242010499Z [inf]    Downloaded rustls-webpki v0.103.10
 
-2026-04-26T02:16:04.01947782Z [inf]    Downloaded unsafe-libyaml v0.2.11
+2026-04-30T00:00:44.245440573Z [inf]    Downloaded serde_yaml v0.9.34+deprecated
 
-2026-04-26T02:16:04.022301912Z [inf]    Downloaded unicode-ident v1.0.24
+2026-04-30T00:00:44.24927989Z [inf]    Downloaded serde v1.0.228
 
-2026-04-26T02:16:04.024518684Z [inf]    Downloaded rand v0.10.0
+2026-04-30T00:00:44.25349616Z [inf]    Downloaded reqwest v0.13.2
 
-2026-04-26T02:16:04.02775456Z [inf]    Downloaded indexmap v2.12.0
+2026-04-30T00:00:44.25941562Z [inf]    Downloaded rand_chacha v0.2.2
 
-2026-04-26T02:16:04.031271752Z [inf]    Downloaded hkdf v0.12.4
+2026-04-30T00:00:44.26081797Z [inf]    Downloaded ppv-lite86 v0.2.21
 
-2026-04-26T02:16:04.033858008Z [inf]    Downloaded zerofrom v0.1.6
+2026-04-30T00:00:44.261997044Z [inf]    Downloaded memchr v2.8.0
 
-2026-04-26T02:16:04.034963875Z [inf]    Downloaded yoke-derive v0.8.1
+2026-04-30T00:00:44.266732628Z [inf]    Downloaded itoa v1.0.18
 
-2026-04-26T02:16:04.035703466Z [inf]    Downloaded yoke v0.8.1
+2026-04-30T00:00:44.267911805Z [inf]    Downloaded uncased v0.9.10
 
-2026-04-26T02:16:04.037410444Z [inf]    Downloaded utf8_iter v1.0.4
+2026-04-30T00:00:44.269737435Z [inf]    Downloaded tracing-attributes v0.1.31
 
-2026-04-26T02:16:04.038224092Z [inf]    Downloaded untrusted v0.7.1
+2026-04-30T00:00:44.272398147Z [inf]    Downloaded tinyvec_macros v0.1.1
 
-2026-04-26T02:16:04.038991086Z [inf]    Downloaded rsa v0.9.10
+2026-04-30T00:00:44.273072902Z [inf]    Downloaded thiserror-impl v2.0.18
 
-2026-04-26T02:16:04.042935819Z [inf]    Downloaded mio v1.2.0
+2026-04-30T00:00:44.275007042Z [inf]    Downloaded stable-pattern v0.1.0
 
-2026-04-26T02:16:04.047495565Z [inf]    Downloaded deranged v0.5.8
+2026-04-30T00:00:44.275966005Z [inf]    Downloaded sqlx-core v0.8.6
 
-2026-04-26T02:16:04.048711099Z [inf]    Downloaded sqlx-sqlite v0.8.6
+2026-04-30T00:00:44.283541495Z [inf]    Downloaded pin-utils v0.1.0
 
-2026-04-26T02:16:04.052362766Z [inf]    Downloaded sqlx-macros v0.8.6
+2026-04-30T00:00:44.284813442Z [inf]    Downloaded is-terminal v0.4.17
 
-2026-04-26T02:16:04.053063695Z [inf]    Downloaded spinning_top v0.3.0
+2026-04-30T00:00:44.285736503Z [inf]    Downloaded stringprep v0.1.5
 
-2026-04-26T02:16:04.054410791Z [inf]    Downloaded serde_spanned v0.6.9
+2026-04-30T00:00:44.28731095Z [inf]    Downloaded sqlx-macros-core v0.8.6
 
-2026-04-26T02:16:04.055317304Z [inf]    Downloaded scopeguard v1.2.0
+2026-04-30T00:00:44.28924021Z [inf]    Downloaded slab v0.4.12
 
-2026-04-26T02:16:04.056247917Z [inf]    Downloaded rand_core v0.9.3
+2026-04-30T00:00:44.290982947Z [inf]    Downloaded simple_asn1 v0.6.4
 
-2026-04-26T02:16:04.057305299Z [inf]    Downloaded rand v0.7.3
+2026-04-30T00:00:44.292484362Z [inf]    Downloaded serde_core v1.0.228
 
-2026-04-26T02:16:04.061811132Z [inf]    Downloaded num-bigint-dig v0.8.6
+2026-04-30T00:00:44.295592851Z [inf]    Downloaded state v0.6.0
 
-2026-04-26T02:16:04.065661149Z [inf]    Downloaded hyper-util v0.1.20
+2026-04-30T00:00:44.2984244Z [inf]    Downloaded stable_deref_trait v1.2.1
 
-2026-04-26T02:16:04.07034303Z [inf]    Downloaded untrusted v0.9.0
+2026-04-30T00:00:44.300182843Z [inf]    Downloaded sqlx-mysql v0.8.6
 
-2026-04-26T02:16:04.071634652Z [inf]    Downloaded ubyte v0.10.4
+2026-04-30T00:00:44.305586587Z [inf]    Downloaded sqlx-macros v0.8.6
 
-2026-04-26T02:16:04.07280903Z [inf]    Downloaded rustc-hash v2.1.2
+2026-04-30T00:00:44.306435658Z [inf]    Downloaded shlex v1.3.0
 
-2026-04-26T02:16:04.073739102Z [inf]    Downloaded num-bigint v0.4.6
+2026-04-30T00:00:44.307986017Z [inf]    Downloaded tempfile v3.27.0
 
-2026-04-26T02:16:04.077521392Z [inf]    Downloaded memchr v2.8.0
+2026-04-30T00:00:44.31015299Z [inf]    Downloaded socket2 v0.6.3
 
-2026-04-26T02:16:04.081611488Z [inf]    Downloaded icu_locale_core v2.1.1
+2026-04-30T00:00:44.312450685Z [inf]    Downloaded signature v2.2.0
 
-2026-04-26T02:16:04.086203481Z [inf]    Downloaded crossbeam-utils v0.8.21
+2026-04-30T00:00:44.314050642Z [inf]    Downloaded sharded-slab v0.1.7
 
-2026-04-26T02:16:04.088429586Z [inf]    Downloaded cc v1.2.58
+2026-04-30T00:00:44.317381331Z [inf]    Downloaded sha1 v0.10.6
 
-2026-04-26T02:16:04.091110499Z [inf]    Downloaded type-map v0.5.1
+2026-04-30T00:00:44.318723049Z [inf]    Downloaded serde_urlencoded v0.7.1
 
-2026-04-26T02:16:04.091875279Z [inf]    Downloaded toml v0.8.23
+2026-04-30T00:00:44.320626685Z [inf]    Downloaded serde_derive v1.0.228
 
-2026-04-26T02:16:04.093715089Z [inf]    Downloaded tokio-stream v0.1.18
+2026-04-30T00:00:44.324095916Z [inf]    Downloaded s2n-quic-rustls v0.77.0
 
-2026-04-26T02:16:04.097161055Z [inf]    Downloaded thiserror-impl v2.0.18
+2026-04-30T00:00:44.325488792Z [inf]    Downloaded s2n-quic v1.77.0
 
-2026-04-26T02:16:04.098278193Z [inf]    Downloaded thiserror-impl v1.0.69
+2026-04-30T00:00:44.330388031Z [inf]    Downloaded s2n-codec v0.77.0
 
-2026-04-26T02:16:04.099314288Z [inf]    Downloaded thiserror v2.0.18
+2026-04-30T00:00:44.332273103Z [inf]    Downloaded ryu v1.0.23
 
-2026-04-26T02:16:04.103615355Z [inf]    Downloaded tempfile v3.27.0
+2026-04-30T00:00:44.33558653Z [inf]    Downloaded rustls-platform-verifier v0.6.2
 
-2026-04-26T02:16:04.105803809Z [inf]    Downloaded stable-pattern v0.1.0
+2026-04-30T00:00:44.339516669Z [inf]    Downloaded rustls-pki-types v1.14.0
 
-2026-04-26T02:16:04.106600986Z [inf]    Downloaded signature v2.2.0
+2026-04-30T00:00:44.341759734Z [inf]    Downloaded raw-cpuid v11.6.0
 
-2026-04-26T02:16:04.107650948Z [inf]    Downloaded serde_urlencoded v0.7.1
+2026-04-30T00:00:44.345277148Z [inf]    Downloaded hashbrown v0.15.4
 
-2026-04-26T02:16:04.108887475Z [inf]    Downloaded ref-cast-impl v1.0.25
+2026-04-30T00:00:44.352990074Z [inf]    Downloaded bytes v1.11.1
 
-2026-04-26T02:16:04.109596132Z [inf]    Downloaded rand v0.9.2
+2026-04-30T00:00:44.359136501Z [inf]    Downloaded thiserror-impl v1.0.69
 
-2026-04-26T02:16:04.112809329Z [inf]    Downloaded icu_normalizer v2.1.1
+2026-04-30T00:00:44.360857787Z [inf]    Downloaded spki v0.7.3
 
-2026-04-26T02:16:04.115675593Z [inf]    Downloaded generic-array v0.14.7
+2026-04-30T00:00:44.362256465Z [inf]    Downloaded signal-hook-registry v1.4.8
 
-2026-04-26T02:16:04.116747974Z [inf]    Downloaded linux-raw-sys v0.12.1
+2026-04-30T00:00:44.363624142Z [inf]    Downloaded sha2 v0.10.9
 
-2026-04-26T02:16:04.179747602Z [inf]    Downloaded flume v0.11.1
+2026-04-30T00:00:44.365541188Z [inf]    Downloaded self_cell v1.2.2
 
-2026-04-26T02:16:04.182751621Z [inf]    Downloaded cipher v0.4.4
+2026-04-30T00:00:44.366750217Z [inf]    Downloaded s2n-quic-crypto v0.77.0
 
-2026-04-26T02:16:04.183881563Z [inf]    Downloaded ryu v1.0.23
+2026-04-30T00:00:44.368395689Z [inf]    Downloaded rustls-native-certs v0.8.3
 
-2026-04-26T02:16:04.186435966Z [inf]    Downloaded ref-swap v0.1.2
+2026-04-30T00:00:44.370276966Z [inf]    Downloaded quinn v0.11.9
 
-2026-04-26T02:16:04.187165803Z [inf]    Downloaded jsonwebtoken v9.3.1
+2026-04-30T00:00:44.375339336Z [inf]    Downloaded proc-macro2-diagnostics v0.10.1
 
-2026-04-26T02:16:04.190237162Z [inf]    Downloaded intrusive-collections v0.10.0
+2026-04-30T00:00:44.376808301Z [inf]    Downloaded potential_utf v0.1.4
 
-2026-04-26T02:16:04.192255943Z [inf]    Downloaded tinystr v0.8.2
+2026-04-30T00:00:44.377928235Z [inf]    Downloaded once_cell v1.21.4
 
-2026-04-26T02:16:04.193774988Z [inf]    Downloaded thiserror v1.0.69
+2026-04-30T00:00:44.380491576Z [inf]    Downloaded num-rational v0.4.2
 
-2026-04-26T02:16:04.197472936Z [inf]    Downloaded stringprep v0.1.5
+2026-04-30T00:00:44.381592265Z [inf]    Downloaded num-iter v0.1.45
 
-2026-04-26T02:16:04.198576713Z [inf]    Downloaded rand_core v0.10.0
+2026-04-30T00:00:44.382377742Z [inf]    Downloaded num-integer v0.1.46
 
-2026-04-26T02:16:04.199790904Z [inf]    Downloaded rand_core v0.6.4
+2026-04-30T00:00:44.383971345Z [inf]    Downloaded nu-ansi-term v0.50.3
 
-2026-04-26T02:16:04.200975629Z [inf]    Downloaded rand_chacha v0.3.1
+2026-04-30T00:00:44.385798181Z [inf]    Downloaded mime v0.3.17
 
-2026-04-26T02:16:04.201835825Z [inf]    Downloaded quanta v0.12.6
+2026-04-30T00:00:44.387032038Z [inf]    Downloaded md-5 v0.10.6
 
-2026-04-26T02:16:04.20376938Z [inf]    Downloaded proc-macro2 v1.0.106
+2026-04-30T00:00:44.388399938Z [inf]    Downloaded maud v0.27.0
 
-2026-04-26T02:16:04.206139292Z [inf]    Downloaded pkcs1 v0.7.5
+2026-04-30T00:00:44.391068763Z [inf]    Downloaded matchers v0.2.0
 
-2026-04-26T02:16:04.207939724Z [inf]    Downloaded log v0.4.29
+2026-04-30T00:00:44.392230001Z [inf]    Downloaded lru-slab v0.1.2
 
-2026-04-26T02:16:04.21013141Z [inf]    Downloaded icu_properties v2.1.2
+2026-04-30T00:00:44.393236165Z [inf]    Downloaded log v0.4.29
 
-2026-04-26T02:16:04.212186839Z [inf]    Downloaded hash_hasher v2.0.4
+2026-04-30T00:00:44.395581937Z [inf]    Downloaded iri-string v0.7.12
 
-2026-04-26T02:16:04.213250004Z [inf]    Downloaded base64ct v1.8.3
+2026-04-30T00:00:44.403622982Z [inf]    Downloaded intl_pluralrules v7.0.2
 
-2026-04-26T02:16:04.215143681Z [inf]    Downloaded base64 v0.22.1
+2026-04-30T00:00:44.404473101Z [inf]    Downloaded inout v0.1.4
 
-2026-04-26T02:16:04.218197562Z [inf]    Downloaded sync_wrapper v1.0.2
+2026-04-30T00:00:44.406660875Z [inf]    Downloaded idna_adapter v1.2.1
 
-2026-04-26T02:16:04.218831836Z [inf]    Downloaded spin v0.9.8
+2026-04-30T00:00:44.407416807Z [inf]    Downloaded iana-time-zone v0.1.65
 
-2026-04-26T02:16:04.220695013Z [inf]    Downloaded num-traits v0.2.19
+2026-04-30T00:00:44.41004904Z [inf]    Downloaded serde_spanned v0.6.9
 
-2026-04-26T02:16:04.22279552Z [inf]    Downloaded iana-time-zone v0.1.65
+2026-04-30T00:00:44.410927155Z [inf]    Downloaded scopeguard v1.2.0
 
-2026-04-26T02:16:04.224934831Z [inf]    Downloaded time-core v0.1.8
+2026-04-30T00:00:44.411910258Z [inf]    Downloaded rustc-hash v2.1.2
 
-2026-04-26T02:16:04.225886803Z [inf]    Downloaded synstructure v0.13.2
+2026-04-30T00:00:44.413532023Z [inf]    Downloaded rsa v0.9.10
 
-2026-04-26T02:16:04.226734537Z [inf]    Downloaded state v0.6.0
+2026-04-30T00:00:44.419532172Z [inf]    Downloaded ref-cast-impl v1.0.25
 
-2026-04-26T02:16:04.228551836Z [inf]    Downloaded stable_deref_trait v1.2.1
+2026-04-30T00:00:44.420623859Z [inf]    Downloaded rand_core v0.6.4
 
-2026-04-26T02:16:04.229233517Z [inf]    Downloaded spki v0.7.3
+2026-04-30T00:00:44.422156725Z [inf]    Downloaded rand_chacha v0.3.1
 
-2026-04-26T02:16:04.230495732Z [inf]    Downloaded futures-macro v0.3.32
+2026-04-30T00:00:44.423664247Z [inf]    Downloaded quote v1.0.45
 
-2026-04-26T02:16:04.231295646Z [inf]    Downloaded foreign-types v0.3.2
+2026-04-30T00:00:44.425968938Z [inf]    Downloaded proc-macro2 v1.0.106
 
-2026-04-26T02:16:04.231885769Z [inf]    Downloaded fluent-langneg v0.13.1
+2026-04-30T00:00:44.428706387Z [inf]    Downloaded pkcs8 v0.10.2
 
-2026-04-26T02:16:04.232778519Z [inf]    Downloaded fastrand v2.3.0
+2026-04-30T00:00:44.431357847Z [inf]    Downloaded pem v3.0.6
 
-2026-04-26T02:16:04.233745999Z [inf]    Downloaded s2n-quic-rustls v0.77.0
+2026-04-30T00:00:44.432414561Z [inf]    Downloaded pear_codegen v0.2.9
 
-2026-04-26T02:16:04.234769961Z [inf]    Downloaded once_cell v1.21.4
+2026-04-30T00:00:44.432968536Z [inf]    Downloaded native-tls v0.2.18
 
-2026-04-26T02:16:04.237257803Z [inf]    Downloaded maud v0.27.0
+2026-04-30T00:00:44.434773324Z [inf]    Downloaded multer v3.1.0
 
-2026-04-26T02:16:04.239253316Z [inf]    Downloaded ipnet v2.12.0
+2026-04-30T00:00:44.43675911Z [inf]    Downloaded hkdf v0.12.4
 
-2026-04-26T02:16:04.240764558Z [inf]    Downloaded futures-sink v0.3.32
+2026-04-30T00:00:44.439904953Z [inf]    Downloaded hashbrown v0.14.5
 
-2026-04-26T02:16:04.241461501Z [inf]    Downloaded devise_core v0.4.2
+2026-04-30T00:00:44.445063282Z [inf]    Downloaded h2 v0.4.13
 
-2026-04-26T02:16:04.24257067Z [inf]    Downloaded pear v0.2.9
+2026-04-30T00:00:44.451078888Z [inf]    Downloaded getrandom v0.3.4
 
-2026-04-26T02:16:04.244274483Z [inf]    Downloaded parking_lot v0.12.5
+2026-04-30T00:00:44.453736858Z [inf]    Downloaded foreign-types v0.3.2
 
-2026-04-26T02:16:04.24631618Z [inf]    Downloaded lock_api v0.4.14
+2026-04-30T00:00:44.454560098Z [inf]    Downloaded figment v0.10.19
 
-2026-04-26T02:16:04.247436746Z [inf]    Downloaded lazy_static v1.5.0
+2026-04-30T00:00:44.45887661Z [inf]    Downloaded chrono v0.4.44
 
-2026-04-26T02:16:04.248821039Z [inf]    Downloaded jobserver v0.1.34
+2026-04-30T00:00:44.467130714Z [inf]    Downloaded base64ct v1.8.3
 
-2026-04-26T02:16:04.250315821Z [inf]    Downloaded hyper-rustls v0.27.7
+2026-04-30T00:00:44.469525337Z [inf]    Downloaded aws-lc-rs v1.16.2
 
-2026-04-26T02:16:04.252439994Z [inf]    Downloaded http v1.4.0
+2026-04-30T00:00:44.481049832Z [inf]    Downloaded proc-macro-hack v0.5.20+deprecated
 
-2026-04-26T02:16:04.255643747Z [inf]    Downloaded h3 v0.0.6
+2026-04-30T00:00:44.482546714Z [inf]    Downloaded pkg-config v0.3.32
 
-2026-04-26T02:16:04.259690166Z [inf]    Downloaded const-oid v0.9.6
+2026-04-30T00:00:44.483946435Z [inf]    Downloaded pem-rfc7468 v0.7.0
 
-2026-04-26T02:16:04.261384282Z [inf]    Downloaded pin-utils v0.1.0
+2026-04-30T00:00:44.485466495Z [inf]    Downloaded http v1.4.0
 
-2026-04-26T02:16:04.262211938Z [inf]    Downloaded pin-project-lite v0.2.17
+2026-04-30T00:00:44.488745987Z [inf]    Downloaded futures-util v0.3.32
 
-2026-04-26T02:16:04.266055154Z [inf]    Downloaded percent-encoding v2.3.2
+2026-04-30T00:00:44.499649206Z [inf]    Downloaded httparse v1.10.1
 
-2026-04-26T02:16:04.266809142Z [inf]    Downloaded pear_codegen v0.2.9
+2026-04-30T00:00:44.503016139Z [inf]    Downloaded hashbrown v0.16.0
 
-2026-04-26T02:16:04.267369052Z [inf]    Downloaded nonzero_ext v0.3.0
+2026-04-30T00:00:44.508868111Z [inf]    Downloaded h3 v0.0.6
 
-2026-04-26T02:16:04.270504585Z [inf]    Downloaded md-5 v0.10.6
+2026-04-30T00:00:44.514505665Z [inf]    Downloaded governor v0.10.4
 
-2026-04-26T02:16:04.271648058Z [inf]    Downloaded maud_macros v0.27.0
+2026-04-30T00:00:44.519251867Z [inf]    Downloaded futures-task v0.3.32
 
-2026-04-26T02:16:04.272358743Z [inf]    Downloaded futures-intrusive v0.5.0
+2026-04-30T00:00:44.520171051Z [inf]    Downloaded futures-intrusive v0.5.0
 
-2026-04-26T02:16:04.27606434Z [inf]    Downloaded displaydoc v0.2.5
+2026-04-30T00:00:44.525792652Z [inf]    Downloaded futures-core v0.3.32
 
-2026-04-26T02:16:04.278260041Z [inf]    Downloaded intl_pluralrules v7.0.2
+2026-04-30T00:00:44.527692313Z [inf]    Downloaded futures v0.3.32
 
-2026-04-26T02:16:04.279201696Z [inf]    Downloaded form_urlencoded v1.2.2
+2026-04-30T00:00:44.534069869Z [inf]    Downloaded form_urlencoded v1.2.2
 
-2026-04-26T02:16:04.279922601Z [inf]    Downloaded foldhash v0.2.0
+2026-04-30T00:00:44.535061982Z [inf]    Downloaded foreign-types-shared v0.1.1
 
-2026-04-26T02:16:04.28092034Z [inf]    Downloaded foldhash v0.1.5
+2026-04-30T00:00:44.535950418Z [inf]    Downloaded flume v0.11.1
 
-2026-04-26T02:16:04.281871967Z [inf]    Downloaded proc-macro2-diagnostics v0.10.1
+2026-04-30T00:00:44.541817881Z [inf]    Downloaded fluent-bundle v0.16.0
 
-2026-04-26T02:16:04.283194108Z [inf]    Downloaded proc-macro-hack v0.5.20+deprecated
+2026-04-30T00:00:44.545906051Z [inf]    Downloaded flate2 v1.1.9
 
-2026-04-26T02:16:04.284730436Z [inf]    Downloaded parking_lot_core v0.9.12
+2026-04-30T00:00:44.552117904Z [inf]    Downloaded find-msvc-tools v0.1.9
 
-2026-04-26T02:16:04.28640328Z [inf]    Downloaded num-rational v0.4.2
+2026-04-30T00:00:44.554080687Z [inf]    Downloaded event-listener v5.4.1
 
-2026-04-26T02:16:04.287461911Z [inf]    Downloaded num-integer v0.1.46
+2026-04-30T00:00:44.55666186Z [inf]    Downloaded derive_more-impl v2.0.1
 
-2026-04-26T02:16:04.288673509Z [inf]    Downloaded litemap v0.8.1
+2026-04-30T00:00:44.562441806Z [inf]    Downloaded der v0.7.10
 
-2026-04-26T02:16:04.290454765Z [inf]    Downloaded fluent v0.17.0
+2026-04-30T00:00:44.569719644Z [inf]    Downloaded cc v1.2.58
 
-2026-04-26T02:16:04.291127765Z [inf]    Downloaded event-listener v5.4.1
+2026-04-30T00:00:44.576428428Z [inf]    Downloaded bincode v1.3.3
 
-2026-04-26T02:16:04.292899458Z [inf]    Downloaded byteorder v1.5.0
+2026-04-30T00:00:44.579559557Z [inf]    Downloaded base64 v0.22.1
 
-2026-04-26T02:16:04.29409654Z [inf]    Downloaded inlinable_string v0.1.15
+2026-04-30T00:00:44.586147435Z [inf]    Downloaded base64 v0.21.7
 
-2026-04-26T02:16:04.295218412Z [inf]    Downloaded hashlink v0.10.0
+2026-04-30T00:00:44.592105692Z [inf]    Downloaded aho-corasick v1.1.4
 
-2026-04-26T02:16:04.296618283Z [inf]    Downloaded equivalent v1.0.2
+2026-04-30T00:00:44.601367806Z [inf]    Downloaded rand_core v0.10.0
 
-2026-04-26T02:16:04.297285276Z [inf]    Downloaded openssl-probe v0.2.1
+2026-04-30T00:00:44.603321614Z [inf]    Downloaded
+2026-04-30T00:00:44.603335709Z [inf]   rand_core v0.9.3
 
-2026-04-26T02:16:04.298166028Z [inf]    Downloaded matchers v0.2.0
+2026-04-30T00:00:44.605085667Z [inf]    Downloaded rand_core v0.5.1
 
-2026-04-26T02:16:04.298957931Z [inf]    Downloaded icu_collections v2.1.1
+2026-04-30T00:00:44.6075153Z [inf]    Downloaded powerfmt v0.2.0
 
-2026-04-26T02:16:04.30486493Z [inf]    Downloaded glob v0.3.3
+2026-04-30T00:00:44.608938664Z [inf]    Downloaded num_cpus v1.17.0
 
-2026-04-26T02:16:04.305132404Z [inf]    Downloaded crossbeam-queue v0.3.12
+2026-04-30T00:00:44.612038634Z [inf]    Downloaded
+2026-04-30T00:00:44.612051181Z [inf]   http-body-util v0.1.3
 
-2026-04-26T02:16:04.306217475Z [inf]    Downloaded cfg_aliases v0.2.1
+2026-04-30T00:00:44.614239941Z [inf]    Downloaded hmac v0.12.1
 
-2026-04-26T02:16:04.306958253Z [inf]    Downloaded openssl-sys v0.9.112
+2026-04-30T00:00:44.61663302Z [inf]    Downloaded getrandom v0.4.2
 
-2026-04-26T02:16:04.311279987Z [inf]    Downloaded derive_more-impl v2.0.1
+2026-04-30T00:00:44.622445991Z [inf]    Downloaded fs_extra v1.3.0
 
-2026-04-26T02:16:04.314944807Z [inf]    Downloaded icu_provider v2.1.1
+2026-04-30T00:00:44.625658017Z [inf]    Downloaded foldhash v0.1.5
 
-2026-04-26T02:16:04.31735434Z [inf]    Downloaded chrono v0.4.44
+2026-04-30T00:00:44.628226133Z [inf]    Downloaded home v0.5.12
 
-2026-04-26T02:16:04.323602676Z [inf]    Downloaded num_cpus v1.17.0
+2026-04-30T00:00:44.629473475Z [inf]    Downloaded hex-literal v1.1.0
 
-2026-04-26T02:16:04.327314845Z [inf]    Downloaded multer v3.1.0
+2026-04-30T00:00:44.630597478Z [inf]    Downloaded
+2026-04-30T00:00:44.630603642Z [inf]   hex v0.4.3
 
-2026-04-26T02:16:04.329332951Z [inf]    Downloaded lru-slab v0.1.2
+2026-04-30T00:00:44.632518892Z [inf]    Downloaded glob v0.3.3
 
-2026-04-26T02:16:04.329966487Z [inf]    Downloaded itoa v1.0.18
+2026-04-30T00:00:44.635203833Z [inf]    Downloaded getrandom v0.2.16
 
-2026-04-26T02:16:04.331051554Z [inf]    Downloaded intl-memoizer v0.5.3
+2026-04-30T00:00:44.639104573Z [inf]    Downloaded futures-io v0.3.32
 
-2026-04-26T02:16:04.331821797Z [inf]    Downloaded inout v0.1.4
+2026-04-30T00:00:44.640203542Z [inf]    Downloaded futures-channel v0.3.32
 
-2026-04-26T02:16:04.332743211Z [inf]    Downloaded hmac v0.12.1
+2026-04-30T00:00:44.643591237Z [inf]    Downloaded fluent-syntax v0.12.0
 
-2026-04-26T02:16:04.334195998Z [inf]    Downloaded cfg-if v1.0.4
+2026-04-30T00:00:44.646591855Z [inf]    Downloaded dotenvy v0.15.7
 
-2026-04-26T02:16:04.335104671Z [inf]    Downloaded parking v2.2.1
+2026-04-30T00:00:44.651088507Z [inf]    Downloaded derive_more v2.0.1
 
-2026-04-26T02:16:04.335988424Z [inf]    Downloaded num-conv v0.2.1
+2026-04-30T00:00:44.663753153Z [inf]    Downloaded crossbeam-utils v0.8.21
 
-2026-04-26T02:16:04.336701485Z [inf]    Downloaded nu-ansi-term v0.50.3
+2026-04-30T00:00:44.668236404Z [inf]    Downloaded cookie v0.18.1
 
-2026-04-26T02:16:04.338405485Z [inf]    Downloaded native-tls v0.2.18
+2026-04-30T00:00:44.671294909Z [inf]    Downloaded const-oid v0.9.6
 
-2026-04-26T02:16:04.339795782Z [inf]    Downloaded is-terminal v0.4.17
+2026-04-30T00:00:44.674560329Z [inf]    Downloaded chacha20 v0.10.0
 
-2026-04-26T02:16:04.34116299Z [inf]    Downloaded futures-timer v3.0.3
+2026-04-30T00:00:44.678433826Z [inf]    Downloaded blowfish v0.9.1
 
-2026-04-26T02:16:04.34253298Z [inf]    Downloaded bincode v1.3.3
+2026-04-30T00:00:44.68026465Z [inf]    Downloaded bitflags v2.11.0
 
-2026-04-26T02:16:04.344279558Z [inf]    Downloaded potential_utf v0.1.4
+2026-04-30T00:00:44.686183492Z [inf]    Downloaded binascii v0.1.4
 
-2026-04-26T02:16:04.345059216Z [inf]    Downloaded pkcs8 v0.10.2
+2026-04-30T00:00:44.687240955Z [inf]    Downloaded
+2026-04-30T00:00:44.68726547Z [inf]   bcrypt v0.19.0
 
-2026-04-26T02:16:04.347054442Z [inf]    Downloaded num-iter v0.1.45
+2026-04-30T00:00:44.688483524Z [inf]    Downloaded http-body v1.0.1
 
-2026-04-26T02:16:04.348102618Z [inf]    Downloaded httparse v1.10.1
+2026-04-30T00:00:44.689615812Z [inf]    Downloaded hashlink v0.10.0
 
-2026-04-26T02:16:04.350179835Z [inf]    Downloaded fnv v1.0.7
+2026-04-30T00:00:44.692722651Z [inf]    Downloaded generic-array v0.14.7
 
-2026-04-26T02:16:04.350871648Z [inf]    Downloaded find-msvc-tools v0.1.9
+2026-04-30T00:00:44.694118461Z [inf]    Downloaded futures-sink v0.3.32
 
-2026-04-26T02:16:04.352183933Z [inf]    Downloaded cuckoofilter v0.5.0
+2026-04-30T00:00:44.694871634Z [inf]    Downloaded futures-macro v0.3.32
 
-2026-04-26T02:16:04.353251362Z [inf]    Downloaded cmake v0.1.58
+2026-04-30T00:00:44.696748186Z [inf]    Downloaded fluent-langneg v0.13.1
 
-2026-04-26T02:16:04.354394234Z [inf]    Downloaded bitflags v2.11.0
+2026-04-30T00:00:44.698661428Z [inf]    Downloaded
+2026-04-30T00:00:44.698673461Z [inf]   fluent v0.17.0
 
-2026-04-26T02:16:04.357583004Z [inf]    Downloaded binascii v0.1.4
+2026-04-30T00:00:44.699731397Z [inf]    Downloaded digest v0.10.7
 
-2026-04-26T02:16:04.358265479Z [inf]    Downloaded http-body-util v0.1.3
+2026-04-30T00:00:44.70190306Z [inf]    Downloaded devise_core v0.4.2
 
-2026-04-26T02:16:04.359564962Z [inf]    Downloaded heck v0.5.0
+2026-04-30T00:00:44.704317776Z [inf]    Downloaded deranged v0.5.8
 
-2026-04-26T02:16:04.36072926Z [inf]    Downloaded digest v0.10.7
+2026-04-30T00:00:44.706650326Z [inf]    Downloaded cuckoofilter v0.5.0
 
-2026-04-26T02:16:04.362041812Z [inf]    Downloaded devise v0.4.2
+2026-04-30T00:00:44.708317451Z [inf]    Downloaded crc32fast v1.5.0
 
-2026-04-26T02:16:04.362618656Z [inf]    Downloaded derive_more v2.0.1
+2026-04-30T00:00:44.710860936Z [inf]    Downloaded concurrent-queue v2.5.0
 
-2026-04-26T02:16:04.369739368Z [inf]    Downloaded der v0.7.10
+2026-04-30T00:00:44.712455061Z [inf]    Downloaded cipher v0.4.4
 
-2026-04-26T02:16:04.373779769Z [inf]    Downloaded crypto-common v0.1.7
+2026-04-30T00:00:44.714388988Z [inf]    Downloaded byteorder v1.5.0
 
-2026-04-26T02:16:04.374488632Z [inf]    Downloaded crc32fast v1.5.0
+2026-04-30T00:00:44.716596915Z [inf]    Downloaded block-buffer v0.10.4
 
-2026-04-26T02:16:04.376245559Z [inf]    Downloaded crc-catalog v2.4.0
+2026-04-30T00:00:44.717869341Z [inf]    Downloaded allocator-api2 v0.2.21
 
-2026-04-26T02:16:04.377084708Z [inf]    Downloaded crc v3.4.0
+2026-04-30T00:00:44.720941145Z [inf]    Downloaded futures-timer v3.0.3
 
-2026-04-26T02:16:04.378277969Z [inf]    Downloaded cpufeatures v0.2.17
+2026-04-30T00:00:44.723375286Z [inf]    Downloaded futures-executor v0.3.32
 
-2026-04-26T02:16:04.379434472Z [inf]    Downloaded cookie v0.18.1
+2026-04-30T00:00:44.726013661Z [inf]    Downloaded foldhash v0.2.0
 
-2026-04-26T02:16:04.381335098Z [inf]    Downloaded concurrent-queue v2.5.0
+2026-04-30T00:00:44.727886437Z [inf]    Downloaded fnv v1.0.7
 
-2026-04-26T02:16:04.382689573Z [inf]    Downloaded block-buffer v0.10.4
+2026-04-30T00:00:44.72895806Z [inf]    Downloaded errno v0.3.14
 
-2026-04-26T02:16:04.383459302Z [inf]    Downloaded hex-literal v1.1.0
+2026-04-30T00:00:44.730708765Z [inf]    Downloaded either v1.15.0
 
-2026-04-26T02:16:04.384257749Z [inf]    Downloaded aws-lc-rs v1.16.2
+2026-04-30T00:00:44.732479527Z [inf]    Downloaded dotenv v0.15.0
 
-2026-04-26T02:16:04.393048283Z [inf]    Downloaded cpufeatures v0.3.0
+2026-04-30T00:00:44.734679706Z [inf]    Downloaded devise v0.4.2
 
-2026-04-26T02:16:04.394157276Z [inf]    Downloaded atoi v2.0.0
+2026-04-30T00:00:44.735669979Z [inf]    Downloaded cpufeatures v0.3.0
 
-2026-04-26T02:16:04.39511528Z [inf]    Downloaded atomic-waker v1.1.2
+2026-04-30T00:00:44.738112143Z [inf]    Downloaded cpufeatures v0.2.17
 
-2026-04-26T02:16:04.396159841Z [inf]    Downloaded async-trait v0.1.89
+2026-04-30T00:00:44.742592012Z [inf]    Downloaded cfg_aliases v0.2.1
 
-2026-04-26T02:16:04.398663141Z [inf]    Downloaded getrandom v0.3.4
+2026-04-30T00:00:44.743876966Z [inf]    Downloaded
+2026-04-30T00:00:44.743982068Z [inf]   async-trait v0.1.89
 
-2026-04-26T02:16:04.401408733Z [inf]    Downloaded futures-channel v0.3.32
+2026-04-30T00:00:44.748463006Z [inf]    Downloaded dashmap v6.1.0
 
-2026-04-26T02:16:04.403972096Z [inf]    Downloaded dashmap v6.1.0
+2026-04-30T00:00:44.751486811Z [inf]    Downloaded crossbeam-queue v0.3.12
 
-2026-04-26T02:16:04.405734448Z [inf]    Downloaded dotenvy v0.15.7
+2026-04-30T00:00:44.754178684Z [inf]    Downloaded cmake v0.1.58
 
-2026-04-26T02:16:04.407720857Z [inf]    Downloaded blowfish v0.9.1
+2026-04-30T00:00:44.756134083Z [inf]    Downloaded autocfg v1.5.0
 
-2026-04-26T02:16:04.408884432Z [inf]    Downloaded autocfg v1.5.0
+2026-04-30T00:00:44.758479123Z [inf]    Downloaded fastrand v2.3.0
 
-2026-04-26T02:16:04.410390261Z [inf]    Downloaded bcrypt v0.19.0
+2026-04-30T00:00:44.760192192Z [inf]    Downloaded equivalent v1.0.2
 
-2026-04-26T02:16:04.411457119Z [inf]    Downloaded libsqlite3-sys v0.30.1
+2026-04-30T00:00:44.761394701Z [inf]    Downloaded crc-catalog v2.4.0
 
-2026-04-26T02:16:04.518066695Z [inf]    Downloaded aws-lc-sys v0.39.1
+2026-04-30T00:00:44.762866817Z [inf]    Downloaded cfg-if v1.0.4
 
-2026-04-26T02:16:04.840164933Z [inf]     Compiling proc-macro2 v1.0.106
-   Compiling unicode-ident v1.0.24
+2026-04-30T00:00:44.918644802Z [inf]     Compiling proc-macro2 v1.0.106
 
-2026-04-26T02:16:04.840178981Z [inf]     Compiling quote v1.0.45
+2026-04-30T00:00:44.918664126Z [inf]     Compiling quote v1.0.45
 
-2026-04-26T02:16:04.840252166Z [inf]     Compiling libc v0.2.183
+2026-04-30T00:00:44.918742655Z [inf]     Compiling unicode-ident v1.0.24
 
-2026-04-26T02:16:04.840403897Z [inf]     Compiling serde_core v1.0.228
+2026-04-30T00:00:44.918809646Z [inf]     Compiling libc v0.2.183
 
-2026-04-26T02:16:04.840436484Z [inf]     Compiling version_check v0.9.5
+2026-04-30T00:00:44.918888987Z [inf]     Compiling serde_core v1.0.228
 
-2026-04-26T02:16:04.84292098Z [inf]     Compiling serde v1.0.228
+2026-04-30T00:00:44.922602486Z [inf]     Compiling version_check v0.9.5
 
-2026-04-26T02:16:04.846099581Z [inf]     Compiling cfg-if v1.0.4
+2026-04-30T00:00:44.925758088Z [inf]     Compiling serde v1.0.228
 
-2026-04-26T02:16:04.847681842Z [inf]     Compiling shlex v1.3.0
+2026-04-30T00:00:44.935676032Z [inf]     Compiling cfg-if v1.0.4
 
-2026-04-26T02:16:04.851560118Z [inf]     Compiling find-msvc-tools v0.1.9
+2026-04-30T00:00:44.938155907Z [inf]     Compiling find-msvc-tools v0.1.9
 
-2026-04-26T02:16:04.853155197Z [inf]     Compiling typenum v1.19.0
+2026-04-30T00:00:44.938208695Z [inf]     Compiling shlex v1.3.0
 
-2026-04-26T02:16:04.854954823Z [inf]     Compiling parking_lot_core v0.9.12
+2026-04-30T00:00:44.943233438Z [inf]     Compiling parking_lot_core v0.9.12
 
-2026-04-26T02:16:04.856778081Z [inf]     Compiling stable_deref_trait v1.2.1
+2026-04-30T00:00:44.950889619Z [inf]     Compiling typenum v1.19.0
 
-2026-04-26T02:16:04.858382932Z [inf]     Compiling pkg-config v0.3.32
+2026-04-30T00:00:44.957231027Z [inf]     Compiling stable_deref_trait v1.2.1
 
-2026-04-26T02:16:04.860112864Z [inf]     Compiling vcpkg v0.2.15
+2026-04-30T00:00:44.957461352Z [inf]     Compiling vcpkg v0.2.15
 
-2026-04-26T02:16:04.863515601Z [inf]     Compiling pin-project-lite v0.2.17
+2026-04-30T00:00:44.962340309Z [inf]     Compiling pkg-config v0.3.32
 
-2026-04-26T02:16:04.865625255Z [inf]     Compiling scopeguard v1.2.0
+2026-04-30T00:00:44.974226198Z [inf]     Compiling pin-project-lite v0.2.17
 
-2026-04-26T02:16:04.868369662Z [inf]     Compiling itoa v1.0.18
+2026-04-30T00:00:44.984931933Z [inf]     Compiling scopeguard v1.2.0
 
-2026-04-26T02:16:04.870385343Z [inf]     Compiling futures-core v0.3.32
+2026-04-30T00:00:44.985241257Z [inf]     Compiling itoa v1.0.18
 
-2026-04-26T02:16:04.872911934Z [inf]     Compiling once_cell v1.21.4
+2026-04-30T00:00:44.990790314Z [inf]     Compiling futures-core v0.3.32
 
-2026-04-26T02:16:04.873110145Z [inf]     Compiling autocfg v1.5.0
+2026-04-30T00:00:44.997357174Z [inf]     Compiling once_cell v1.21.4
 
-2026-04-26T02:16:04.875114798Z [inf]     Compiling memchr v2.8.0
+2026-04-30T00:00:45.00337392Z [inf]     Compiling autocfg v1.5.0
 
-2026-04-26T02:16:04.875307785Z [inf]     Compiling icu_properties_data v2.1.2
+2026-04-30T00:00:45.003492842Z [inf]     Compiling memchr v2.8.0
 
-2026-04-26T02:16:04.875438006Z [inf]     Compiling icu_normalizer_data v2.1.1
+2026-04-30T00:00:45.011930526Z [inf]     Compiling icu_normalizer_data v2.1.1
 
-2026-04-26T02:16:04.875572903Z [inf]     Compiling
-2026-04-26T02:16:04.875589245Z [inf]   bytes v1.11.1
+2026-04-30T00:00:45.022453667Z [inf]     Compiling icu_properties_data v2.1.2
 
-2026-04-26T02:16:04.87565289Z [inf]     Compiling zerocopy v0.8.48
+2026-04-30T00:00:45.02324809Z [inf]     Compiling
+2026-04-30T00:00:45.02326654Z [inf]   bytes v1.11.1
 
-2026-04-26T02:16:04.875966861Z [inf]     Compiling equivalent v1.0.2
+2026-04-30T00:00:45.028621536Z [inf]     Compiling zerocopy v0.8.48
 
-2026-04-26T02:16:04.87600436Z [inf]     Compiling allocator-api2 v0.2.21
+2026-04-30T00:00:45.029215592Z [inf]     Compiling allocator-api2 v0.2.21
 
-2026-04-26T02:16:04.876111031Z [inf]     Compiling futures-sink v0.3.32
+2026-04-30T00:00:45.029535773Z [inf]     Compiling
+2026-04-30T00:00:45.029694895Z [inf]   equivalent v1.0.2
 
-2026-04-26T02:16:04.876373629Z [inf]     Compiling slab v0.4.12
+2026-04-30T00:00:45.035552668Z [inf]     Compiling
+2026-04-30T00:00:45.035596631Z [inf]   futures-sink v0.3.32
 
-2026-04-26T02:16:04.876464822Z [inf]     Compiling zmij v1.0.21
+2026-04-30T00:00:45.035776712Z [inf]     Compiling zmij v1.0.21
 
-2026-04-26T02:16:04.876575568Z [inf]     Compiling foldhash v0.2.0
+2026-04-30T00:00:45.036501508Z [inf]     Compiling foldhash v0.2.0
 
-2026-04-26T02:16:04.876663414Z [inf]     Compiling thiserror v2.0.18
+2026-04-30T00:00:45.036665845Z [inf]     Compiling log v0.4.29
 
-2026-04-26T02:16:04.876737429Z [inf]     Compiling log v0.4.29
+2026-04-30T00:00:45.037647178Z [inf]     Compiling slab v0.4.12
 
-2026-04-26T02:16:04.876828237Z [inf]     Compiling serde_json v1.0.149
+2026-04-30T00:00:45.038075149Z [inf]     Compiling thiserror v2.0.18
 
-2026-04-26T02:16:04.876977931Z [inf]     Compiling subtle v2.6.1
+2026-04-30T00:00:45.038183861Z [inf]     Compiling futures-task v0.3.32
 
-2026-04-26T02:16:04.877068108Z [inf]     Compiling futures-io v0.3.32
+2026-04-30T00:00:45.038389372Z [inf]     Compiling subtle v2.6.1
 
-2026-04-26T02:16:04.877158465Z [inf]     Compiling futures-task v0.3.32
+2026-04-30T00:00:45.038474228Z [inf]     Compiling
+2026-04-30T00:00:45.038490171Z [inf]   serde_json v1.0.149
 
-2026-04-26T02:16:04.877236261Z [inf]     Compiling openssl v0.10.76
+2026-04-30T00:00:45.038630202Z [inf]     Compiling futures-io v0.3.32
 
-2026-04-26T02:16:04.877300632Z [inf]     Compiling percent-encoding v2.3.2
+2026-04-30T00:00:45.038686182Z [inf]     Compiling percent-encoding v2.3.2
 
-2026-04-26T02:16:04.877401913Z [inf]     Compiling bitflags v2.11.0
+2026-04-30T00:00:45.038909573Z [inf]     Compiling
+2026-04-30T00:00:45.039015105Z [inf]   bitflags v2.11.0
 
-2026-04-26T02:16:04.877611586Z [inf]     Compiling writeable v0.6.2
+2026-04-30T00:00:45.039297197Z [inf]     Compiling
+2026-04-30T00:00:45.039312401Z [inf]   openssl v0.10.76
 
-2026-04-26T02:16:04.877666278Z [inf]     Compiling litemap v0.8.1
+2026-04-30T00:00:45.039521229Z [inf]     Compiling writeable v0.6.2
 
-2026-04-26T02:16:04.877746592Z [inf]     Compiling crossbeam-utils v0.8.21
+2026-04-30T00:00:45.039731841Z [inf]     Compiling litemap v0.8.1
 
-2026-04-26T02:16:04.897820223Z [inf]     Compiling lock_api v0.4.14
+2026-04-30T00:00:45.040906201Z [inf]     Compiling native-tls v0.2.18
 
-2026-04-26T02:16:04.967455104Z [inf]     Compiling native-tls v0.2.18
+2026-04-30T00:00:45.044027313Z [inf]     Compiling
+2026-04-30T00:00:45.044114315Z [inf]   lock_api v0.4.14
 
-2026-04-26T02:16:04.989953209Z [inf]     Compiling proc-macro-hack v0.5.20+deprecated
+2026-04-30T00:00:45.162854872Z [inf]     Compiling crossbeam-utils v0.8.21
 
-2026-04-26T02:16:05.017051576Z [inf]     Compiling futures-channel v0.3.32
+2026-04-30T00:00:45.225607774Z [inf]     Compiling tracing-core v0.1.36
 
-2026-04-26T02:16:05.041814706Z [inf]     Compiling yansi v1.0.1
+2026-04-30T00:00:45.235400497Z [inf]     Compiling generic-array v0.14.7
 
-2026-04-26T02:16:05.047443819Z [inf]     Compiling tinyvec_macros v0.1.1
+2026-04-30T00:00:45.252172205Z [inf]     Compiling proc-macro2-diagnostics v0.10.1
 
-2026-04-26T02:16:05.073076321Z [inf]     Compiling generic-array v0.14.7
+2026-04-30T00:00:45.268106594Z [inf]     Compiling tinyvec_macros v0.1.1
 
-2026-04-26T02:16:05.082166117Z [inf]     Compiling proc-macro2-diagnostics v0.10.1
+2026-04-30T00:00:45.289038597Z [inf]     Compiling
+2026-04-30T00:00:45.289059444Z [inf]   futures-channel v0.3.32
 
-2026-04-26T02:16:05.100998955Z [inf]     Compiling
-2026-04-26T02:16:05.101180919Z [inf]   tracing-core v0.1.36
+2026-04-30T00:00:45.296682283Z [inf]     Compiling yansi v1.0.1
 
-2026-04-26T02:16:05.105938186Z [inf]     Compiling base64 v0.22.1
+2026-04-30T00:00:45.297398767Z [inf]     Compiling
+2026-04-30T00:00:45.297815019Z [inf]   proc-macro-hack v0.5.20+deprecated
 
-2026-04-26T02:16:05.139904959Z [inf]     Compiling tinyvec v1.11.0
+2026-04-30T00:00:45.331796302Z [inf]     Compiling
+2026-04-30T00:00:45.332011807Z [inf]   base64 v0.22.1
 
-2026-04-26T02:16:05.150611088Z [inf]     Compiling num-conv v0.2.1
+2026-04-30T00:00:45.418040692Z [inf]     Compiling
+2026-04-30T00:00:45.418416955Z [inf]   num-conv v0.2.1
 
-2026-04-26T02:16:05.185310053Z [inf]     Compiling hashbrown v0.16.0
+2026-04-30T00:00:45.418787563Z [inf]     Compiling
+2026-04-30T00:00:45.419650569Z [inf]   time-core v0.1.8
 
-2026-04-26T02:16:05.185370471Z [inf]     Compiling time-core v0.1.8
+2026-04-30T00:00:45.435014455Z [inf]     Compiling hashbrown v0.16.0
 
-2026-04-26T02:16:05.194479739Z [inf]     Compiling foreign-types-shared v0.1.1
+2026-04-30T00:00:45.479292747Z [inf]     Compiling
+2026-04-30T00:00:45.479370852Z [inf]   foreign-types-shared v0.1.1
 
-2026-04-26T02:16:05.226017644Z [inf]     Compiling num-traits v0.2.19
+2026-04-30T00:00:45.58911417Z [inf]     Compiling tinyvec v1.11.0
 
-2026-04-26T02:16:05.23946585Z [inf]     Compiling zeroize v1.8.2
+2026-04-30T00:00:45.67850485Z [inf]     Compiling openssl-probe v0.2.1
 
-2026-04-26T02:16:05.277685344Z [inf]     Compiling foreign-types v0.3.2
+2026-04-30T00:00:45.680255851Z [inf]     Compiling
+2026-04-30T00:00:45.680680861Z [inf]   num-traits v0.2.19
 
-2026-04-26T02:16:05.285982296Z [inf]     Compiling utf8_iter v1.0.4
+2026-04-30T00:00:45.755789864Z [inf]     Compiling utf8_iter v1.0.4
 
-2026-04-26T02:16:05.311551635Z [inf]     Compiling openssl-probe v0.2.1
+2026-04-30T00:00:45.799620694Z [inf]     Compiling foldhash v0.1.5
 
-2026-04-26T02:16:05.318753556Z [inf]     Compiling foldhash v0.1.5
+2026-04-30T00:00:45.824640322Z [inf]     Compiling zeroize v1.8.2
 
-2026-04-26T02:16:05.325510165Z [inf]     Compiling form_urlencoded v1.2.2
+2026-04-30T00:00:45.838822149Z [inf]     Compiling http v1.4.0
 
-2026-04-26T02:16:05.35516366Z [inf]     Compiling time-macros v0.2.27
+2026-04-30T00:00:45.839092159Z [inf]     Compiling form_urlencoded v1.2.2
 
-2026-04-26T02:16:05.365693593Z [inf]     Compiling cpufeatures v0.2.17
+2026-04-30T00:00:45.898156895Z [inf]     Compiling
+2026-04-30T00:00:45.898419265Z [inf]   getrandom v0.4.2
 
-2026-04-26T02:16:05.373801705Z [inf]     Compiling crc-catalog v2.4.0
+2026-04-30T00:00:45.931032034Z [inf]     Compiling
+2026-04-30T00:00:45.931228405Z [inf]   crc-catalog v2.4.0
 
-2026-04-26T02:16:05.392204464Z [inf]     Compiling parking v2.2.1
+2026-04-30T00:00:45.990493249Z [inf]     Compiling
+2026-04-30T00:00:45.990633134Z [inf]   hashbrown v0.15.4
 
-2026-04-26T02:16:05.393025088Z [inf]     Compiling rand_core v0.10.0
+2026-04-30T00:00:45.998040205Z [inf]     Compiling
+2026-04-30T00:00:45.998070068Z [inf]   time-macros v0.2.27
 
-2026-04-26T02:16:05.414328115Z [inf]     Compiling
-2026-04-26T02:16:05.414344073Z [inf]   getrandom v0.4.2
+2026-04-30T00:00:46.006780797Z [inf]     Compiling
+2026-04-30T00:00:46.006799969Z [inf]   parking v2.2.1
 
-2026-04-26T02:16:05.418327837Z [inf]     Compiling
-2026-04-26T02:16:05.419302998Z [inf]   iana-time-zone v0.1.65
+2026-04-30T00:00:46.053772079Z [inf]     Compiling
+2026-04-30T00:00:46.053790399Z [inf]   foreign-types v0.3.2
 
-2026-04-26T02:16:05.431544236Z [inf]     Compiling crc v3.4.0
+2026-04-30T00:00:46.068120083Z [inf]     Compiling
+2026-04-30T00:00:46.068137091Z [inf]   rand_core v0.10.0
 
-2026-04-26T02:16:05.452006158Z [inf]     Compiling untrusted v0.9.0
+2026-04-30T00:00:46.086619147Z [inf]     Compiling iana-time-zone v0.1.65
 
-2026-04-26T02:16:05.452614836Z [inf]     Compiling unicode-normalization v0.1.25
+2026-04-30T00:00:46.163717171Z [inf]     Compiling cpufeatures v0.2.17
 
-2026-04-26T02:16:05.453117658Z [inf]     Compiling
-2026-04-26T02:16:05.453163989Z [inf]   unicode-bidi v0.3.18
+2026-04-30T00:00:46.233653698Z [inf]     Compiling
+2026-04-30T00:00:46.233977248Z [inf]   crc v3.4.0
 
-2026-04-26T02:16:05.454607994Z [inf]     Compiling
-2026-04-26T02:16:05.454941939Z [inf]   fs_extra v1.3.0
+2026-04-30T00:00:46.235733642Z [inf]     Compiling
+2026-04-30T00:00:46.236370022Z [inf]   unicode-properties v0.1.4
 
-2026-04-26T02:16:05.464483913Z [inf]     Compiling
-2026-04-26T02:16:05.464680825Z [inf]   dunce v1.0.5
+2026-04-30T00:00:46.23770348Z [inf]     Compiling
+2026-04-30T00:00:46.237852505Z [inf]   powerfmt v0.2.0
 
-2026-04-26T02:16:05.500913099Z [inf]     Compiling http v1.4.0
+2026-04-30T00:00:46.238452689Z [inf]     Compiling
+2026-04-30T00:00:46.238579863Z [inf]   dunce v1.0.5
 
-2026-04-26T02:16:05.501035498Z [inf]     Compiling unicode-properties v0.1.4
+2026-04-30T00:00:46.315387153Z [inf]     Compiling
+2026-04-30T00:00:46.320970727Z [inf]   indexmap v2.12.0
 
-2026-04-26T02:16:05.520782043Z [inf]     Compiling powerfmt v0.2.0
+2026-04-30T00:00:46.356381802Z [inf]     Compiling
+2026-04-30T00:00:46.356401088Z [inf]   unicode-normalization v0.1.25
 
-2026-04-26T02:16:05.531340159Z [inf]     Compiling rustc-hash v2.1.2
+2026-04-30T00:00:46.364254783Z [inf]     Compiling
+2026-04-30T00:00:46.36433261Z [inf]   unicode-bidi v0.3.18
 
-2026-04-26T02:16:05.531418001Z [inf]     Compiling byteorder v1.5.0
+2026-04-30T00:00:46.365564903Z [inf]     Compiling
+2026-04-30T00:00:46.36572716Z [inf]   fs_extra v1.3.0
 
-2026-04-26T02:16:05.542062191Z [inf]     Compiling dotenvy v0.15.7
+2026-04-30T00:00:46.387360308Z [inf]     Compiling
+2026-04-30T00:00:46.387512186Z [inf]   untrusted v0.9.0
 
-2026-04-26T02:16:05.549567682Z [inf]     Compiling httparse v1.10.1
+2026-04-30T00:00:46.396014438Z [inf]     Compiling unicode-xid v0.2.6
 
-2026-04-26T02:16:05.559946161Z [inf]     Compiling futures-util v0.3.32
-   Compiling home v0.5.12
+2026-04-30T00:00:46.404165222Z [inf]     Compiling hex v0.4.3
 
-2026-04-26T02:16:05.59543419Z [inf]     Compiling whoami v1.6.1
+2026-04-30T00:00:46.427195692Z [inf]     Compiling home v0.5.12
 
-2026-04-26T02:16:05.616053858Z [inf]     Compiling hashbrown v0.15.4
+2026-04-30T00:00:46.442579327Z [inf]     Compiling
+2026-04-30T00:00:46.442686792Z [inf]   whoami v1.6.1
 
-2026-04-26T02:16:05.622975988Z [inf]     Compiling hex v0.4.3
+2026-04-30T00:00:46.454399256Z [inf]     Compiling byteorder v1.5.0
 
-2026-04-26T02:16:05.639953752Z [inf]     Compiling
-2026-04-26T02:16:05.640177877Z [inf]   deranged v0.5.8
+2026-04-30T00:00:46.488661464Z [inf]     Compiling futures-util v0.3.32
 
-2026-04-26T02:16:05.640808845Z [inf]     Compiling unicode-xid v0.2.6
+2026-04-30T00:00:46.537533757Z [inf]     Compiling
+2026-04-30T00:00:46.537554046Z [inf]   deranged v0.5.8
 
-2026-04-26T02:16:05.673085733Z [inf]     Compiling type-map v0.5.1
+2026-04-30T00:00:46.552473535Z [inf]     Compiling concurrent-queue v2.5.0
 
-2026-04-26T02:16:05.700422813Z [inf]     Compiling
-2026-04-26T02:16:05.700437423Z [inf]   indexmap v2.12.0
+2026-04-30T00:00:46.571408485Z [inf]     Compiling httparse v1.10.1
 
-2026-04-26T02:16:05.705762251Z [inf]     Compiling concurrent-queue v2.5.0
+2026-04-30T00:00:46.583656873Z [inf]     Compiling
+2026-04-30T00:00:46.584054741Z [inf]   syn v2.0.117
 
-2026-04-26T02:16:05.706819275Z [inf]     Compiling crossbeam-queue v0.3.12
+2026-04-30T00:00:46.584196665Z [inf]     Compiling rustc-hash v2.1.2
 
-2026-04-26T02:16:05.727564626Z [inf]     Compiling cookie v0.18.1
+2026-04-30T00:00:46.613405411Z [inf]     Compiling dotenvy v0.15.7
 
-2026-04-26T02:16:05.733515808Z [inf]     Compiling heck v0.5.0
+2026-04-30T00:00:46.665390244Z [inf]     Compiling crossbeam-queue v0.3.12
 
-2026-04-26T02:16:05.740291789Z [inf]     Compiling ref-cast v1.0.25
+2026-04-30T00:00:46.670905375Z [inf]     Compiling cookie v0.18.1
 
-2026-04-26T02:16:05.752503792Z [inf]     Compiling getrandom v0.3.4
+2026-04-30T00:00:46.679043599Z [inf]     Compiling getrandom v0.3.4
 
-2026-04-26T02:16:05.795685412Z [inf]     Compiling
-2026-04-26T02:16:05.795709512Z [inf]   syn v2.0.117
+2026-04-30T00:00:46.705959833Z [inf]     Compiling
+2026-04-30T00:00:46.70597858Z [inf]   ref-cast v1.0.25
 
-2026-04-26T02:16:05.843804082Z [inf]     Compiling self_cell v1.2.2
+2026-04-30T00:00:46.7062635Z [inf]     Compiling heck v0.5.0
 
-2026-04-26T02:16:05.855947771Z [inf]     Compiling aws-lc-rs v1.16.2
+2026-04-30T00:00:46.767206904Z [inf]     Compiling type-map v0.5.1
 
-2026-04-26T02:16:05.859530148Z [inf]     Compiling
-2026-04-26T02:16:05.859552287Z [inf]   atomic-waker v1.1.2
+2026-04-30T00:00:46.824163186Z [inf]     Compiling hashlink v0.10.0
 
-2026-04-26T02:16:05.864785849Z [inf]     Compiling try-lock v0.2.5
+2026-04-30T00:00:46.857422086Z [inf]     Compiling event-listener v5.4.1
 
-2026-04-26T02:16:05.875747219Z [inf]     Compiling
-2026-04-26T02:16:05.877165331Z [inf]   event-listener v5.4.1
+2026-04-30T00:00:46.875076159Z [inf]     Compiling try-lock v0.2.5
 
-2026-04-26T02:16:05.894372212Z [inf]     Compiling
-2026-04-26T02:16:05.894402716Z [inf]   stringprep v0.1.5
+2026-04-30T00:00:46.884768585Z [inf]     Compiling aws-lc-rs v1.16.2
 
-2026-04-26T02:16:05.894512093Z [inf]     Compiling fnv v1.0.7
+2026-04-30T00:00:46.887823188Z [inf]     Compiling jobserver v0.1.34
 
-2026-04-26T02:16:05.895136091Z [inf]     Compiling
-2026-04-26T02:16:05.89526007Z [inf]   tower-service v0.3.3
+2026-04-30T00:00:46.895618301Z [inf]     Compiling
+2026-04-30T00:00:46.895774883Z [inf]   mio v1.2.0
 
-2026-04-26T02:16:05.912103187Z [inf]     Compiling pointercrate-core v0.1.0 (/app/pointercrate-core)
+2026-04-30T00:00:46.920259768Z [inf]     Compiling
+2026-04-30T00:00:46.920623402Z [inf]   socket2 v0.6.3
 
-2026-04-26T02:16:05.912222422Z [inf]     Compiling httpdate v1.0.3
+2026-04-30T00:00:46.922250352Z [inf]     Compiling
+2026-04-30T00:00:46.922908297Z [inf]   getrandom v0.2.16
 
-2026-04-26T02:16:05.921521206Z [inf]     Compiling
-2026-04-26T02:16:05.921916574Z [inf]   pin-utils v0.1.0
+2026-04-30T00:00:46.923244826Z [inf]     Compiling
+2026-04-30T00:00:46.923386274Z [inf]   stringprep v0.1.5
 
-2026-04-26T02:16:05.922069774Z [inf]     Compiling rustls-pki-types v1.14.0
+2026-04-30T00:00:46.932550963Z [inf]     Compiling
+2026-04-30T00:00:46.932849707Z [inf]   self_cell v1.2.2
 
-2026-04-26T02:16:05.938265627Z [inf]     Compiling want v0.3.1
+2026-04-30T00:00:46.936955217Z [inf]     Compiling
+2026-04-30T00:00:46.943945438Z [inf]   atomic-waker v1.1.2
 
-2026-04-26T02:16:05.938673775Z [inf]     Compiling uncased v0.9.10
+2026-04-30T00:00:46.953192527Z [inf]     Compiling tower-service v0.3.3
 
-2026-04-26T02:16:05.95440751Z [inf]     Compiling ipnet v2.12.0
+2026-04-30T00:00:46.96261231Z [inf]     Compiling fnv v1.0.7
 
-2026-04-26T02:16:05.98079096Z [inf]     Compiling jobserver v0.1.34
+2026-04-30T00:00:46.986733421Z [inf]     Compiling want v0.3.1
 
-2026-04-26T02:16:05.981545352Z [inf]     Compiling mio v1.2.0
+2026-04-30T00:00:47.015034992Z [inf]     Compiling crypto-common v0.1.7
 
-2026-04-26T02:16:05.981648627Z [inf]     Compiling
-2026-04-26T02:16:05.981656886Z [inf]   socket2 v0.6.3
+2026-04-30T00:00:47.033922761Z [inf]     Compiling
+2026-04-30T00:00:47.034905173Z [inf]   block-buffer v0.10.4
 
-2026-04-26T02:16:05.981771194Z [inf]     Compiling
-2026-04-26T02:16:05.981901021Z [inf]   getrandom v0.2.16
+2026-04-30T00:00:47.04281937Z [inf]     Compiling
+2026-04-30T00:00:47.043153888Z [inf]   pointercrate-core v0.1.0 (/app/pointercrate-core)
 
-2026-04-26T02:16:05.995157045Z [inf]     Compiling encoding_rs v0.8.35
+2026-04-30T00:00:47.066027826Z [inf]     Compiling
+2026-04-30T00:00:47.066050684Z [inf]   httpdate v1.0.3
 
-2026-04-26T02:16:06.005777635Z [inf]     Compiling inlinable_string v0.1.15
-   Compiling winnow v0.7.15
+2026-04-30T00:00:47.06637587Z [inf]     Compiling pin-utils v0.1.0
 
-2026-04-26T02:16:06.024108924Z [inf]     Compiling mime v0.3.17
+2026-04-30T00:00:47.068845002Z [inf]     Compiling rustls-pki-types v1.14.0
 
-2026-04-26T02:16:06.03988127Z [inf]     Compiling rustix v1.1.4
+2026-04-30T00:00:47.085647029Z [inf]     Compiling
+2026-04-30T00:00:47.085781114Z [inf]   uncased v0.9.10
 
-2026-04-26T02:16:06.064489262Z [inf]     Compiling rustls v0.23.37
+2026-04-30T00:00:47.108726546Z [inf]     Compiling errno v0.3.14
 
-2026-04-26T02:16:06.071342939Z [inf]     Compiling toml_write v0.1.2
+2026-04-30T00:00:47.167066252Z [inf]     Compiling cc v1.2.58
 
-2026-04-26T02:16:06.090497095Z [inf]     Compiling errno v0.3.14
+2026-04-30T00:00:47.182567255Z [inf]     Compiling rand_core v0.6.4
 
-2026-04-26T02:16:06.154049831Z [inf]     Compiling rand_core v0.6.4
+2026-04-30T00:00:47.204579638Z [inf]     Compiling is-terminal v0.4.17
 
-2026-04-26T02:16:06.165984187Z [inf]     Compiling
-2026-04-26T02:16:06.16600863Z [inf]   chrono v0.4.44
+2026-04-30T00:00:47.205619006Z [inf]     Compiling digest v0.10.7
 
-2026-04-26T02:16:06.167527087Z [inf]     Compiling atoi v2.0.0
+2026-04-30T00:00:47.228450436Z [inf]     Compiling
+2026-04-30T00:00:47.229506102Z [inf]   inout v0.1.4
+   Compiling
+2026-04-30T00:00:47.229518422Z [inf]   ipnet v2.12.0
 
-2026-04-26T02:16:06.205932884Z [inf]     Compiling cc v1.2.58
+2026-04-30T00:00:47.246058347Z [inf]     Compiling
+2026-04-30T00:00:47.246077201Z [inf]   http-body v1.0.1
 
-2026-04-26T02:16:06.206059293Z [inf]     Compiling signal-hook-registry v1.4.8
+2026-04-30T00:00:47.248259732Z [inf]     Compiling encoding_rs v0.8.35
 
-2026-04-26T02:16:06.222472616Z [inf]     Compiling hashlink v0.10.0
+2026-04-30T00:00:47.270313643Z [inf]     Compiling chrono v0.4.44
 
-2026-04-26T02:16:06.237706908Z [inf]     Compiling num-integer v0.1.46
+2026-04-30T00:00:47.270346817Z [inf]     Compiling
+2026-04-30T00:00:47.270351854Z [inf]   atoi v2.0.0
 
-2026-04-26T02:16:06.257215318Z [inf]     Compiling
-2026-04-26T02:16:06.257236224Z [inf]   block-buffer v0.10.4
+2026-04-30T00:00:47.314054916Z [inf]     Compiling
+2026-04-30T00:00:47.314274408Z [inf]   signal-hook-registry v1.4.8
 
-2026-04-26T02:16:06.268298286Z [inf]     Compiling
-2026-04-26T02:16:06.268368965Z [inf]   crypto-common v0.1.7
+2026-04-30T00:00:47.350765681Z [inf]     Compiling num-integer v0.1.46
 
-2026-04-26T02:16:06.274327322Z [inf]     Compiling is-terminal v0.4.17
+2026-04-30T00:00:47.360445116Z [inf]     Compiling tokio v1.50.0
 
-2026-04-26T02:16:06.307885017Z [inf]     Compiling rand_core v0.9.3
+2026-04-30T00:00:47.373226262Z [inf]     Compiling
+2026-04-30T00:00:47.374055161Z [inf]   winnow v0.7.15
 
-2026-04-26T02:16:06.331634286Z [inf]     Compiling tokio v1.50.0
+2026-04-30T00:00:47.398937258Z [inf]     Compiling
+2026-04-30T00:00:47.399294817Z [inf]   rustix v1.1.4
 
-2026-04-26T02:16:06.342787033Z [inf]     Compiling digest v0.10.7
+2026-04-30T00:00:47.412729606Z [inf]     Compiling inlinable_string v0.1.15
 
-2026-04-26T02:16:06.349840756Z [inf]     Compiling
-2026-04-26T02:16:06.349858573Z [inf]   stable-pattern v0.1.0
+2026-04-30T00:00:47.421856986Z [inf]     Compiling toml_write v0.1.2
 
-2026-04-26T02:16:06.350032647Z [inf]     Compiling pem v3.0.6
+2026-04-30T00:00:47.428356245Z [inf]     Compiling rustls v0.23.37
 
-2026-04-26T02:16:06.35005146Z [inf]     Compiling multer v3.1.0
+2026-04-30T00:00:47.428492031Z [inf]     Compiling mime v0.3.17
 
-2026-04-26T02:16:06.364796225Z [inf]     Compiling
-2026-04-26T02:16:06.36481794Z [inf]   figment v0.10.19
+2026-04-30T00:00:47.489048752Z [inf]     Compiling hmac v0.12.1
 
-2026-04-26T02:16:06.365290298Z [inf]     Compiling linux-raw-sys v0.12.1
+2026-04-30T00:00:47.514375539Z [inf]     Compiling
+2026-04-30T00:00:47.514605963Z [inf]   sha2 v0.10.9
 
-2026-04-26T02:16:06.365764471Z [inf]     Compiling
-2026-04-26T02:16:06.369118606Z [inf]   state v0.6.0
+2026-04-30T00:00:47.525270792Z [inf]     Compiling
+2026-04-30T00:00:47.525580036Z [inf]   md-5 v0.10.6
 
-2026-04-26T02:16:06.385582612Z [inf]     Compiling
-2026-04-26T02:16:06.39022336Z [inf]   inout v0.1.4
+2026-04-30T00:00:47.529089596Z [inf]     Compiling rand_core v0.9.3
 
-2026-04-26T02:16:06.410091364Z [inf]     Compiling lazy_static v1.5.0
+2026-04-30T00:00:47.558610828Z [inf]     Compiling
+2026-04-30T00:00:47.558954096Z [inf]   cipher v0.4.4
 
-2026-04-26T02:16:06.410111551Z [inf]     Compiling tracing-log v0.2.0
+2026-04-30T00:00:47.560893214Z [inf]     Compiling
+2026-04-30T00:00:47.561067936Z [inf]   pem v3.0.6
 
-2026-04-26T02:16:06.420033478Z [inf]     Compiling rocket v0.6.0-dev (https://github.com/rwf2/Rocket?branch=master#3a54d079)
+2026-04-30T00:00:47.561349291Z [inf]     Compiling
+2026-04-30T00:00:47.5615524Z [inf]   stable-pattern v0.1.0
 
-2026-04-26T02:16:06.421619273Z [inf]     Compiling thread_local v1.1.9
+2026-04-30T00:00:47.561835419Z [inf]     Compiling
+2026-04-30T00:00:47.562062909Z [inf]   figment v0.10.19
 
-2026-04-26T02:16:06.440666434Z [inf]     Compiling crc32fast v1.5.0
+2026-04-30T00:00:47.5622959Z [inf]     Compiling
+2026-04-30T00:00:47.562436911Z [inf]   multer v3.1.0
 
-2026-04-26T02:16:06.440928887Z [inf]     Compiling portable-atomic v1.13.1
+2026-04-30T00:00:47.562631775Z [inf]     Compiling
+2026-04-30T00:00:47.562868825Z [inf]   linux-raw-sys v0.12.1
 
-2026-04-26T02:16:06.458030786Z [inf]     Compiling http-body v1.0.1
+2026-04-30T00:00:47.576599631Z [inf]     Compiling lazy_static v1.5.0
 
-2026-04-26T02:16:06.464710153Z [inf]     Compiling sharded-slab v0.1.7
+2026-04-30T00:00:47.613233239Z [inf]     Compiling state v0.6.0
 
-2026-04-26T02:16:06.471095257Z [inf]     Compiling glob v0.3.3
+2026-04-30T00:00:47.70195665Z [inf]     Compiling hkdf v0.12.4
 
-2026-04-26T02:16:06.494888417Z [inf]     Compiling cipher v0.4.4
+2026-04-30T00:00:47.703386234Z [inf]     Compiling
+2026-04-30T00:00:47.703400612Z [inf]   sharded-slab v0.1.7
 
-2026-04-26T02:16:06.50129098Z [inf]     Compiling spin v0.9.8
+2026-04-30T00:00:47.705405265Z [inf]     Compiling tracing-log v0.2.0
 
-2026-04-26T02:16:06.513012477Z [inf]     Compiling fastrand v2.3.0
+2026-04-30T00:00:47.734676109Z [inf]     Compiling rocket v0.6.0-dev (https://github.com/rwf2/Rocket?branch=master#3a54d079)
 
-2026-04-26T02:16:06.514698394Z [inf]     Compiling
-2026-04-26T02:16:06.515647217Z [inf]   num_cpus v1.17.0
+2026-04-30T00:00:47.734996217Z [inf]     Compiling thread_local v1.1.9
 
-2026-04-26T02:16:06.515774263Z [inf]     Compiling raw-cpuid v11.6.0
+2026-04-30T00:00:47.758481245Z [inf]     Compiling num-bigint v0.4.6
 
-2026-04-26T02:16:06.532204243Z [inf]     Compiling hmac v0.12.1
+2026-04-30T00:00:47.796569374Z [inf]     Compiling spin v0.9.8
 
-2026-04-26T02:16:06.538562921Z [inf]     Compiling sha2 v0.10.9
+2026-04-30T00:00:47.866001188Z [inf]     Compiling
+2026-04-30T00:00:47.866018911Z [inf]   portable-atomic v1.13.1
 
-2026-04-26T02:16:06.539611552Z [inf]     Compiling md-5 v0.10.6
+2026-04-30T00:00:47.867695174Z [inf]     Compiling
+2026-04-30T00:00:47.867778137Z [inf]   fastrand v2.3.0
 
-2026-04-26T02:16:06.542969714Z [inf]     Compiling num-bigint v0.4.6
+2026-04-30T00:00:47.880142175Z [inf]     Compiling
+2026-04-30T00:00:47.880570581Z [inf]   crc32fast v1.5.0
 
-2026-04-26T02:16:06.574307798Z [inf]     Compiling sync_wrapper v1.0.2
+2026-04-30T00:00:47.889312909Z [inf]     Compiling
+2026-04-30T00:00:47.889647711Z [inf]   glob v0.3.3
 
-2026-04-26T02:16:06.58155724Z [inf]     Compiling
-2026-04-26T02:16:06.582163032Z [inf]   binascii v0.1.4
+2026-04-30T00:00:47.901374504Z [inf]     Compiling
+2026-04-30T00:00:47.90148745Z [inf]   num_cpus v1.17.0
 
-2026-04-26T02:16:06.582420378Z [inf]     Compiling thiserror v1.0.69
+2026-04-30T00:00:47.917599121Z [inf]     Compiling blowfish v0.9.1
 
-2026-04-26T02:16:06.588105643Z [inf]     Compiling tower-layer v0.3.3
+2026-04-30T00:00:47.932224507Z [inf]     Compiling
+2026-04-30T00:00:47.93258382Z [inf]   raw-cpuid v11.6.0
 
-2026-04-26T02:16:06.611688651Z [inf]     Compiling hkdf v0.12.4
+2026-04-30T00:00:47.937483209Z [inf]     Compiling sync_wrapper v1.0.2
 
-2026-04-26T02:16:06.624903444Z [inf]     Compiling ref-swap v0.1.2
+2026-04-30T00:00:47.951923063Z [inf]     Compiling hashbrown v0.14.5
 
-2026-04-26T02:16:06.631986198Z [inf]     Compiling ryu v1.0.23
+2026-04-30T00:00:47.968158317Z [inf]     Compiling thiserror v1.0.69
 
-2026-04-26T02:16:06.694014902Z [inf]     Compiling blowfish v0.9.1
+2026-04-30T00:00:48.002973118Z [inf]     Compiling binascii v0.1.4
+   Compiling ryu v1.0.23
+   Compiling tower-layer v0.3.3
 
-2026-04-26T02:16:06.709237283Z [inf]     Compiling
-2026-04-26T02:16:06.709252469Z [inf]   hashbrown v0.14.5
+2026-04-30T00:00:48.038204213Z [inf]     Compiling ref-swap v0.1.2
+   Compiling rustls-native-certs v0.8.3
 
-2026-04-26T02:16:06.749003051Z [inf]     Compiling rustls-native-certs v0.8.3
+2026-04-30T00:00:48.055307429Z [inf]     Compiling spinning_top v0.3.0
 
-2026-04-26T02:16:06.74902294Z [inf]     Compiling spinning_top v0.3.0
+2026-04-30T00:00:48.08416488Z [inf]     Compiling bcrypt v0.19.0
 
-2026-04-26T02:16:06.764475948Z [inf]     Compiling web-time v1.1.0
+2026-04-30T00:00:48.115240615Z [inf]     Compiling iri-string v0.7.12
 
-2026-04-26T02:16:06.778832028Z [inf]     Compiling futures-timer v3.0.3
+2026-04-30T00:00:48.115487369Z [inf]     Compiling nonzero_ext v0.3.0
 
-2026-04-26T02:16:06.785288034Z [inf]     Compiling iri-string v0.7.12
+2026-04-30T00:00:48.144901299Z [inf]     Compiling web-time v1.1.0
 
-2026-04-26T02:16:06.790354221Z [inf]     Compiling nonzero_ext v0.3.0
+2026-04-30T00:00:48.145915932Z [inf]     Compiling futures-timer v3.0.3
 
-2026-04-26T02:16:06.795720742Z [inf]     Compiling http-body-util v0.1.3
+2026-04-30T00:00:48.164494477Z [inf]     Compiling http-body-util v0.1.3
 
-2026-04-26T02:16:06.799254837Z [inf]     Compiling bcrypt v0.19.0
+2026-04-30T00:00:48.171306826Z [inf]     Compiling base64 v0.21.7
 
-2026-04-26T02:16:06.804093035Z [inf]     Compiling base64 v0.21.7
+2026-04-30T00:00:48.195277309Z [inf]     Compiling cpufeatures v0.3.0
 
-2026-04-26T02:16:06.808303902Z [inf]     Compiling
-2026-04-26T02:16:06.808874566Z [inf]   cpufeatures v0.3.0
+2026-04-30T00:00:48.200776543Z [inf]     Compiling dotenv v0.15.0
 
-2026-04-26T02:16:06.823986464Z [inf]     Compiling dotenv v0.15.0
+2026-04-30T00:00:48.278306984Z [inf]     Compiling
+2026-04-30T00:00:48.278564216Z [inf]   chacha20 v0.10.0
 
-2026-04-26T02:16:06.837515682Z [inf]     Compiling chacha20 v0.10.0
+2026-04-30T00:00:48.312305699Z [inf]     Compiling
+2026-04-30T00:00:48.312327685Z [inf]   cmake v0.1.58
 
-2026-04-26T02:16:06.98728416Z [inf]     Compiling time v0.3.47
+2026-04-30T00:00:48.33712368Z [inf]     Compiling time v0.3.47
 
-2026-04-26T02:16:07.059202804Z [inf]     Compiling
-2026-04-26T02:16:07.059433742Z [inf]   rand v0.10.0
+2026-04-30T00:00:48.588442692Z [inf]     Compiling rand v0.10.0
 
-2026-04-26T02:16:07.115689178Z [inf]     Compiling cmake v0.1.58
-
-2026-04-26T02:16:07.320873488Z [inf]     Compiling openssl-sys v0.9.112
+2026-04-30T00:00:48.839100896Z [inf]     Compiling openssl-sys v0.9.112
+   Compiling aws-lc-sys v0.39.1
    Compiling ring v0.17.14
    Compiling libz-sys v1.1.25
 
-2026-04-26T02:16:07.382107937Z [inf]     Compiling aws-lc-sys v0.39.1
+2026-04-30T00:00:49.510325716Z [inf]     Compiling flate2 v1.1.9
 
-2026-04-26T02:16:07.596774041Z [inf]     Compiling flate2 v1.1.9
+2026-04-30T00:00:49.96516977Z [inf]     Compiling quanta v0.12.6
 
-2026-04-26T02:16:08.20312909Z [inf]     Compiling quanta v0.12.6
+2026-04-30T00:00:50.043273582Z [inf]     Compiling tempfile v3.27.0
 
-2026-04-26T02:16:08.261142275Z [inf]     Compiling tempfile v3.27.0
+2026-04-30T00:00:50.841876033Z [inf]     Compiling synstructure v0.13.2
 
-2026-04-26T02:16:09.0250282Z [inf]     Compiling
-2026-04-26T02:16:09.025286971Z [inf]   ppv-lite86 v0.2.21
+2026-04-30T00:00:51.018310975Z [inf]     Compiling devise_core v0.4.2
 
-2026-04-26T02:16:09.276544184Z [inf]     Compiling synstructure v0.13.2
+2026-04-30T00:00:51.035209803Z [inf]     Compiling ppv-lite86 v0.2.21
 
-2026-04-26T02:16:09.328007418Z [inf]     Compiling rand_chacha v0.3.1
+2026-04-30T00:00:51.382121356Z [inf]     Compiling rand_chacha v0.3.1
 
-2026-04-26T02:16:09.410785187Z [inf]     Compiling
-2026-04-26T02:16:09.410807194Z [inf]   devise_core v0.4.2
+2026-04-30T00:00:51.43521926Z [inf]     Compiling serde_derive v1.0.228
 
-2026-04-26T02:16:09.490709408Z [inf]     Compiling rand v0.8.5
+2026-04-30T00:00:51.47521184Z [inf]     Compiling zerofrom-derive v0.1.6
 
-2026-04-26T02:16:09.599032717Z [inf]     Compiling rand_chacha v0.9.0
+2026-04-30T00:00:51.52488604Z [inf]     Compiling yoke-derive v0.8.1
 
-2026-04-26T02:16:09.772933191Z [inf]     Compiling
-2026-04-26T02:16:09.77317944Z [inf]   serde_derive v1.0.228
+2026-04-30T00:00:51.525179758Z [inf]     Compiling zerovec-derive v0.11.2
+   Compiling displaydoc v0.2.5
+   Compiling tokio-macros v2.6.1
 
-2026-04-26T02:16:09.836839015Z [inf]     Compiling zerofrom-derive v0.1.6
+2026-04-30T00:00:51.530155678Z [inf]     Compiling tracing-attributes v0.1.31
 
-2026-04-26T02:16:09.836967985Z [inf]     Compiling yoke-derive v0.8.1
+2026-04-30T00:00:51.530361842Z [inf]     Compiling thiserror-impl v2.0.18
 
-2026-04-26T02:16:09.837098686Z [inf]     Compiling zerovec-derive v0.11.2
+2026-04-30T00:00:51.531044486Z [inf]     Compiling futures-macro v0.3.32
+   Compiling openssl-macros v0.1.1
+   Compiling pear_codegen v0.2.9
+   Compiling derive_more-impl v2.0.1
+   Compiling ref-cast-impl v1.0.25
+   Compiling maud_macros v0.27.0
 
-2026-04-26T02:16:09.837197842Z [inf]     Compiling displaydoc v0.2.5
+2026-04-30T00:00:51.531485092Z [inf]     Compiling async-stream-impl v0.3.6
+   Compiling async-trait v0.1.89
+   Compiling thiserror-impl v1.0.69
 
-2026-04-26T02:16:09.841407048Z [inf]     Compiling tokio-macros v2.6.1
+2026-04-30T00:00:51.532152817Z [inf]     Compiling dash-rs-derive v0.1.0 (https://github.com/stadust/dash-rs#397c4730)
 
-2026-04-26T02:16:09.844540155Z [inf]     Compiling tracing-attributes v0.1.31
+2026-04-30T00:00:51.538587253Z [inf]     Compiling variant_partial_eq v0.0.0 (https://github.com/stadust/variant-partial-eq#bdccf434)
 
-2026-04-26T02:16:09.848691847Z [inf]     Compiling thiserror-impl v2.0.18
+2026-04-30T00:00:51.553145002Z [inf]     Compiling pointercrate-core-macros v0.1.0 (/app/pointercrate-core-macros)
 
-2026-04-26T02:16:09.854646896Z [inf]     Compiling futures-macro v0.3.32
+2026-04-30T00:00:51.620108548Z [inf]     Compiling rand v0.8.5
 
-2026-04-26T02:16:09.858728338Z [inf]     Compiling openssl-macros v0.1.1
+2026-04-30T00:00:51.770723208Z [inf]     Compiling rand_chacha v0.9.0
 
-2026-04-26T02:16:09.862301946Z [inf]     Compiling pear_codegen v0.2.9
+2026-04-30T00:00:51.945164112Z [inf]     Compiling devise_codegen v0.4.2
 
-2026-04-26T02:16:09.866227945Z [inf]     Compiling ref-cast-impl v1.0.25
+2026-04-30T00:00:52.007308368Z [inf]     Compiling async-stream v0.3.6
 
-2026-04-26T02:16:09.880472597Z [inf]     Compiling derive_more-impl v2.0.1
+2026-04-30T00:00:52.021907137Z [inf]     Compiling
+2026-04-30T00:00:52.02292302Z [inf]   rand v0.9.2
 
-2026-04-26T02:16:09.880490899Z [inf]     Compiling rand v0.9.2
+2026-04-30T00:00:52.185760602Z [inf]     Compiling pear v0.2.9
 
-2026-04-26T02:16:09.880645396Z [inf]     Compiling async-stream-impl v0.3.6
+2026-04-30T00:00:52.239212978Z [inf]     Compiling tokio-stream v0.1.18
 
-2026-04-26T02:16:09.938510027Z [inf]     Compiling
-2026-04-26T02:16:09.938634738Z [inf]   maud_macros v0.27.0
+2026-04-30T00:00:52.252794159Z [inf]     Compiling maud v0.27.0
 
-2026-04-26T02:16:09.938853667Z [inf]     Compiling
-2026-04-26T02:16:09.938958622Z [inf]   async-trait v0.1.89
+2026-04-30T00:00:52.286789229Z [inf]     Compiling zerofrom v0.1.6
 
-2026-04-26T02:16:09.93906567Z [inf]     Compiling
-2026-04-26T02:16:09.939072961Z [inf]   thiserror-impl v1.0.69
+2026-04-30T00:00:52.356718652Z [inf]     Compiling devise v0.4.2
 
-2026-04-26T02:16:09.94421733Z [inf]     Compiling
-2026-04-26T02:16:09.947572463Z [inf]   dash-rs-derive v0.1.0 (https://github.com/stadust/dash-rs#397c4730)
+2026-04-30T00:00:52.377421137Z [inf]     Compiling yoke v0.8.1
 
-2026-04-26T02:16:09.948454351Z [inf]     Compiling variant_partial_eq v0.0.0 (https://github.com/stadust/variant-partial-eq#bdccf434)
+2026-04-30T00:00:52.538203882Z [inf]     Compiling zerotrie v0.2.3
 
-2026-04-26T02:16:09.952732907Z [inf]     Compiling pointercrate-core-macros v0.1.0 (/app/pointercrate-core-macros)
+2026-04-30T00:00:52.595252127Z [inf]     Compiling tracing v0.1.44
 
-2026-04-26T02:16:10.077587601Z [inf]     Compiling devise_codegen v0.4.2
+2026-04-30T00:00:52.62367745Z [inf]     Compiling zerovec v0.11.5
 
-2026-04-26T02:16:10.167494518Z [inf]     Compiling tokio-stream v0.1.18
+2026-04-30T00:00:52.697934619Z [inf]     Compiling fluent-syntax v0.12.0
 
-2026-04-26T02:16:10.172676511Z [inf]     Compiling async-stream v0.3.6
+2026-04-30T00:00:52.698314192Z [inf]     Compiling simple_asn1 v0.6.4
 
-2026-04-26T02:16:10.303900804Z [inf]     Compiling pear v0.2.9
+2026-04-30T00:00:52.709874442Z [inf]     Compiling derive_more v2.0.1
 
-2026-04-26T02:16:10.407358542Z [inf]     Compiling devise v0.4.2
+2026-04-30T00:00:53.595671325Z [inf]     Compiling tinystr v0.8.2
 
-2026-04-26T02:16:10.473566715Z [inf]     Compiling maud v0.27.0
+2026-04-30T00:00:53.597075601Z [inf]     Compiling potential_utf v0.1.4
 
-2026-04-26T02:16:10.546387115Z [inf]     Compiling zerofrom v0.1.6
+2026-04-30T00:00:53.70062774Z [inf]     Compiling icu_collections v2.1.1
 
-2026-04-26T02:16:10.588553028Z [inf]     Compiling
-2026-04-26T02:16:10.588577784Z [inf]   tracing v0.1.44
+2026-04-30T00:00:53.738891481Z [inf]     Compiling icu_locale_core v2.1.1
 
-2026-04-26T02:16:10.608419762Z [inf]     Compiling yoke v0.8.1
+2026-04-30T00:00:53.739027903Z [inf]     Compiling unic-langid-impl v0.9.6
 
-2026-04-26T02:16:10.700439254Z [inf]     Compiling fluent-syntax v0.12.0
-   Compiling simple_asn1 v0.6.4
+2026-04-30T00:00:53.907054037Z [inf]     Compiling unic-langid-macros-impl v0.9.6
 
-2026-04-26T02:16:10.711306118Z [inf]     Compiling zerovec v0.11.5
-   Compiling zerotrie v0.2.3
+2026-04-30T00:00:54.177421839Z [inf]     Compiling unic-langid-macros v0.9.6
 
-2026-04-26T02:16:10.794606653Z [inf]     Compiling derive_more v2.0.1
+2026-04-30T00:00:54.209854329Z [inf]     Compiling unic-langid v0.9.6
 
-2026-04-26T02:16:11.335048773Z [inf]     Compiling tinystr v0.8.2
-   Compiling potential_utf v0.1.4
+2026-04-30T00:00:54.24217604Z [inf]     Compiling fluent-langneg v0.13.1
+   Compiling intl_pluralrules v7.0.2
 
-2026-04-26T02:16:11.385378932Z [inf]     Compiling icu_collections v2.1.1
+2026-04-30T00:00:54.24226454Z [inf]     Compiling intl-memoizer v0.5.3
 
-2026-04-26T02:16:11.415298404Z [inf]     Compiling icu_locale_core v2.1.1
-   Compiling unic-langid-impl v0.9.6
+2026-04-30T00:00:54.306972215Z [inf]     Compiling smallvec v1.15.1
 
-2026-04-26T02:16:11.548168784Z [inf]     Compiling unic-langid-macros-impl v0.9.6
+2026-04-30T00:00:54.307066694Z [inf]     Compiling either v1.15.0
 
-2026-04-26T02:16:11.729996745Z [inf]     Compiling unic-langid-macros v0.9.6
+2026-04-30T00:00:54.340142052Z [inf]     Compiling toml_datetime v0.6.11
+   Compiling serde_spanned v0.6.9
 
-2026-04-26T02:16:11.754086037Z [inf]     Compiling unic-langid v0.9.6
+2026-04-30T00:00:54.344405523Z [inf]     Compiling ubyte v0.10.4
 
-2026-04-26T02:16:11.776616113Z [inf]     Compiling intl_pluralrules v7.0.2
+2026-04-30T00:00:54.35167167Z [inf]     Compiling serde_urlencoded v0.7.1
 
-2026-04-26T02:16:11.77663663Z [inf]     Compiling intl-memoizer v0.5.3
-   Compiling fluent-langneg v0.13.1
+2026-04-30T00:00:54.351966638Z [inf]     Compiling bincode v1.3.3
 
-2026-04-26T02:16:11.776768739Z [inf]     Compiling smallvec v1.15.1
+2026-04-30T00:00:54.360876269Z [inf]     Compiling
+2026-04-30T00:00:54.366570111Z [inf]   dash-rs v0.1.0 (https://github.com/stadust/dash-rs#397c4730)
 
-2026-04-26T02:16:11.779296818Z [inf]     Compiling either v1.15.0
+2026-04-30T00:00:54.520745096Z [inf]     Compiling rocket_http v0.6.0-dev (https://github.com/rwf2/Rocket?branch=master#3a54d079)
 
-2026-04-26T02:16:11.829575772Z [inf]     Compiling serde_spanned v0.6.9
-   Compiling toml_datetime v0.6.11
-   Compiling ubyte v0.10.4
+2026-04-30T00:00:54.533330427Z [inf]     Compiling
+2026-04-30T00:00:54.533348621Z [inf]   icu_provider v2.1.1
 
-2026-04-26T02:16:11.832289303Z [inf]     Compiling serde_urlencoded v0.7.1
+2026-04-30T00:00:54.545363053Z [inf]     Compiling toml_edit v0.22.27
 
-2026-04-26T02:16:11.835318457Z [inf]     Compiling dash-rs v0.1.0 (https://github.com/stadust/dash-rs#397c4730)
+2026-04-30T00:00:54.557008227Z [inf]     Compiling
+2026-04-30T00:00:54.557032238Z [inf]   fluent-bundle v0.16.0
 
-2026-04-26T02:16:11.841076098Z [inf]     Compiling bincode v1.3.3
+2026-04-30T00:00:54.662496523Z [inf]     Compiling
+2026-04-30T00:00:54.662519123Z [inf]   parking_lot v0.12.5
 
-2026-04-26T02:16:11.890929175Z [inf]     Compiling icu_provider v2.1.1
+2026-04-30T00:00:54.7355722Z [inf]     Compiling dashmap v6.1.0
 
-2026-04-26T02:16:11.922355633Z [inf]     Compiling rocket_http v0.6.0-dev (https://github.com/rwf2/Rocket?branch=master#3a54d079)
+2026-04-30T00:00:54.756616817Z [inf]     Compiling icu_properties v2.1.2
 
-2026-04-26T02:16:12.002223349Z [inf]     Compiling toml_edit v0.22.27
+2026-04-30T00:00:54.756639512Z [inf]     Compiling icu_normalizer v2.1.1
 
-2026-04-26T02:16:12.017461094Z [inf]     Compiling parking_lot v0.12.5
+2026-04-30T00:00:54.819933831Z [inf]     Compiling
+2026-04-30T00:00:54.819953487Z [inf]   futures-intrusive v0.5.0
 
-2026-04-26T02:16:12.039251633Z [inf]     Compiling icu_normalizer v2.1.1
-   Compiling icu_properties v2.1.2
+2026-04-30T00:00:54.963501318Z [inf]     Compiling
+2026-04-30T00:00:54.963842861Z [inf]   tracing-subscriber v0.3.23
 
-2026-04-26T02:16:12.046136034Z [inf]     Compiling fluent-bundle v0.16.0
+2026-04-30T00:00:55.065265417Z [inf]     Compiling fluent v0.17.0
 
-2026-04-26T02:16:12.143927852Z [inf]     Compiling dashmap v6.1.0
+2026-04-30T00:00:55.67123142Z [inf]     Compiling
+2026-04-30T00:00:55.671601112Z [inf]   futures-executor v0.3.32
 
-2026-04-26T02:16:12.200287847Z [inf]     Compiling futures-intrusive v0.5.0
+2026-04-30T00:00:55.671769967Z [inf]     Compiling
+2026-04-30T00:00:55.671968722Z [inf]   governor v0.10.4
 
-2026-04-26T02:16:12.323629815Z [inf]     Compiling tracing-subscriber v0.3.23
+2026-04-30T00:00:55.879615722Z [inf]     Compiling
+2026-04-30T00:00:55.879934398Z [inf]   futures v0.3.32
 
-2026-04-26T02:16:12.389109002Z [inf]     Compiling fluent v0.17.0
+2026-04-30T00:00:55.923395326Z [inf]     Compiling
+2026-04-30T00:00:55.923736312Z [inf]   idna_adapter v1.2.1
 
-2026-04-26T02:16:12.451161258Z [inf]     Compiling futures-executor v0.3.32
-   Compiling governor v0.10.4
+2026-04-30T00:00:56.027080235Z [inf]     Compiling idna v1.1.0
 
-2026-04-26T02:16:12.562807693Z [inf]     Compiling futures v0.3.32
+2026-04-30T00:00:56.308371213Z [inf]     Compiling
+2026-04-30T00:00:56.308386446Z [inf]   url v2.5.8
 
-2026-04-26T02:16:12.839263166Z [inf]     Compiling idna_adapter v1.2.1
+2026-04-30T00:00:56.407779365Z [inf]     Compiling rocket_codegen v0.6.0-dev (https://github.com/rwf2/Rocket?branch=master#3a54d079)
 
-2026-04-26T02:16:12.883473816Z [inf]     Compiling idna v1.1.0
+2026-04-30T00:00:56.544753004Z [inf]     Compiling
+2026-04-30T00:00:56.544797541Z [inf]   jsonwebtoken v9.3.1
 
-2026-04-26T02:16:13.074113382Z [inf]     Compiling url v2.5.8
+2026-04-30T00:00:56.814136979Z [inf]     Compiling
+2026-04-30T00:00:56.81443728Z [inf]   sqlx-core v0.8.6
 
-2026-04-26T02:16:13.150337341Z [inf]     Compiling rocket_codegen v0.6.0-dev (https://github.com/rwf2/Rocket?branch=master#3a54d079)
+2026-04-30T00:00:56.936493083Z [inf]     Compiling
+2026-04-30T00:00:56.936771001Z [inf]   toml v0.8.23
 
-2026-04-26T02:16:13.180178607Z [inf]     Compiling jsonwebtoken v9.3.1
+2026-04-30T00:00:59.208963748Z [inf]     Compiling sqlx-postgres v0.8.6
 
-2026-04-26T02:16:13.449103846Z [inf]     Compiling sqlx-core v0.8.6
+2026-04-30T00:01:00.478543467Z [inf]     Compiling tokio-util v0.7.18
 
-2026-04-26T02:16:13.600348209Z [inf]     Compiling toml v0.8.23
+2026-04-30T00:01:00.478743928Z [inf]     Compiling tower v0.5.3
 
-2026-04-26T02:16:15.164525606Z [inf]     Compiling sqlx-postgres v0.8.6
+2026-04-30T00:01:00.878632679Z [inf]     Compiling tower-http v0.6.8
 
-2026-04-26T02:16:15.624959003Z [inf]     Compiling tokio-util v0.7.18
-   Compiling tower v0.5.3
+2026-04-30T00:01:00.99873388Z [inf]     Compiling h2 v0.4.13
 
-2026-04-26T02:16:15.923724323Z [inf]     Compiling tower-http v0.6.8
+2026-04-30T00:01:02.304832458Z [inf]     Compiling sqlx-macros-core v0.8.6
 
-2026-04-26T02:16:15.978240532Z [inf]     Compiling h2 v0.4.13
+2026-04-30T00:01:03.1434875Z [inf]     Compiling sqlx-macros v0.8.6
 
-2026-04-26T02:16:17.516310416Z [inf]     Compiling sqlx-macros-core v0.8.6
+2026-04-30T00:01:04.544992272Z [inf]     Compiling hyper v1.8.1
 
-2026-04-26T02:16:18.246923618Z [inf]     Compiling sqlx-macros v0.8.6
+2026-04-30T00:01:05.816452639Z [inf]     Compiling sqlx v0.8.6
 
-2026-04-26T02:16:18.646087098Z [inf]     Compiling hyper v1.8.1
+2026-04-30T00:01:05.857335792Z [inf]     Compiling hyper-util v0.1.20
 
-2026-04-26T02:16:19.650553423Z [inf]     Compiling hyper-util v0.1.20
-
-2026-04-26T02:16:19.866833372Z [inf]     Compiling sqlx v0.8.6
-
-2026-04-26T02:16:20.425610639Z [inf]     Compiling pointercrate-user v0.1.0 (/app/pointercrate-user)
+2026-04-30T00:01:06.525649438Z [inf]     Compiling pointercrate-user v0.1.0 (/app/pointercrate-user)
    Compiling pointercrate-core-pages v0.1.0 (/app/pointercrate-core-pages)
 
-2026-04-26T02:16:20.528995371Z [inf]  warning: field `logo_path` is never read
+2026-04-30T00:01:06.643965147Z [inf]  warning: field `logo_path` is never read
   --> pointercrate-core-pages/src/navigation.rs:30:5
    |
 29 | pub struct NavigationBar {
@@ -1377,11 +1430,11 @@ ca-certificates is already the newest version (20250419).
    = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
 
 
-2026-04-26T02:16:20.756943203Z [inf]  warning: `pointercrate-core-pages` (lib) generated 1 warning
+2026-04-30T00:01:06.895393381Z [inf]  warning: `pointercrate-core-pages` (lib) generated 1 warning
 
-2026-04-26T02:16:21.05148486Z [inf]     Compiling pointercrate-demonlist v0.1.0 (/app/pointercrate-demonlist)
+2026-04-30T00:01:07.231440035Z [inf]     Compiling pointercrate-demonlist v0.1.0 (/app/pointercrate-demonlist)
 
-2026-04-26T02:16:21.170527304Z [inf]  error: set `DATABASE_URL` to use query macros online, or run `cargo sqlx prepare` to update the query cache
+2026-04-30T00:01:07.408103976Z [inf]  error: set `DATABASE_URL` to use query macros online, or run `cargo sqlx prepare` to update the query cache
    --> pointercrate-demonlist/src/demon/mod.rs:173:9
     |
 173 | / ...   sqlx::query!(
@@ -1394,16 +1447,16 @@ ca-certificates is already the newest version (20250419).
     = note: this error originates in the macro `$crate::sqlx_macros::expand_query` which comes from the expansion of the macro `sqlx::query` (in Nightly builds, run with -Z macro-backtrace for more info)
 
 
-2026-04-26T02:16:23.083001403Z [inf]  error: could not compile `pointercrate-demonlist` (lib) due to 1 previous error
+2026-04-30T00:01:10.236120694Z [inf]  error: could not compile `pointercrate-demonlist` (lib) due to 1 previous error
 warning: build failed, waiting for other jobs to finish...
 
-2026-04-26T02:16:31.469853691Z [err]  [builder 4/4] RUN cargo build --release -p pointercrate-example
-2026-04-26T02:16:31.482549806Z [err]  Dockerfile:4
-2026-04-26T02:16:31.482580977Z [err]  -------------------
-2026-04-26T02:16:31.482585469Z [err]  2 |     WORKDIR /app
-2026-04-26T02:16:31.482589055Z [err]  3 |     COPY . .
-2026-04-26T02:16:31.482593772Z [err]  4 | >>> RUN cargo build --release -p pointercrate-example
-2026-04-26T02:16:31.482597148Z [err]  5 |
-2026-04-26T02:16:31.482600931Z [err]  6 |     FROM rust:latest
-2026-04-26T02:16:31.482604230Z [err]  -------------------
-2026-04-26T02:16:31.482608393Z [err]  ERROR: failed to build: failed to solve: process "/bin/sh -c cargo build --release -p pointercrate-example" did not complete successfully: exit code: 101
+2026-04-30T00:01:20.138382506Z [err]  [builder 4/4] RUN cargo build --release -p pointercrate-example
+2026-04-30T00:01:20.169667356Z [err]  Dockerfile:4
+2026-04-30T00:01:20.170112725Z [err]  -------------------
+2026-04-30T00:01:20.170142760Z [err]  2 |     WORKDIR /app
+2026-04-30T00:01:20.170148639Z [err]  3 |     COPY . .
+2026-04-30T00:01:20.170155623Z [err]  4 | >>> RUN cargo build --release -p pointercrate-example
+2026-04-30T00:01:20.170163018Z [err]  5 |
+2026-04-30T00:01:20.170168913Z [err]  6 |     FROM rust:latest
+2026-04-30T00:01:20.170179508Z [err]  -------------------
+2026-04-30T00:01:20.170186076Z [err]  ERROR: failed to build: failed to solve: process "/bin/sh -c cargo build --release -p pointercrate-example" did not complete successfully: exit code: 101
