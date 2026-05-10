@@ -9,7 +9,7 @@ edition.workspace = true
 [dependencies]
 serde = "1.0.228"
 sqlx = { workspace = true }
-derive_more = { version = "2.0.1", features = ["display"] }
+derive_more = { version = "2.1.1", features = ["display"] }
 pointercrate-core = {path = "../pointercrate-core"}
 pointercrate-user = {path = "../pointercrate-user"}
 log = "0.4.29"
